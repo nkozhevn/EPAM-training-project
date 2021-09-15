@@ -5,33 +5,37 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float speed = 10f;
 
-    public Rigidbody2D rb;
+    public Rigidbody rb;
     public Camera cam;
 
-    Vector2 movement;
-    Vector2 mousePosition;
+    Vector3 movement;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        movement.z = Input.GetAxisRaw("Vertical");
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
-        Vector2 lookDir = mousePosition - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
+        Plane playerPlane = new Plane(Vector3.up, transform.position);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        float hitdist = 0.0f;
+        if (playerPlane.Raycast(ray, out hitdist))
+        {
+            Vector3 targetPoint = ray.GetPoint(hitdist);
+            Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+        }
     }
 }
