@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6532592758704591927}
   - component: {fileID: 8468154746950280744}
   - component: {fileID: -7414691285536334387}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MainCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6550603587117081874}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GunPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
