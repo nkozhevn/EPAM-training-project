@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    void Awake()
+    {
+        Destroy(gameObject, 5f);
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
