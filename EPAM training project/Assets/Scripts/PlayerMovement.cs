@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float speed = 10f;
+    [SerializeField]
+    private float moveSpeed = 5f;
+    [SerializeField]
+    private float speed = 10f;
 
-    public Rigidbody rb;
-    public Camera cam;
+    [SerializeField]
+    private Rigidbody rb;
+    [SerializeField]
+    private Camera cam;
 
     Vector3 movement;
 

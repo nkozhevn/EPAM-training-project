@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public Transform firePoint;
-    public GameObject bulletPrefab;
+    [SerializeField]
+    private Transform firePoint;
+    [SerializeField]
+    private GameObject bulletPrefab;
 
-    public float bulletForce = 40f;
+    [SerializeField]
+    private float bulletForce = 40f;
 
     // Update is called once per frame
     void Update()
