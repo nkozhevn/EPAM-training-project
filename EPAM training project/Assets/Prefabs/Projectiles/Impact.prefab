@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3573813109166365753}
   - component: {fileID: 3508501004851843065}
   - component: {fileID: 5532668752340938335}
-  - component: {fileID: 7349669282659428237}
+  - component: {fileID: 540440635}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &7349669282659428237
+--- !u!95 &540440635
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ Animator:
   m_GameObject: {fileID: 3204555303946768428}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce2d1845a7506224f9129adffab0a6a5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2936ce1b370351f429dc73788a37d9d5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

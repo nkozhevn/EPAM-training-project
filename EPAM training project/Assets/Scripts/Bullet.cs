@@ -20,6 +20,11 @@ public class Bullet : MonoBehaviour
         }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.33f);
+        Damage damage = collision.gameObject.GetComponent<Damage>();
+        if(damage != null)
+        {
+            damage.DamageEffect();
+        }
         Destroy(gameObject);
     }
 }
