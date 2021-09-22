@@ -6,7 +6,7 @@ public class Damage : MonoBehaviour
 {
     private Animation animation;
 
-    private void Awake()
+    private void Start()
     {
         animation = transform.GetComponent<Animation>();
     }

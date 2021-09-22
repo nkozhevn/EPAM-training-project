@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711737537814934217}
   - component: {fileID: 737404705783240045}
+  - component: {fileID: 8191225950499145034}
   m_Layer: 0
   m_Name: Weapon1
   m_TagString: Untagged
@@ -25,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530314228072032690}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1587272786798756432}
@@ -35,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.8, y: 3.9}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &737404705783240045
@@ -52,7 +53,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 451928517607295948}
   bulletPrefab: {fileID: 8666828142862487963, guid: 5f42d4f5365d2b248960e11d04beb50c, type: 3}
-  bulletForce: 70
+  bulletForce: 150
+  coolDown: 0.1
+  maxAmmo: 40
+  reloadTime: 2
+--- !u!111 &8191225950499145034
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530314228072032690}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 80c8ddd354063e841ac61a4643767a6b, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7543827682783842667
 GameObject:
   m_ObjectHideFlags: 0

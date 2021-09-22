@@ -12,15 +12,15 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 5f);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Player" || collider.gameObject.tag == "Bullet")
         {
             return;
         }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.33f);
-        Damage damage = collision.gameObject.GetComponent<Damage>();
+        Damage damage = collider.gameObject.GetComponent<Damage>();
         if(damage != null)
         {
             damage.DamageEffect();
