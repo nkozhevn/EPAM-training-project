@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float spawnTimer = 1f;
     [SerializeField] private int enemyToSpawn = 20;
+    [SerializeField] private List<GameObject> enemyPrefabs;
     private List<Transform> _spawners = new List<Transform>();
     private Transform _currentSpawner;
     private int _count;
@@ -28,7 +28,7 @@ public class Spawn : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnTimer);
             _currentSpawner = _spawners[Random.Range(0, _spawners.Count)];
-            Instantiate(enemyPrefab, _currentSpawner.position, _currentSpawner.rotation);
+            Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], _currentSpawner.position, _currentSpawner.rotation);
             _count++;
         }
         

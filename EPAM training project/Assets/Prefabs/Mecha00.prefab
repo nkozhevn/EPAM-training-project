@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 2916750317102974138}
   - component: {fileID: 1796104718652087765}
   - component: {fileID: 5597902031217195174}
+  - component: {fileID: -5701993041643274619}
   m_Layer: 0
   m_Name: Mecha00
   m_TagString: Player
@@ -202,6 +203,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  speed: 10
-  rb: {fileID: 2916750317102974138}
+  turnSpeed: 10
   cam: {fileID: 0}
+--- !u!114 &-5701993041643274619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053937825787487586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

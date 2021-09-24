@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3197612246287811145}
   - component: {fileID: 2524553967369097596}
   - component: {fileID: -8703922337119386250}
+  - component: {fileID: 4435125031277387755}
   m_Layer: 0
   m_Name: Arachnoid
   m_TagString: Untagged
@@ -93,6 +94,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &4435125031277387755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980029598182094185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff40e5dae7e7eb14dbea83ce36634c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 19
+  turnSpeed: 10
+  objectName: Player
+  enemyPower: 3
+  stunTime: 3
 --- !u!1 &5383539012102016432
 GameObject:
   m_ObjectHideFlags: 0

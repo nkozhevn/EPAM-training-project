@@ -10,22 +10,57 @@ public class EnemyMovement : MonoBehaviour
     private Transform _player;
     private Vector3 _direction;
     [SerializeField] private string objectName = "Player";
+    [SerializeField] private int enemyPower = 3;
+    [SerializeField] private float stunTime = 3f;
+    private bool _hitCheck = true;
+    private GameObject _playerCheck;
     
     // Start is called before the first frame update
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _player = GameObject.Find(objectName).transform;
+        _playerCheck = GameObject.Find(objectName);
+        if(_playerCheck != null)
+        {
+            _player = _playerCheck.transform;
+        }
     }
 
     private void Update()
     {
-        _direction = _player.position - _rb.position;
-        _direction = _direction / _direction.magnitude;
+        if(_playerCheck != null)
+        {
+            _direction = _player.position - _rb.position;
+            _direction.Normalize();
+        }
     }
 
     private void FixedUpdate()
     {
-        _rb.MovePosition(_rb.position + _direction * moveSpeed * Time.fixedDeltaTime);
+        if(_hitCheck && _playerCheck != null)
+        {
+            _rb.MovePosition(_rb.position + _direction * moveSpeed * Time.fixedDeltaTime);
+            _rb.rotation = Quaternion.Euler(_direction);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerDamage playerDamage = collision.gameObject.GetComponent<PlayerDamage>();
+            if(playerDamage != null)
+            {
+                playerDamage.DamageEffect(enemyPower);
+                StartCoroutine(Stunning());
+            }
+        }
+    }
+
+    private IEnumerator Stunning()
+    {
+        _hitCheck = false;
+        yield return new WaitForSeconds(stunTime);
+        _hitCheck = true;
     }
 }

@@ -54,9 +54,10 @@ MonoBehaviour:
   firePoint: {fileID: 451928517607295948}
   bulletPrefab: {fileID: 8666828142862487963, guid: 5f42d4f5365d2b248960e11d04beb50c, type: 3}
   bulletForce: 150
-  coolDown: 0.1
+  coolDown: 0.2
   maxAmmo: 40
   reloadTime: 2
+  isReloading: 0
 --- !u!111 &8191225950499145034
 Animation:
   m_ObjectHideFlags: 0
@@ -67,7 +68,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 80c8ddd354063e841ac61a4643767a6b, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 80c8ddd354063e841ac61a4643767a6b, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

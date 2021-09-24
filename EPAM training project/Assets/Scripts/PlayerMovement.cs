@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     [SerializeField] private Camera cam;
     private Vector3 _movement;
+    private Vector3 _mousePosition;
 
     private void Start()
     {
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.z = Input.GetAxisRaw("Vertical");
+
+        _mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void FixedUpdate()
@@ -35,5 +38,9 @@ public class PlayerMovement : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
         }
+        /*Vector3 difference = _mousePosition - transform.position; 
+        difference.Normalize();
+        float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);*/
     }
 }
