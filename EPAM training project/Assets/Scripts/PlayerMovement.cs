@@ -4,30 +4,27 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 5f;
-    [SerializeField]
-    private float turnSpeed = 10f;
-    private Rigidbody rb;
-    [SerializeField]
-    private Camera cam;
-    Vector3 movement;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float turnSpeed = 10f;
+    private Rigidbody _rb;
+    [SerializeField] private Camera cam;
+    private Vector3 _movement;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.z = Input.GetAxisRaw("Vertical");
+        _movement.x = Input.GetAxisRaw("Horizontal");
+        _movement.z = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        _rb.MovePosition(_rb.position + _movement * moveSpeed * Time.fixedDeltaTime);
 
         Plane playerPlane = new Plane(Vector3.up, transform.position);
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);

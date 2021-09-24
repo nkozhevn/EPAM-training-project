@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    private Animation animation;
+    private Animation _animation;
     [SerializeField] private int healthPoints = 3;
-    private int hitCount;
+    private int _hitCount;
 
     private void Awake()
     {
-        hitCount = 0;
-        animation = transform.GetComponent<Animation>();
+        _hitCount = 0;
+        _animation = transform.GetComponent<Animation>();
     }
 
     public void DamageEffect(int x)
     {
-        hitCount = hitCount + x;
-        if(hitCount < healthPoints)
+        _hitCount = _hitCount + x;
+        if(_hitCount < healthPoints)
         {
-            //animation.Play();
+            //_animation.Play();
         }
         else
         {

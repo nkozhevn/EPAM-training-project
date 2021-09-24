@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    private float shootingTimer = 99999f;
+    private float _shootingTimer = 99999f;
     [SerializeField] private int selectedWeapon = 0;
-    private Shooting shooting;
-    private int previousSelectedWeapon;
+    private Shooting _shooting;
+    private int _previousSelectedWeapon;
 
     private void Start()
     {
@@ -16,16 +16,16 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
-        previousSelectedWeapon = selectedWeapon;
+        _previousSelectedWeapon = selectedWeapon;
 
-        if(Input.GetButton("Fire1") && shootingTimer >= shooting.coolDown)
+        if(Input.GetButton("Fire1") && _shootingTimer >= _shooting.coolDown)
         {
-            shooting.Shoot();
-            shootingTimer = 0;
+            _shooting.Shoot();
+            _shootingTimer = 0;
         }
-        else if(shootingTimer < shooting.coolDown)
+        else if(_shootingTimer < _shooting.coolDown)
         {
-            shootingTimer += Time.deltaTime;
+            _shootingTimer += Time.deltaTime;
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha1))
@@ -65,18 +65,18 @@ public class PlayerShooting : MonoBehaviour
             selectedWeapon = 8;
         }
 
-        if(previousSelectedWeapon != selectedWeapon)
+        if(_previousSelectedWeapon != selectedWeapon)
         {
             SelectWeapon();
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && shooting.isReloading == false)
+        if(Input.GetKeyDown(KeyCode.R) && _shooting.isReloading == false)
         {
-            StartCoroutine(shooting.Reload());
+            StartCoroutine(_shooting.Reload());
         }
     }
 
-    void SelectWeapon()
+    private void SelectWeapon()
     {
         int i = 0;
         foreach(Transform weapon in transform)
@@ -84,9 +84,9 @@ public class PlayerShooting : MonoBehaviour
             if(i == selectedWeapon)
             {
                 weapon.gameObject.SetActive(true);
-                shooting = weapon.GetComponent<Shooting>();
+                _shooting = weapon.GetComponent<Shooting>();
             }
-            else if(i == previousSelectedWeapon)
+            else if(i == _previousSelectedWeapon)
             {
                 weapon.gameObject.SetActive(false);
             }

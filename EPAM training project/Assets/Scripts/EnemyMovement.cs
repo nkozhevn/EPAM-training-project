@@ -6,26 +6,26 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float turnSpeed = 10f;
-    private Rigidbody rb;
-    private Transform player;
-    Vector3 direction;
+    private Rigidbody _rb;
+    private Transform _player;
+    private Vector3 _direction;
     [SerializeField] private string objectName = "Player";
     
     // Start is called before the first frame update
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        player = GameObject.Find(objectName).transform;
+        _rb = GetComponent<Rigidbody>();
+        _player = GameObject.Find(objectName).transform;
     }
 
     private void Update()
     {
-        direction = player.position - rb.position;
-        direction = direction / direction.magnitude;
+        _direction = _player.position - _rb.position;
+        _direction = _direction / _direction.magnitude;
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+        _rb.MovePosition(_rb.position + _direction * moveSpeed * Time.fixedDeltaTime);
     }
 }

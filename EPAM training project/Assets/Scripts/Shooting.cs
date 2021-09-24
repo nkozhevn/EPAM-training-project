@@ -12,18 +12,18 @@ public class Shooting : MonoBehaviour
     [SerializeField] public float coolDown = 0.1f;
 
     [SerializeField] private int maxAmmo = 40;
-    private int currentAmmo = 0;
+    private int _currentAmmo = 0;
     [SerializeField] private float reloadTime = 1f;
     [SerializeField] public bool isReloading = false;
-    private Animation animation;
+    private Animation _animation;
 
-    void Start()
+    private void Start()
     {
-        currentAmmo = maxAmmo;
-        animation = transform.GetComponent<Animation>();
+        _currentAmmo = maxAmmo;
+        _animation = transform.GetComponent<Animation>();
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
         isReloading = false;
     }
@@ -34,12 +34,12 @@ public class Shooting : MonoBehaviour
         {
             return;
         }
-        if(currentAmmo <= 0)
+        if(_currentAmmo <= 0)
         {
             StartCoroutine(Reload());
             return;
         }
-        currentAmmo--;
+        _currentAmmo--;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
@@ -49,9 +49,9 @@ public class Shooting : MonoBehaviour
     public IEnumerator Reload()
     {
         isReloading = true;
-        animation.Play();
+        _animation.Play();
         yield return new WaitForSeconds(reloadTime);
-        currentAmmo = maxAmmo;
+        _currentAmmo = maxAmmo;
         isReloading = false;
     }
 }
