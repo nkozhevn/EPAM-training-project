@@ -5,14 +5,25 @@ using UnityEngine;
 public class Damage : MonoBehaviour
 {
     private Animation animation;
+    [SerializeField] private int healthPoints = 3;
+    private int hitCount;
 
-    private void Start()
+    private void Awake()
     {
+        hitCount = 0;
         animation = transform.GetComponent<Animation>();
     }
 
-    public void DamageEffect()
+    public void DamageEffect(int x)
     {
-        animation.Play();
+        hitCount = hitCount + x;
+        if(hitCount < healthPoints)
+        {
+            //animation.Play();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

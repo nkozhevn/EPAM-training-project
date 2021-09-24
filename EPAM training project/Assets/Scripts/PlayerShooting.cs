@@ -7,15 +7,16 @@ public class PlayerShooting : MonoBehaviour
     private float shootingTimer = 99999f;
     [SerializeField] private int selectedWeapon = 0;
     private Shooting shooting;
+    private int previousSelectedWeapon;
 
-    void Start()
+    private void Start()
     {
         SelectWeapon();
     }
 
-    void Update()
+    private void Update()
     {
-        int previousSelectedWeapon = selectedWeapon;
+        previousSelectedWeapon = selectedWeapon;
 
         if(Input.GetButton("Fire1") && shootingTimer >= shooting.coolDown)
         {
@@ -68,6 +69,11 @@ public class PlayerShooting : MonoBehaviour
         {
             SelectWeapon();
         }
+
+        if(Input.GetKeyDown(KeyCode.R) && shooting.isReloading == false)
+        {
+            StartCoroutine(shooting.Reload());
+        }
     }
 
     void SelectWeapon()
@@ -80,7 +86,7 @@ public class PlayerShooting : MonoBehaviour
                 weapon.gameObject.SetActive(true);
                 shooting = weapon.GetComponent<Shooting>();
             }
-            else
+            else if(i == previousSelectedWeapon)
             {
                 weapon.gameObject.SetActive(false);
             }

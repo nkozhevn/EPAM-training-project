@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private int maxAmmo = 40;
     private int currentAmmo = 0;
     [SerializeField] private float reloadTime = 1f;
-    private bool isReloading = false;
+    [SerializeField] public bool isReloading = false;
     private Animation animation;
 
     void Start()

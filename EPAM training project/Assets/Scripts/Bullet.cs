@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject hitEffect;
+    [SerializeField] private GameObject hitEffect;
+    [SerializeField] private int bulletPower = 1;
     
-    void Awake()
+    private void Awake()
     {
         Destroy(gameObject, 5f);
     }
 
-    void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player" || collider.gameObject.tag == "Bullet")
         {
@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         Damage damage = collider.gameObject.GetComponent<Damage>();
         if(damage != null)
         {
-            damage.DamageEffect();
+            damage.DamageEffect(bulletPower);
         }
         Destroy(gameObject);
     }
