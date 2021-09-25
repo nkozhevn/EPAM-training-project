@@ -896,6 +896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1036470917}
   - component: {fileID: 1036470918}
+  - component: {fileID: 1036470919}
   m_Layer: 0
   m_Name: SpawnEnemies
   m_TagString: Untagged
@@ -938,6 +939,21 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 7472696272030029116, guid: 7652ea49bcc4e8e4c944d75505203487, type: 3}
   - {fileID: 3980029598182094185, guid: 323e7513d1686cb4a8c7974ce4a1c181, type: 3}
+--- !u!114 &1036470919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036470916}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe9e3065b8f44c4b81ed3b249802acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 8666828142862487963, guid: 5f42d4f5365d2b248960e11d04beb50c, type: 3}
+  amountToPool: 20
 --- !u!1001 &1050566288
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: -4761776704271092945}
   m_Layer: 0
   m_Name: ReconBot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,6 +189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   turnSpeed: 10
-  objectName: Player
+  objectName: /Player
   enemyPower: 5
   stunTime: 1

@@ -15,7 +15,6 @@ public class EnemyMovement : MonoBehaviour
     private bool _hitCheck = true;
     private GameObject _playerCheck;
     
-    // Start is called before the first frame update
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
