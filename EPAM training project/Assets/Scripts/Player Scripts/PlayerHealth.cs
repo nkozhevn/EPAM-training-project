@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDamage : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int healthPoints = 10;
     private int _hitCount;

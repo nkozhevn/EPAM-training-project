@@ -920,7 +920,7 @@ Transform:
   - {fileID: 813111650}
   - {fileID: 2108753102}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1036470918
 MonoBehaviour:
@@ -935,10 +935,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTimer: 1
-  enemyToSpawn: 20
+  enemyToSpawn: 10
   enemyPrefabs:
   - {fileID: 7472696272030029116, guid: 7652ea49bcc4e8e4c944d75505203487, type: 3}
   - {fileID: 3980029598182094185, guid: 323e7513d1686cb4a8c7974ce4a1c181, type: 3}
+  - {fileID: 2883832484011255656, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
 --- !u!114 &1036470919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,63 +2336,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 104e556426dced4419588f0558dff695, type: 3}
---- !u!1001 &2649250782432340164
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 24.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544180785758961106, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883832484011255656, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
-      propertyPath: m_Name
-      value: QuadrupedTank
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 56944d274fc380345ba3ab347f4f006b, type: 3}
 --- !u!1001 &3468008776587644188
 PrefabInstance:
   m_ObjectHideFlags: 0

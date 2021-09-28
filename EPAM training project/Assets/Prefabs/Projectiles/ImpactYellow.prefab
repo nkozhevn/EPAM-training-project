@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5532668752340938335}
   - component: {fileID: 540440635}
   m_Layer: 0
-  m_Name: Impact
+  m_Name: ImpactYellow
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

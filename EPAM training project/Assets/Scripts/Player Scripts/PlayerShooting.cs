@@ -6,7 +6,7 @@ public class PlayerShooting : MonoBehaviour
 {
     private float _shootingTimer = 99999f;
     [SerializeField] private int selectedWeapon = 0;
-    private Shooting _shooting;
+    private Weapon _weapon;
     private int _previousSelectedWeapon;
 
     private void Start()
@@ -18,12 +18,12 @@ public class PlayerShooting : MonoBehaviour
     {
         _previousSelectedWeapon = selectedWeapon;
 
-        if(Input.GetButton("Fire1") && _shootingTimer >= _shooting.coolDown)
+        if(Input.GetButton("Fire1") && _shootingTimer >= _weapon.coolDown)
         {
-            _shooting.Shoot();
+            _weapon.Shoot();
             _shootingTimer = 0;
         }
-        else if(_shootingTimer < _shooting.coolDown)
+        else if(_shootingTimer < _weapon.coolDown)
         {
             _shootingTimer += Time.deltaTime;
         }
@@ -70,25 +70,25 @@ public class PlayerShooting : MonoBehaviour
             SelectWeapon();
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && _shooting.isReloading == false)
+        if(Input.GetKeyDown(KeyCode.R) && _weapon.isReloading == false)
         {
-            StartCoroutine(_shooting.Reload());
+            StartCoroutine(_weapon.Reload());
         }
     }
 
     private void SelectWeapon()
     {
         int i = 0;
-        foreach(Transform weapon in transform)
+        foreach(Transform item in transform)
         {
             if(i == selectedWeapon)
             {
-                weapon.gameObject.SetActive(true);
-                _shooting = weapon.GetComponent<Shooting>();
+                item.gameObject.SetActive(true);
+                _weapon = item.GetComponent<Weapon>();
             }
             else if(i == _previousSelectedWeapon)
             {
-                weapon.gameObject.SetActive(false);
+                item.gameObject.SetActive(false);
             }
             i++;
         }

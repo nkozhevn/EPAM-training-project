@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class RunningEnemyMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 4f;
-    [SerializeField] private float turnSpeed = 10f;
     private Rigidbody _rb;
     private Transform _player;
     private Vector3 _direction;
@@ -39,7 +38,7 @@ public class EnemyMovement : MonoBehaviour
         if(_hitCheck && _playerCheck != null)
         {
             _rb.MovePosition(_rb.position + _direction * moveSpeed * Time.fixedDeltaTime);
-            _rb.rotation = Quaternion.Euler(_direction);
+            transform.LookAt(_player.transform);
         }
     }
 
@@ -47,10 +46,10 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerDamage playerDamage = collision.gameObject.GetComponent<PlayerDamage>();
-            if(playerDamage != null)
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if(playerHealth != null)
             {
-                playerDamage.DamageEffect(enemyPower);
+                playerHealth.DamageEffect(enemyPower);
                 StartCoroutine(Stunning());
             }
         }

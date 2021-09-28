@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Damage : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     private Animation _animation;
     [SerializeField] private int healthPoints = 3;

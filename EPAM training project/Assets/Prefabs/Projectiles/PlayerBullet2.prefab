@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3828003064030214221}
   - component: {fileID: 7330472221739548576}
   m_Layer: 0
-  m_Name: Bullet2
+  m_Name: PlayerBullet2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 3204555303946768428, guid: 108e0ed048c066b4494f90515b665cda, type: 3}
-  bulletPower: 1
+  bulletPower: 2
 --- !u!1 &9063669127934619296
 GameObject:
   m_ObjectHideFlags: 0

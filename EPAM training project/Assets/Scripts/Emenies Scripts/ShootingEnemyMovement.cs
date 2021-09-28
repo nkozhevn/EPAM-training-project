@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMoveAndShoot : MonoBehaviour
+public class ShootingEnemyMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 4f;
-    [SerializeField] private float turnSpeed = 10f;
     private Rigidbody _rb;
     private Transform _player;
     private Vector3 _direction;
@@ -42,10 +41,10 @@ public class EnemyMoveAndShoot : MonoBehaviour
     {
         if(_playerCheck != null)
         {
+            transform.LookAt(_player.transform);
             if(_direction.magnitude > shootingDist)
             {
                 _rb.MovePosition(_rb.position + _directionNorm * moveSpeed * Time.fixedDeltaTime);
-                _rb.rotation = Quaternion.Euler(_directionNorm);
             }
             else
             {
