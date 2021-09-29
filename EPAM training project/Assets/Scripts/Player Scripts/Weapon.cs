@@ -1,35 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
-    [SerializeField] private Rigidbody bulletPrefab;
+    [SerializeField] private WeaponStats weaponStats;
 
-    [SerializeField] private float bulletForce = 40f;
-    [SerializeField] public float coolDown = 0.1f;
-
-    [SerializeField] private int maxAmmo = 40;
     private int _currentAmmo = 0;
-    [SerializeField] private float reloadTime = 1f;
-    [SerializeField] public bool isReloading = false;
     private Animation _animation;
+
+    public bool IsReloading { get; private set; }
+
+    public WeaponStats Stats => weaponStats;
 
     private void Start()
     {
-        _currentAmmo = maxAmmo;
+        _currentAmmo = weaponStats.MaxAmmo;
         _animation = transform.GetComponent<Animation>();
     }
 
     private void OnEnable()
     {
-        isReloading = false;
+        IsReloading = false;
     }
 
     public void Shoot()
     {
-        if(isReloading)
+        if(IsReloading)
         {
             return;
         }
@@ -40,17 +37,16 @@ public class Weapon : MonoBehaviour
         }
         _currentAmmo--;
 
-        var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        //Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        bullet.AddForce(firePoint.up * bulletForce, ForceMode.Impulse);
+        var bullet = Instantiate(weaponStats.BulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.AddForce(firePoint.up * weaponStats.BulletForce, ForceMode.Impulse);
     }
 
     public IEnumerator Reload()
     {
-        isReloading = true;
+        IsReloading = true;
         _animation.Play();
-        yield return new WaitForSeconds(reloadTime);
-        _currentAmmo = maxAmmo;
-        isReloading = false;
+        yield return new WaitForSeconds(weaponStats.CoolDown);
+        _currentAmmo = weaponStats.MaxAmmo;
+        IsReloading = false;
     }
 }

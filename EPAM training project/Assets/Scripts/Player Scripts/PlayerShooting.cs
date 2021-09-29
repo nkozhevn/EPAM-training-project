@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
@@ -18,12 +16,12 @@ public class PlayerShooting : MonoBehaviour
     {
         _previousSelectedWeapon = selectedWeapon;
 
-        if(Input.GetButton("Fire1") && _shootingTimer >= _weapon.coolDown)
+        if(Input.GetButton("Fire1") && _shootingTimer >= _weapon.Stats.CoolDown)
         {
             _weapon.Shoot();
             _shootingTimer = 0;
         }
-        else if(_shootingTimer < _weapon.coolDown)
+        else if(_shootingTimer < _weapon.Stats.CoolDown)
         {
             _shootingTimer += Time.deltaTime;
         }
@@ -70,7 +68,7 @@ public class PlayerShooting : MonoBehaviour
             SelectWeapon();
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && _weapon.isReloading == false)
+        if(Input.GetKeyDown(KeyCode.R) && _weapon.IsReloading == false)
         {
             StartCoroutine(_weapon.Reload());
         }

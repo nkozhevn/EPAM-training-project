@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1439,6 +1439,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3172306339bc36245936a34ebcdd18e9, type: 3}
+--- !u!114 &1467340224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -5701993041643274619, guid: 104e556426dced4419588f0558dff695, type: 3}
+  m_PrefabInstance: {fileID: 1343353346040891512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1472948557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1192341692053550548, guid: 53f2092a4ad0d7b4a8cad3969d197152, type: 3}
@@ -1505,6 +1516,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6691069233788595656, guid: 3172306339bc36245936a34ebcdd18e9, type: 3}
   m_PrefabInstance: {fileID: 1337769604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1600248983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 12322896247152059, guid: 104e556426dced4419588f0558dff695, type: 3}
+  m_PrefabInstance: {fileID: 1343353346040891512}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1693344845 stripped
 Transform:
@@ -2265,6 +2281,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7454906881481713618, guid: 104e556426dced4419588f0558dff695, type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 1600248983}
+    - target: {fileID: -7454906881481713618, guid: 104e556426dced4419588f0558dff695, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1467340224}
     - target: {fileID: -5701993041643274619, guid: 104e556426dced4419588f0558dff695, type: 3}
       propertyPath: healthBar
       value: 

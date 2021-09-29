@@ -52,12 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 451928517607295948}
-  bulletPrefab: {fileID: 7321792454890513710, guid: 5f42d4f5365d2b248960e11d04beb50c, type: 3}
-  bulletForce: 150
-  coolDown: 0.2
-  maxAmmo: 40
-  reloadTime: 2
-  isReloading: 0
+  weaponStats: {fileID: 11400000, guid: e6acc9b5b85519f488895a7e4f7330f9, type: 2}
 --- !u!111 &8191225950499145034
 Animation:
   m_ObjectHideFlags: 0
