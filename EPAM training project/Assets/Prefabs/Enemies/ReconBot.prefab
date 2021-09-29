@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 7854146935128330118}
   - component: {fileID: 73332767725334099}
   - component: {fileID: 915055586674302748}
-  - component: {fileID: 4451618770924950513}
   - component: {fileID: -2012385886321762097}
   - component: {fileID: -4761776704271092945}
+  - component: {fileID: -7601897489701071994}
   m_Layer: 0
   m_Name: ReconBot
   m_TagString: Enemy
@@ -146,19 +146,6 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!114 &4451618770924950513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7472696272030029116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96b90e19a6c1d1f45ad4ac007b6d0219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 5
 --- !u!54 &-2012385886321762097
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -188,7 +175,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
-  turnSpeed: 10
   objectName: /Player
   enemyPower: 5
   stunTime: 1
+--- !u!114 &-7601897489701071994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7472696272030029116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 5

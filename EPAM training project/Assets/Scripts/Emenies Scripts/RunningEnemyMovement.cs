@@ -46,10 +46,10 @@ public class RunningEnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if(playerHealth != null)
+            Health health = collision.gameObject.GetComponent<Health>();
+            if(health != null)
             {
-                playerHealth.DamageEffect(enemyPower);
+                health.DamageEffect(enemyPower);
                 StartCoroutine(Stunning());
             }
         }

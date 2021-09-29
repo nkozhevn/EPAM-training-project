@@ -20,10 +20,10 @@ public class PlayerBullet : MonoBehaviour
         }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.33f);
-        EnemyHealth enemyHealth = collider.gameObject.GetComponent<EnemyHealth>();
-        if(enemyHealth != null)
+        Health health = collider.gameObject.GetComponent<Health>();
+        if(health != null)
         {
-            enemyHealth.DamageEffect(bulletPower);
+            health.DamageEffect(bulletPower);
         }
         Destroy(gameObject);
     }
