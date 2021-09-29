@@ -1,24 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IDamageable
 {
-    [SerializeField] private int healthPoints = 10;
-    private HealthSystem _healthSystem;
-    [SerializeField] private HealthBar healthBar;
-
-    private void Awake()
+    public event Action HealthChanged;
+    [SerializeField] public int maxHealthPoints = 10;
+    public bool NoHealth => _healthPoints < 0;
+    private int _healthPoints;
+    public int HealthPoints
     {
-        _healthSystem = new HealthSystem(healthPoints);
-
-        if(gameObject.CompareTag("Player"))
+        get => _healthPoints;
+        set
         {
-            healthBar.Setup(_healthSystem);
+            _healthPoints = value;
+            HealthChanged?.Invoke();
         }
     }
 
-    public void DamageEffect(int x)
+    private void Awake()
+    {
+        _healthPoints = maxHealthPoints;
+
+        //_healthSystem = new HealthSystem(healthPoints);
+
+        /*if(gameObject.CompareTag("Player"))
+        {
+            healthBar.Setup(_healthSystem);
+        }*/
+    }
+
+    public void RecieveDamage(int amount)
+    {
+        HealthPoints -= amount;
+    }
+
+    /*public void DamageEffect(int x)
     {
         _healthSystem.Damage(x);
         if(_healthSystem.GetHealth() == 0)
@@ -32,5 +50,5 @@ public class Health : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
+    }*/
 }

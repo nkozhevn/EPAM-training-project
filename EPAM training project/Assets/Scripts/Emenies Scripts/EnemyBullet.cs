@@ -23,7 +23,7 @@ public class EnemyBullet : MonoBehaviour
         Health health = collider.gameObject.GetComponent<Health>();
         if(health != null)
         {
-            health.DamageEffect(bulletPower);
+            health.RecieveDamage(bulletPower);
         }
         Destroy(gameObject);
     }

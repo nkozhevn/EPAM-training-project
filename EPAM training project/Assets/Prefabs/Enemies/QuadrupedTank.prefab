@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 2
+  healthBar: {fileID: 0}
+  animation: {fileID: 2649250781368657539}
 --- !u!54 &-2226733663730261915
 Rigidbody:
   m_ObjectHideFlags: 0

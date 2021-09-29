@@ -191,3 +191,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 5
+  healthBar: {fileID: 0}
+  animation: {fileID: 915055586674302748}

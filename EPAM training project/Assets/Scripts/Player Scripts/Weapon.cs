@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Rigidbody bulletPrefab;
 
     [SerializeField] private float bulletForce = 40f;
     [SerializeField] public float coolDown = 0.1f;
@@ -40,9 +40,9 @@ public class Weapon : MonoBehaviour
         }
         _currentAmmo--;
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode.Impulse);
+        var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        //Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        bullet.AddForce(firePoint.up * bulletForce, ForceMode.Impulse);
     }
 
     public IEnumerator Reload()

@@ -6,39 +6,29 @@ public class RunningEnemyMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 4f;
     private Rigidbody _rb;
-    private Transform _player;
     private Vector3 _direction;
     [SerializeField] private string objectName = "Player";
     [SerializeField] private int enemyPower = 3;
     [SerializeField] private float stunTime = 3f;
     private bool _hitCheck = true;
-    private GameObject _playerCheck;
     
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _playerCheck = GameObject.Find(objectName);
-        if(_playerCheck != null)
-        {
-            _player = _playerCheck.transform;
-        }
     }
 
     private void Update()
     {
-        if(_playerCheck != null)
-        {
-            _direction = _player.position - _rb.position;
-            _direction.Normalize();
-        }
+        _direction = Player.Instance.GetPosition() - _rb.position;
+        _direction.Normalize();
     }
 
     private void FixedUpdate()
     {
-        if(_hitCheck && _playerCheck != null)
+        if(_hitCheck)
         {
             _rb.MovePosition(_rb.position + _direction * moveSpeed * Time.fixedDeltaTime);
-            transform.LookAt(_player.transform);
+            transform.LookAt(Player.Instance.transform);
         }
     }
 
@@ -49,7 +39,7 @@ public class RunningEnemyMovement : MonoBehaviour
             Health health = collision.gameObject.GetComponent<Health>();
             if(health != null)
             {
-                health.DamageEffect(enemyPower);
+                health.RecieveDamage(enemyPower);
                 StartCoroutine(Stunning());
             }
         }

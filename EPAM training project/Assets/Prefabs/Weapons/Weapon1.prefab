@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 451928517607295948}
-  bulletPrefab: {fileID: 8666828142862487963, guid: 5f42d4f5365d2b248960e11d04beb50c, type: 3}
+  bulletPrefab: {fileID: 7321792454890513710, guid: 5f42d4f5365d2b248960e11d04beb50c, type: 3}
   bulletForce: 150
   coolDown: 0.2
   maxAmmo: 40
