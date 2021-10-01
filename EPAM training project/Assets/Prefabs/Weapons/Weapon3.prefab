@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2995015787289585552
 Transform:
   m_ObjectHideFlags: 0
@@ -49,11 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2979645193909023502}
-  bulletPrefab: {fileID: 5277379162095041090, guid: f158432a81081574ab1509dba41b297d, type: 3}
-  bulletForce: 70
-  coolDown: 1
-  maxAmmo: 5
-  reloadTime: 3
+  weaponStats: {fileID: 11400000, guid: 7e3ab06622f4c8b408175e522fd86be4, type: 2}
+  OnShoot: 0
 --- !u!111 &927128850395849378
 Animation:
   m_ObjectHideFlags: 0

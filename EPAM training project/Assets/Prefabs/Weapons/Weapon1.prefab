@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &711737537814934217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 451928517607295948}
   weaponStats: {fileID: 11400000, guid: e6acc9b5b85519f488895a7e4f7330f9, type: 2}
+  OnShoot: 0
 --- !u!111 &8191225950499145034
 Animation:
   m_ObjectHideFlags: 0

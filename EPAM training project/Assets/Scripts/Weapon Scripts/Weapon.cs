@@ -5,13 +5,13 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
     [SerializeField] private WeaponStats weaponStats;
-
+    
+    private float _shootingTimer = 99999f;
     private int _currentAmmo = 0;
-    private Animation _animation;
-
-    public bool IsReloading { get; private set; }
-
+    public bool IsReloading{ get; private set; }
+    public bool OnShoot;
     public WeaponStats Stats => weaponStats;
+    private Animation _animation;
 
     private void Start()
     {
@@ -22,19 +22,35 @@ public class Weapon : MonoBehaviour
     private void OnEnable()
     {
         IsReloading = false;
+        OnShoot = false;
     }
 
-    public void Shoot()
+    private void Update()
     {
-        if(IsReloading)
+        if(OnShoot && _shootingTimer >= Stats.CoolDown)
         {
-            return;
+            if(IsReloading)
+            {
+                return;
+            }
+            if(_currentAmmo <= 0)
+            {
+                StartCoroutine(Reload());
+                return;
+            }
+            
+            Shoot();
+
+            _shootingTimer = 0;
         }
-        if(_currentAmmo <= 0)
+        else if(_shootingTimer < Stats.CoolDown)
         {
-            StartCoroutine(Reload());
-            return;
+            _shootingTimer += Time.deltaTime;
         }
+    }
+
+    private void Shoot()
+    {
         _currentAmmo--;
 
         var bullet = Instantiate(weaponStats.BulletPrefab, firePoint.position, firePoint.rotation);
@@ -45,7 +61,7 @@ public class Weapon : MonoBehaviour
     {
         IsReloading = true;
         _animation.Play();
-        yield return new WaitForSeconds(weaponStats.CoolDown);
+        yield return new WaitForSeconds(weaponStats.ReloadTime);
         _currentAmmo = weaponStats.MaxAmmo;
         IsReloading = false;
     }

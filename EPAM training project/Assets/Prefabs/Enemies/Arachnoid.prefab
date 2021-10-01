@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2524553967369097596}
   - component: {fileID: -8703922337119386250}
   - component: {fileID: 4435125031277387755}
+  - component: {fileID: 473685065727340327}
   m_Layer: 0
   m_Name: Arachnoid
   m_TagString: Enemy
@@ -77,9 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 2
-  healthBar: {fileID: 0}
-  animation: {fileID: 3197612246287811145}
+  maxHealthPoints: 2
 --- !u!54 &-8703922337119386250
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,10 +107,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff40e5dae7e7eb14dbea83ce36634c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 19
-  objectName: /Player
-  enemyPower: 3
-  stunTime: 3
+  enemyStats: {fileID: 11400000, guid: 2c4dfae3af942274b852edcf6f789632, type: 2}
+  enemy: {fileID: 473685065727340327}
+--- !u!114 &473685065727340327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980029598182094185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2524553967369097596}
 --- !u!1 &5383539012102016432
 GameObject:
   m_ObjectHideFlags: 0

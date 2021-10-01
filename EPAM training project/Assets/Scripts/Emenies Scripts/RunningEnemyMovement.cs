@@ -4,30 +4,15 @@ using UnityEngine;
 
 public class RunningEnemyMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 4f;
-    private Rigidbody _rb;
-    private Vector3 _direction;
-    [SerializeField] private string objectName = "Player";
-    [SerializeField] private int enemyPower = 3;
-    [SerializeField] private float stunTime = 3f;
-    private bool _hitCheck = true;
-    
-    private void Awake()
-    {
-        _rb = GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        _direction = Player.Instance.GetPosition() - _rb.position;
-        _direction.Normalize();
-    }
+    [SerializeField] private RunningEnemyStats enemyStats;
+    private bool _hitCheck = false;
+    [SerializeField] private Enemy enemy;
 
     private void FixedUpdate()
     {
-        if(_hitCheck)
+        if(!_hitCheck)
         {
-            _rb.MovePosition(_rb.position + _direction * moveSpeed * Time.fixedDeltaTime);
+            enemy.Rigidbody().MovePosition(enemy.Rigidbody().position + enemy.directionNorm * enemyStats.MoveSpeed * Time.fixedDeltaTime);
             transform.LookAt(Player.Instance.transform);
         }
     }
@@ -39,7 +24,7 @@ public class RunningEnemyMovement : MonoBehaviour
             Health health = collision.gameObject.GetComponent<Health>();
             if(health != null)
             {
-                health.RecieveDamage(enemyPower);
+                health.RecieveDamage(enemyStats.EnemyPower);
                 StartCoroutine(Stunning());
             }
         }
@@ -47,8 +32,8 @@ public class RunningEnemyMovement : MonoBehaviour
 
     private IEnumerator Stunning()
     {
-        _hitCheck = false;
-        yield return new WaitForSeconds(stunTime);
         _hitCheck = true;
+        yield return new WaitForSeconds(enemyStats.StunTime);
+        _hitCheck = false;
     }
 }

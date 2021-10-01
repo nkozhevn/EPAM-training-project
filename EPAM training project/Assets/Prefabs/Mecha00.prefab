@@ -43,7 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf19b2a9df057ed45836356e52eab3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedWeapon: 0
+  weapons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &12322896247152059
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,8 +179,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!65 &1796104718652087765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,9 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ab3bf0034bdaf4a8058d5d78a75564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
-  turnSpeed: 10
-  cam: {fileID: 0}
 --- !u!114 &-5701993041643274619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,8 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 10
-  healthBar: {fileID: 0}
+  maxHealthPoints: 10
 --- !u!114 &-7454906881481713618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,3 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc90af00ca5bda4c8e12807e17f055d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: -5701993041643274619}
+  isActive: 0
+  moveSpeed: 20
+  turnSpeed: 10
+  cam: {fileID: 0}

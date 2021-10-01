@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: -2012385886321762097}
   - component: {fileID: -4761776704271092945}
   - component: {fileID: -7601897489701071994}
+  - component: {fileID: -8362227427635526428}
   m_Layer: 0
   m_Name: ReconBot
   m_TagString: Enemy
@@ -174,10 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff40e5dae7e7eb14dbea83ce36634c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
-  objectName: /Player
-  enemyPower: 5
-  stunTime: 1
+  enemyStats: {fileID: 11400000, guid: 98f686023725d824787f45f64f68c953, type: 2}
+  enemy: {fileID: -8362227427635526428}
 --- !u!114 &-7601897489701071994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +189,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 5
-  healthBar: {fileID: 0}
-  animation: {fileID: 915055586674302748}
+  maxHealthPoints: 5
+--- !u!114 &-8362227427635526428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7472696272030029116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: -7601897489701071994}

@@ -22,33 +22,10 @@ public class Health : MonoBehaviour, IDamageable
     private void Awake()
     {
         _healthPoints = maxHealthPoints;
-
-        //_healthSystem = new HealthSystem(healthPoints);
-
-        /*if(gameObject.CompareTag("Player"))
-        {
-            healthBar.Setup(_healthSystem);
-        }*/
     }
 
     public void RecieveDamage(int amount)
     {
         HealthPoints -= amount;
     }
-
-    /*public void DamageEffect(int x)
-    {
-        _healthSystem.Damage(x);
-        if(_healthSystem.GetHealth() == 0)
-        {
-            if(gameObject.CompareTag("Player"))
-            {
-                gameObject.SetActive(false);
-            }
-            else if(gameObject.CompareTag("Enemy"))
-            {
-                Destroy(gameObject);
-            }
-        }
-    }*/
 }

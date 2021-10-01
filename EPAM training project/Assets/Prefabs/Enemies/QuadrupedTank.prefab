@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2649250781368657538}
   - component: {fileID: -2226733663730261915}
   - component: {fileID: 4870276614895376727}
+  - component: {fileID: -6333987927217703609}
   m_Layer: 0
   m_Name: QuadrupedTank
   m_TagString: Enemy
@@ -78,9 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 2
-  healthBar: {fileID: 0}
-  animation: {fileID: 2649250781368657539}
+  maxHealthPoints: 3
 --- !u!54 &-2226733663730261915
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -109,13 +108,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc318eb3bc8cbd747b53395c32cb5720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 17
-  targetName: /Player
-  shootingDist: 50
-  shootingCoolDown: 0.5
+  enemyStats: {fileID: 11400000, guid: d10809fd9ab08cf43a52572b67d9b249, type: 2}
   firePoint: {fileID: 2607566374527185665}
-  bulletPrefab: {fileID: 6137887287921274957, guid: 032a432338449a643b9522b54e2a9b4f, type: 3}
-  bulletForce: 40
+  enemy: {fileID: -6333987927217703609}
+--- !u!114 &-6333987927217703609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883832484011255656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2649250781368657538}
 --- !u!1 &6163358322177761201
 GameObject:
   m_ObjectHideFlags: 0
