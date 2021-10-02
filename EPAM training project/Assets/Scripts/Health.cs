@@ -28,4 +28,6 @@ public class Health : MonoBehaviour, IDamageable
     {
         HealthPoints -= amount;
     }
+
+    public float HealthPercent() => (float)_healthPoints / maxHealthPoints;
 }
