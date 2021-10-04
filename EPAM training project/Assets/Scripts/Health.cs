@@ -21,7 +21,7 @@ public class Health : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        _healthPoints = maxHealthPoints;
+        HealthPoints = maxHealthPoints;
     }
 
     public void RecieveDamage(int amount)
@@ -29,5 +29,5 @@ public class Health : MonoBehaviour, IDamageable
         HealthPoints -= amount;
     }
 
-    public float HealthPercent() => (float)_healthPoints / maxHealthPoints;
+    public float HealthPercent() => (float)HealthPoints / maxHealthPoints;
 }

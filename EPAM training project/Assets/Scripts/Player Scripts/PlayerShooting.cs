@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public event Action WeaponChanged;
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
@@ -20,6 +22,9 @@ public class PlayerShooting : MonoBehaviour
         {KeyCode.Alpha8, 7},
         {KeyCode.Alpha9, 8}
     };
+
+    public Weapon SelectedWeapon() => _selectedWeapon;
+    public int SelectedWeaponIndex() => _selectedWeaponIndex;
 
     private void Start()
     {
@@ -67,5 +72,6 @@ public class PlayerShooting : MonoBehaviour
             weapons[i].gameObject.SetActive(i == _selectedWeaponIndex);
         }
         _selectedWeapon = weapons[_selectedWeaponIndex];
+        WeaponChanged?.Invoke();
     }
 }

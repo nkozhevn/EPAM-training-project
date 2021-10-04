@@ -1,8 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class Weapon : MonoBehaviour
 {
+    public event Action AmmoChanged;
     [SerializeField] private Transform firePoint;
     [SerializeField] private WeaponStats weaponStats;
     
@@ -12,10 +14,19 @@ public class Weapon : MonoBehaviour
     public bool OnShoot;
     public WeaponStats Stats => weaponStats;
     private Animation _animation;
+    public int CurrentAmmo
+    {
+        get => _currentAmmo;
+        set
+        {
+            _currentAmmo = value;
+            AmmoChanged?.Invoke();
+        }
+    }
 
     private void Start()
     {
-        _currentAmmo = weaponStats.MaxAmmo;
+        CurrentAmmo = weaponStats.MaxAmmo;
         _animation = transform.GetComponent<Animation>();
     }
 
@@ -33,7 +44,7 @@ public class Weapon : MonoBehaviour
             {
                 return;
             }
-            if(_currentAmmo <= 0)
+            if(CurrentAmmo <= 0)
             {
                 StartCoroutine(Reload());
                 return;
@@ -51,7 +62,7 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        _currentAmmo--;
+        CurrentAmmo--;
 
         var bullet = Instantiate(weaponStats.BulletPrefab, firePoint.position, firePoint.rotation);
         bullet.AddForce(firePoint.up * weaponStats.BulletForce, ForceMode.Impulse);
@@ -62,7 +73,9 @@ public class Weapon : MonoBehaviour
         IsReloading = true;
         _animation.Play();
         yield return new WaitForSeconds(weaponStats.ReloadTime);
-        _currentAmmo = weaponStats.MaxAmmo;
+        CurrentAmmo = weaponStats.MaxAmmo;
         IsReloading = false;
     }
+
+    public float AmmoPercent() => (float)CurrentAmmo / weaponStats.MaxAmmo;
 }
