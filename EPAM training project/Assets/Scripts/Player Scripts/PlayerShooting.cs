@@ -23,10 +23,10 @@ public class PlayerShooting : MonoBehaviour
         {KeyCode.Alpha9, 8}
     };
 
-    public Weapon SelectedWeapon() => _selectedWeapon;
-    public int SelectedWeaponIndex() => _selectedWeaponIndex;
+    public Weapon SelectedWeapon => _selectedWeapon;
+    public int SelectedWeaponIndex => _selectedWeaponIndex;
 
-    private void Start()
+    private void Awake()
     {
         SelectWeapon();
     }
