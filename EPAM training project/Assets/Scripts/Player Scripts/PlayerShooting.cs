@@ -5,7 +5,7 @@ using System;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public event Action WeaponChanged;
+    public event Action<Weapon> WeaponChanged;
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
@@ -72,6 +72,6 @@ public class PlayerShooting : MonoBehaviour
             weapons[i].gameObject.SetActive(i == _selectedWeaponIndex);
         }
         _selectedWeapon = weapons[_selectedWeaponIndex];
-        WeaponChanged?.Invoke();
+        WeaponChanged?.Invoke(_selectedWeapon);
     }
 }

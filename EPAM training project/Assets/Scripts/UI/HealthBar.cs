@@ -13,6 +13,10 @@ public class HealthBar : MonoBehaviour
         health.HealthChanged += OnHealthChanged;
     }
 
+    private void OnDestroy() {
+        health.HealthChanged -= OnHealthChanged;
+    }
+
     public void OnHealthChanged()
     {
         barImage.fillAmount = health.HealthPercent();

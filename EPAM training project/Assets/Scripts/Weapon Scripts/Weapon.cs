@@ -77,5 +77,5 @@ public class Weapon : MonoBehaviour
         IsReloading = false;
     }
 
-    public float AmmoPercent() => (float)CurrentAmmo / weaponStats.MaxAmmo;
+    public float AmmoPercent => (float)CurrentAmmo / weaponStats.MaxAmmo;
 }
