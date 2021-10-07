@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance{ get; private set; }
+    public static Player Instance{ get; set; }
+    public event Action PlayerDied;
     [SerializeField] private Health health;
-    [SerializeField] public bool isActive;
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float turnSpeed = 10f;
     private Rigidbody _rb;
@@ -17,7 +18,6 @@ public class Player : MonoBehaviour
         Instance = this;
         health.HealthChanged += OnHealthChanged;
         _rb = GetComponent<Rigidbody>();
-        isActive = true;
     }
     
     public Vector3 GetPosition() => transform.position;
@@ -27,8 +27,8 @@ public class Player : MonoBehaviour
     {
         if(health.NoHealth)
         {
+            PlayerDied?.Invoke();
             gameObject.SetActive(false);
-            isActive = false;
         }
     }
 }
