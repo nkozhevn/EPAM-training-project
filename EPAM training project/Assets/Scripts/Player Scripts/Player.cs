@@ -5,7 +5,7 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance{ get; set; }
+    public static Player Instance{ get; private set; }
     public event Action PlayerDied;
     [SerializeField] private Health health;
     [SerializeField] public float moveSpeed = 5f;

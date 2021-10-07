@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 797dc20799edc5a40b237706f383d6dd, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2047,8 +2047,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8dc2293d32adc44cbbd6a5de4c79d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTimer: 1
-  enemyToSpawn: 10
+  spawnTimer: 0.2
+  enemyToSpawn: 30
   enemyPrefabs:
   - {fileID: 7472696272030029116, guid: 7652ea49bcc4e8e4c944d75505203487, type: 3}
   - {fileID: 3980029598182094185, guid: 323e7513d1686cb4a8c7974ce4a1c181, type: 3}
