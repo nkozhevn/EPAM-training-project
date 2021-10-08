@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameLoop : MonoBehaviour
 {
+    public static GameLoop Instance{ get; private set; }
+    public bool gameIsPaused = false;
+    [SerializeField] private PauseScreen pauseScreen;
     [SerializeField] private GameOverScreen gameOverScreen;
 
     private void Awake()
@@ -11,9 +14,24 @@ public class GameLoop : MonoBehaviour
         Player.Instance.PlayerDied += OnPlayerDied;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(gameIsPaused)
+            {
+                pauseScreen.Resume();
+            }
+            else
+            {
+                pauseScreen.Pause();
+            }
+        }
+    }
+
     private void OnPlayerDied()
     {
-        gameOverScreen.Setup();
+        gameOverScreen.GameOver();
     }
 
     private void OnDestroy()

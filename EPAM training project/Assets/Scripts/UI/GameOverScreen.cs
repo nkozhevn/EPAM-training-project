@@ -8,7 +8,7 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private GameObject ingameUI;
     [SerializeField] private string menuSceneName = "Main Menu";
 
-    public void Setup()
+    public void GameOver()
     {
         gameObject.SetActive(true);
         ingameUI.SetActive(false);

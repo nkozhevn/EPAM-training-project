@@ -8,10 +8,10 @@ public class RunningEnemyMovement : MonoBehaviour
     private bool _hitCheck = false;
     [SerializeField] private Enemy enemy;
 
-    private void Awake()
+    /*private void Awake()
     {
         Player.Instance.PlayerDied += OnPlayerDied;
-    }
+    }*/
 
     private void FixedUpdate()
     {
@@ -42,13 +42,13 @@ public class RunningEnemyMovement : MonoBehaviour
         _hitCheck = false;
     }
 
-    private void OnPlayerDied()
+    /*private void OnPlayerDied()
     {
         this.enabled = false;
-    }
+    }*/
 
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         Player.Instance.PlayerDied -= OnPlayerDied;
-    }
+    }*/
 }
