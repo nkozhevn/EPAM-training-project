@@ -8,7 +8,6 @@ public class PauseScreen : MonoBehaviour
     [SerializeField] private GameObject ingameUI;
     [SerializeField] private GameLoop gameLoop;
     [SerializeField] private string menuSceneName = "Main Menu";
-    [SerializeField] private string settingsSceneName = "Settings";
 
     public void Pause()
     {
@@ -31,9 +30,15 @@ public class PauseScreen : MonoBehaviour
         Resume();
     }
 
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+    }
+
     public void SettingsButton()
     {
-        SceneManager.LoadScene(settingsSceneName);
+        
     }
 
     public void MenuButton()

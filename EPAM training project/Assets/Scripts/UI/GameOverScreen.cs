@@ -12,11 +12,13 @@ public class GameOverScreen : MonoBehaviour
     {
         gameObject.SetActive(true);
         ingameUI.SetActive(false);
+        Time.timeScale = 0f;
     }
 
     public void RestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void MenuButton()
