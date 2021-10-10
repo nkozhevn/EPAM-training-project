@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseScreen : MonoBehaviour
 {
     [SerializeField] private GameObject ingameUI;
+    [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameLoop gameLoop;
     [SerializeField] private string menuSceneName = "Main Menu";
 
@@ -38,11 +39,13 @@ public class PauseScreen : MonoBehaviour
 
     public void SettingsButton()
     {
-        
+        settingsMenu.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void MenuButton()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(menuSceneName);
     }
 }
