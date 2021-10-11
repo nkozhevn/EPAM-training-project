@@ -8,10 +8,17 @@ public class GameLoop : MonoBehaviour
     public bool gameIsPaused = false;
     [SerializeField] private PauseScreen pauseScreen;
     [SerializeField] private GameOverScreen gameOverScreen;
+    [SerializeField] private GameOverScreen finishScreen;
+    [SerializeField] private GameObject ingameUI;
+    [SerializeField] private TriggerObjects finish;
 
     private void Awake()
     {
         Player.Instance.PlayerDied += OnPlayerDied;
+
+        ingameUI.SetActive(true);
+
+        Time.timeScale = 1f;
     }
 
     private void Update()
@@ -27,11 +34,21 @@ public class GameLoop : MonoBehaviour
                 pauseScreen.Pause();
             }
         }
+
+        if(finish.IsActivated())
+        {
+            OnFinish();
+        }
     }
 
     private void OnPlayerDied()
     {
         gameOverScreen.GameOver();
+    }
+
+    private void OnFinish()
+    {
+        finishScreen.GameOver();
     }
 
     private void OnDestroy()

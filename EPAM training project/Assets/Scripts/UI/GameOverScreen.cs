@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] private GameObject ingameUI;
+    [SerializeField] private string nextLevelName = "02";
     [SerializeField] private string menuSceneName = "Main Menu";
 
     public void GameOver()
@@ -13,6 +14,12 @@ public class GameOverScreen : MonoBehaviour
         gameObject.SetActive(true);
         ingameUI.SetActive(false);
         Time.timeScale = 0f;
+    }
+
+    public void NextLevelButton()
+    {
+        SceneManager.LoadScene(nextLevelName);
+        Time.timeScale = 1f;
     }
 
     public void RestartButton()

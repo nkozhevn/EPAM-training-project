@@ -232,7 +232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: -5701993041643274619}
-  isActive: 0
   moveSpeed: 20
   turnSpeed: 10
   cam: {fileID: 0}
