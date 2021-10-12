@@ -7,9 +7,27 @@ public class MainMenuScreen : MonoBehaviour
 {
     [SerializeField] private string levelName = "01";
     [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject modsButtons;
+
+    private void Awake()
+    {
+        modsButtons.SetActive(false);
+    }
 
     public void PlayButton()
     {
+        modsButtons.SetActive(true);
+    }
+
+    public void EasyButton()
+    {
+        PlayerPrefs.SetInt("Difficulty", 0);
+        SceneManager.LoadScene(levelName);
+    }
+
+    public void HardButton()
+    {
+        PlayerPrefs.SetInt("Difficulty", 1);
         SceneManager.LoadScene(levelName);
     }
 

@@ -8912,6 +8912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverScene
       objectReference: {fileID: 0}
+    - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
+      propertyPath: ingameUI
+      value: 
+      objectReference: {fileID: 721285726}
     - target: {fileID: 2789037220699407005, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

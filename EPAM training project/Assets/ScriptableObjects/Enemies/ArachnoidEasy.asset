@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82932ad3181b44d4fb40ec84358521cc, type: 3}
-  m_Name: QuadrupedTank
+  m_Script: {fileID: 11500000, guid: c80f471f862c8d845a584a6fd6e7ccf7, type: 3}
+  m_Name: ArachnoidEasy
   m_EditorClassIdentifier: 
-  moveSpeed: 15
-  shootingDist: 50
-  shootingCoolDown: 0.5
-  bulletPrefab: {fileID: 6137887287921274957, guid: 032a432338449a643b9522b54e2a9b4f, type: 3}
-  bulletForce: 50
+  moveSpeed: 17
+  enemyPower: 2
+  stunTime: 3

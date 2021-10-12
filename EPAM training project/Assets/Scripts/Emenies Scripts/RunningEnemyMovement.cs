@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class RunningEnemyMovement : MonoBehaviour
 {
-    [SerializeField] private RunningEnemyStats enemyStats;
+    //[SerializeField] private RunningEnemyStats enemyStats;
+    [SerializeField] private List<RunningEnemyStats> enemyStatsList;
+    private RunningEnemyStats _enemyStats;
     private bool _hitCheck = false;
     [SerializeField] private Enemy enemy;
 
-    /*private void Awake()
+    private void Awake()
     {
-        Player.Instance.PlayerDied += OnPlayerDied;
-    }*/
+        _enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
+    }
 
     private void FixedUpdate()
     {
         if(!_hitCheck)
         {
-            enemy.Rigidbody().MovePosition(enemy.Rigidbody().position + enemy.directionNorm * enemyStats.MoveSpeed * Time.fixedDeltaTime);
+            enemy.Rigidbody().MovePosition(enemy.Rigidbody().position + enemy.directionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
             transform.LookAt(Player.Instance.transform);
         }
     }
@@ -29,7 +32,7 @@ public class RunningEnemyMovement : MonoBehaviour
             Health health = collision.gameObject.GetComponent<Health>();
             if(health != null)
             {
-                health.RecieveDamage(enemyStats.EnemyPower);
+                health.RecieveDamage(_enemyStats.EnemyPower);
                 StartCoroutine(Stunning());
             }
         }
@@ -38,17 +41,7 @@ public class RunningEnemyMovement : MonoBehaviour
     private IEnumerator Stunning()
     {
         _hitCheck = true;
-        yield return new WaitForSeconds(enemyStats.StunTime);
+        yield return new WaitForSeconds(_enemyStats.StunTime);
         _hitCheck = false;
     }
-
-    /*private void OnPlayerDied()
-    {
-        this.enabled = false;
-    }*/
-
-    /*private void OnDestroy()
-    {
-        Player.Instance.PlayerDied -= OnPlayerDied;
-    }*/
 }

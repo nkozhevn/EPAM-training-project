@@ -108,7 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc318eb3bc8cbd747b53395c32cb5720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStats: {fileID: 11400000, guid: d10809fd9ab08cf43a52572b67d9b249, type: 2}
+  enemyStatsList:
+  - {fileID: 11400000, guid: d10809fd9ab08cf43a52572b67d9b249, type: 2}
+  - {fileID: 11400000, guid: 9244c55bac5e07d4ea974e797e4f24c6, type: 2}
   firePoint: {fileID: 2607566374527185665}
   enemy: {fileID: -6333987927217703609}
 --- !u!114 &-6333987927217703609
