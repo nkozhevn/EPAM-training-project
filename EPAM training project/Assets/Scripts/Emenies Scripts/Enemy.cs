@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody _rb;
     [SerializeField] public Vector3 direction{ get; set; }
     [SerializeField] public Vector3 directionNorm{ get; set; }
+    [SerializeField] private int levelPoints;
     public Rigidbody Rigidbody() => _rb;
 
     private void Awake()
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
         if(health.NoHealth)
         {
             Destroy(gameObject);
+            Player.Instance.level.GainLevelPoints(levelPoints);
         }
     }
 }

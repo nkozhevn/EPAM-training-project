@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public static Player Instance{ get; private set; }
     public event Action PlayerDied;
     [SerializeField] private Health health;
+    [SerializeField] public Level level;
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float turnSpeed = 10f;
     private Rigidbody _rb;
@@ -16,7 +17,10 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
         health.HealthChanged += OnHealthChanged;
+        health.HealthPoints = PlayerPrefs.GetInt("MaxHealth");
+
         _rb = GetComponent<Rigidbody>();
     }
     

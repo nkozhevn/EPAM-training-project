@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 2524553967369097596}
+  levelPoints: 1
 --- !u!1 &5383539012102016432
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShootingEnemyMovement : MonoBehaviour
 {
-    //[SerializeField] private ShootingEnemyStats enemyStats;
     [SerializeField] private List<ShootingEnemyStats> enemyStatsList;
     private ShootingEnemyStats _enemyStats;
     private float _shootingTimer = 99999f;

@@ -5,7 +5,6 @@ using System;
 
 public class RunningEnemyMovement : MonoBehaviour
 {
-    //[SerializeField] private RunningEnemyStats enemyStats;
     [SerializeField] private List<RunningEnemyStats> enemyStatsList;
     private RunningEnemyStats _enemyStats;
     private bool _hitCheck = false;

@@ -22,12 +22,16 @@ public class MainMenuScreen : MonoBehaviour
     public void EasyButton()
     {
         PlayerPrefs.SetInt("Difficulty", 0);
+        PlayerPrefs.SetInt("MaxHealth", 20);
+        PlayerPrefs.SetInt("Level", 1);
         SceneManager.LoadScene(levelName);
     }
 
     public void HardButton()
     {
         PlayerPrefs.SetInt("Difficulty", 1);
+        PlayerPrefs.SetInt("MaxHealth", 10);
+        PlayerPrefs.SetInt("Level", 1);
         SceneManager.LoadScene(levelName);
     }
 

@@ -12,13 +12,13 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private GameObject ingameUI;
     [SerializeField] private TriggerObjects finish;
 
-    private void Awake()
+    private void Start()
     {
-        Player.Instance.PlayerDied += OnPlayerDied;
-
         ingameUI.SetActive(true);
 
         Time.timeScale = 1f;
+
+        Player.Instance.PlayerDied += OnPlayerDied;
     }
 
     private void Update()
