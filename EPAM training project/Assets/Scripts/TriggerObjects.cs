@@ -12,4 +12,9 @@ public class TriggerObjects : MonoBehaviour
     {
         _isActivated = true;
     }
+
+    private void OnTriggerExit()
+    {
+        _isActivated = false;
+    }
 }

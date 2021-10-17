@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private float spawnTimer = 1f;
-    [SerializeField] private int enemyToSpawn = 20;
-    [SerializeField] private List<GameObject> enemyPrefabs;
-    [SerializeField] private List<Transform> spawners;
-    private Transform _currentSpawner;
+    [SerializeField] private float spawnTimer = 0.1f;
+    [SerializeField] private int enemyToSpawn = 10;
+    [SerializeField] private GameObject enemyPrefab;
     private int _count;
+    [SerializeField] private TriggerObjects trigger;
 
-    private void Start()
-    {
-        StartCoroutine(Spawning());
-    }
-
-    private IEnumerator Spawning()
+    public IEnumerator Spawning()
     {
         _count = 0;
         while(_count < enemyToSpawn)
         {
+            if(!trigger.IsActivated())
+            {
+                Instantiate(enemyPrefab, transform.position, transform.rotation);
+                _count++;
+            }
             yield return new WaitForSeconds(spawnTimer);
-            _currentSpawner = spawners[Random.Range(0, spawners.Count)];
-            Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], _currentSpawner.position, _currentSpawner.rotation);
-            _count++;
         }
         
     }
