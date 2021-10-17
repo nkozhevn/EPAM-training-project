@@ -5,13 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScreen : MonoBehaviour
 {
-    [SerializeField] private string levelName = "01";
+    [SerializeField] private string levelName = "1";
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject modsButtons;
+    [SerializeField] private GameObject loadPlug;
 
     private void Awake()
     {
         modsButtons.SetActive(false);
+        if(PlayerPrefs.GetInt("Level") > 1)
+        {
+            loadPlug.SetActive(false);
+        }
+    }
+
+    public void LoadButton()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Level").ToString());
     }
 
     public void PlayButton()
@@ -23,7 +33,7 @@ public class MainMenuScreen : MonoBehaviour
     {
         PlayerPrefs.SetInt("Difficulty", 0);
         PlayerPrefs.SetInt("MaxHealth", 20);
-        PlayerPrefs.SetInt("Level", 1);
+        PlayerPrefs.SetInt("PlayerLevel", 1);
         SceneManager.LoadScene(levelName);
     }
 
@@ -31,7 +41,7 @@ public class MainMenuScreen : MonoBehaviour
     {
         PlayerPrefs.SetInt("Difficulty", 1);
         PlayerPrefs.SetInt("MaxHealth", 10);
-        PlayerPrefs.SetInt("Level", 1);
+        PlayerPrefs.SetInt("PlayerLevel", 1);
         SceneManager.LoadScene(levelName);
     }
 

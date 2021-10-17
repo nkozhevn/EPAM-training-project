@@ -5789,6 +5789,10 @@ PrefabInstance:
       propertyPath: ingameUI
       value: 
       objectReference: {fileID: 157234159}
+    - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
+      propertyPath: nextLevelName
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2789037220699407005, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6040,6 +6044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameIsPaused: 0
+  levelNumber: 2
   pauseScreen: {fileID: 1000144530}
   gameOverScreen: {fileID: 1902456169}
   finishScreen: {fileID: 437283899}
@@ -6422,6 +6427,10 @@ PrefabInstance:
       propertyPath: ingameUI
       value: 
       objectReference: {fileID: 157234159}
+    - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
+      propertyPath: nextLevelName
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2789037220699407005, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6737,6 +6746,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1843833325}
+    - target: {fileID: 6492348828549088332, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
+      propertyPath: offset.y
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492348828549088332, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
+      propertyPath: offset.z
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 6492348828549088333, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6747,11 +6764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6492348828549088333, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6492348828549088333, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 6492348828549088333, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
       propertyPath: m_LocalRotation.w

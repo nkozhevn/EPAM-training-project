@@ -22,7 +22,7 @@ public class Level : MonoBehaviour
 
     private void Awake()
     {
-        _level = PlayerPrefs.GetInt("Level");
+        _level = PlayerPrefs.GetInt("PlayerLevel");
         health.HealthUpgrade((_level - 1) * 5);
     }
 
@@ -34,7 +34,7 @@ public class Level : MonoBehaviour
             for(int i = 0; i < LevelPoints / maxLevelPoints; i++)
             {
                 _level++;
-                PlayerPrefs.SetInt("Level", _level);
+                PlayerPrefs.SetInt("PlayerLevel", _level);
                 health.HealthUpgrade(5);
                 LevelPoints -= maxLevelPoints;
             }

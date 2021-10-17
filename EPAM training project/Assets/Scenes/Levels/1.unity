@@ -4510,7 +4510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6492348828549088333, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6492348828549088333, guid: cc4fc13c68663614da2c776348f6478f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7918,6 +7918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameIsPaused: 0
+  levelNumber: 1
   pauseScreen: {fileID: 202547275}
   gameOverScreen: {fileID: 1812186997}
   finishScreen: {fileID: 2789037219910171621}
@@ -9186,10 +9187,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverScene
       objectReference: {fileID: 0}
+    - target: {fileID: 2789037220699407002, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
       propertyPath: ingameUI
       value: 
       objectReference: {fileID: 721285726}
+    - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
+      propertyPath: nextLevelName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2789037220699407005, guid: 05b60ebf382f8a84785beff5eaf9c96f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9554,6 +9563,10 @@ PrefabInstance:
       propertyPath: ingameUI
       value: 
       objectReference: {fileID: 721285726}
+    - target: {fileID: 1606378254443522021, guid: c4db0f686319061499c70f5875785419, type: 3}
+      propertyPath: nextLevelName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4318302011123302102, guid: c4db0f686319061499c70f5875785419, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextLevelButton

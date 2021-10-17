@@ -6,6 +6,7 @@ public class GameLoop : MonoBehaviour
 {
     public static GameLoop Instance{ get; private set; }
     public bool gameIsPaused = false;
+    [SerializeField] private int levelNumber;
     [SerializeField] private PauseScreen pauseScreen;
     [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private GameOverScreen finishScreen;
@@ -17,6 +18,8 @@ public class GameLoop : MonoBehaviour
         ingameUI.SetActive(true);
 
         Time.timeScale = 1f;
+
+        PlayerPrefs.SetInt("Level", levelNumber);
 
         Player.Instance.PlayerDied += OnPlayerDied;
     }
