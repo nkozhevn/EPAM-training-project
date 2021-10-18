@@ -19,8 +19,6 @@ public class GameLoop : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        PlayerPrefs.SetInt("Level", levelNumber);
-
         Player.Instance.PlayerDied += OnPlayerDied;
     }
 

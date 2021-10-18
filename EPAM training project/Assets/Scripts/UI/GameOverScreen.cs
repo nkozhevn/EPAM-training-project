@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] private GameObject ingameUI;
-    [SerializeField] private string nextLevelName = "02";
+    [SerializeField] private string nextLevelName = "2";
     [SerializeField] private string menuSceneName = "Main Menu";
 
     public void GameOver()
@@ -18,6 +19,9 @@ public class GameOverScreen : MonoBehaviour
 
     public void NextLevelButton()
     {
+        PlayerPrefs.SetInt("PlayerLevel", Player.Instance.level.PlayerLevel());
+        PlayerPrefs.SetInt("PlayerLevelPoints", Player.Instance.level.LevelPoints);
+        PlayerPrefs.SetInt("Level", Convert.ToInt32(nextLevelName));
         SceneManager.LoadScene(nextLevelName);
         Time.timeScale = 1f;
     }
@@ -30,6 +34,9 @@ public class GameOverScreen : MonoBehaviour
 
     public void MenuButton()
     {
+        PlayerPrefs.SetInt("PlayerLevel", Player.Instance.level.PlayerLevel());
+        PlayerPrefs.SetInt("PlayerLevelPoints", Player.Instance.level.LevelPoints);
+        PlayerPrefs.SetInt("Level", Convert.ToInt32(nextLevelName));
         SceneManager.LoadScene(menuSceneName);
     }
 }

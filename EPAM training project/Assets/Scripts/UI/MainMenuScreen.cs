@@ -34,6 +34,7 @@ public class MainMenuScreen : MonoBehaviour
         PlayerPrefs.SetInt("Difficulty", 0);
         PlayerPrefs.SetInt("MaxHealth", 20);
         PlayerPrefs.SetInt("PlayerLevel", 1);
+        PlayerPrefs.SetInt("PlayerLevelPoints", 0);
         SceneManager.LoadScene(levelName);
     }
 
@@ -42,6 +43,7 @@ public class MainMenuScreen : MonoBehaviour
         PlayerPrefs.SetInt("Difficulty", 1);
         PlayerPrefs.SetInt("MaxHealth", 10);
         PlayerPrefs.SetInt("PlayerLevel", 1);
+        PlayerPrefs.SetInt("PlayerLevelPoints", 0);
         SceneManager.LoadScene(levelName);
     }
 

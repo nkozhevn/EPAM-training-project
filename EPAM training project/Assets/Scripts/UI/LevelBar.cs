@@ -12,6 +12,7 @@ public class LevelBar : MonoBehaviour
     private void Start()
     {
         level.LevelPointsChanged += OnLevelPointsChanged;
+        OnLevelPointsChanged();
         playerLevelNumber.text = level.StringLevelNumber();
     }
 
