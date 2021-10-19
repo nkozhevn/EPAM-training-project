@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8898311151609199225}
   - component: {fileID: 6028641516005753651}
   - component: {fileID: 7102092661071357863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: -3867999390115791052}
   - component: {fileID: 7321792454890513710}
   - component: {fileID: 5936234214103492569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerBullet1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b, type: 3}
       propertyPath: m_Intensity
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b, type: 3}
       propertyPath: m_CullingMask.m_Bits
