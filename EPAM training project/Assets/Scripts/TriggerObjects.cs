@@ -6,7 +6,7 @@ public class TriggerObjects : MonoBehaviour
 {
     private bool _isActivated = false;
 
-    public bool IsActivated() => _isActivated;
+    public bool IsActivated => _isActivated;
 
     private void OnTriggerEnter()
     {

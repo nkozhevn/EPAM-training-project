@@ -175,9 +175,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1777499931764746985, guid: ec12a739967f4234ca58b637f727617b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b, type: 3}
       propertyPath: m_Range
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b, type: 3}
       propertyPath: m_Color.b

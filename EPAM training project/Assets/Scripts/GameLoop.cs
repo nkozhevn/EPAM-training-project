@@ -36,7 +36,7 @@ public class GameLoop : MonoBehaviour
             }
         }
 
-        if(finish.IsActivated())
+        if(finish.IsActivated)
         {
             OnFinish();
         }

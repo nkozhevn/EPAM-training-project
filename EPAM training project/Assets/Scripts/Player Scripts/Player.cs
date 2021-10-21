@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     {
         if(health.NoHealth)
         {
+            PlayerPrefs.SetInt("Level", 1);
             PlayerDied?.Invoke();
             gameObject.SetActive(false);
         }

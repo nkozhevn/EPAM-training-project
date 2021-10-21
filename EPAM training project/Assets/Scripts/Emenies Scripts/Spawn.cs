@@ -15,7 +15,7 @@ public class Spawn : MonoBehaviour
         _count = 0;
         while(_count < enemyToSpawn)
         {
-            if(!trigger.IsActivated())
+            if(!trigger.IsActivated)
             {
                 Instantiate(enemyPrefab, transform.position, transform.rotation);
                 _count++;
