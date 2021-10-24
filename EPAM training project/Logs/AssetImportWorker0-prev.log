@@ -15,11 +15,11 @@ D:/ПРОЕКТЫ/EPAM-training-project/EPAM training project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63222
+49371
 Successfully changed project path to: D:/ПРОЕКТЫ/EPAM-training-project/EPAM training project
 D:/ПРОЕКТЫ/EPAM-training-project/EPAM training project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 102.01 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 71.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.14f1 (d0d1bb862f9d)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.14f1/Editor/Data/Resources/UnitySubsystems
@@ -35,7 +35,7 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.14f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56568
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56188
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.14f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,93 +43,93 @@ Register platform support module: D:/Unity/2020.3.14f1/Editor/Data/PlaybackEngin
 Register platform support module: D:/Unity/2020.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/Unity/2020.3.14f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: D:/Unity/2020.3.14f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.009333 seconds.
+Registered in 0.003371 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 124.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 81.09 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  5.310 seconds
+- Completed reload, in  2.376 seconds
 Domain Reload Profiling:
-	ReloadAssembly (5311ms)
-		BeginReloadAssembly (104ms)
+	ReloadAssembly (2377ms)
+		BeginReloadAssembly (87ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1451ms)
-			LoadAssemblies (108ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (758ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (621ms)
+			SetupTypeCache (273ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (458ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (309ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (125ms)
-				BeforeProcessingInitializeOnLoad (17ms)
-				ProcessInitializeOnLoadAttributes (190ms)
-				ProcessInitializeOnLoadMethodAttributes (112ms)
+				RefreshPlugins (81ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (153ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (1ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011971 seconds.
+Registered in 0.004782 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 82.80 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 74.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.185 seconds
+- Completed reload, in  1.847 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2186ms)
-		BeginReloadAssembly (272ms)
+	ReloadAssembly (1848ms)
+		BeginReloadAssembly (267ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (1798ms)
-			LoadAssemblies (163ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (1483ms)
+			LoadAssemblies (165ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (606ms)
+			SetupTypeCache (493ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (115ms)
-			SetupLoadedEditorAssemblies (636ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (540ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (83ms)
-				BeforeProcessingInitializeOnLoad (113ms)
-				ProcessInitializeOnLoadAttributes (405ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
+				RefreshPlugins (74ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (334ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 104.9 MB.
 System memory in use after: 105.0 MB.
 
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2446.
-Total: 6.017100 ms (FindLiveObjects: 0.660600 ms CreateObjectMapping: 0.317900 ms MarkObjects: 4.835500 ms  DeleteObjects: 0.200000 ms)
+Total: 4.175600 ms (FindLiveObjects: 0.526400 ms CreateObjectMapping: 0.250000 ms MarkObjects: 3.204500 ms  DeleteObjects: 0.192500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -143,512 +143,388 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Resourses/Space Horde/Enemies/Bullet1-1.obj
-  artifactKey: Guid(5c394b78d0d969f4ebfb0aab6b2a74cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Enemies/Bullet1-1.obj using Guid(5c394b78d0d969f4ebfb0aab6b2a74cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c765a49fe348d4f6e8a21088ac3d031') in 0.355010 seconds 
-  Import took 0.362046 seconds .
+  path: Assets/Resourses/Space Horde/Start Room-10 1.mtl
+  artifactKey: Guid(424a27c24cc017040a48c9bb2c7c1782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-10 1.mtl using Guid(424a27c24cc017040a48c9bb2c7c1782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99c17fed6d68d7ac736c7ab7ab4236c0') in 0.067312 seconds 
+  Import took 0.073123 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000392 seconds.
-  path: Assets/Resourses/Space Horde/Enemies/Bullet1-0.obj
-  artifactKey: Guid(897bfaaee25360b43bec13930dfb9ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Enemies/Bullet1-0.obj using Guid(897bfaaee25360b43bec13930dfb9ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd890b066d69805bb5a5b515d4f42351d') in 0.104174 seconds 
-  Import took 0.110551 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000443 seconds.
-  path: Assets/Resourses/Space Horde/Enemies/Bullet1-1.png
-  artifactKey: Guid(6e667d54369b43448b638c12447ac88b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Enemies/Bullet1-1.png using Guid(6e667d54369b43448b638c12447ac88b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df081ed5c40bb747602186f1f475f49c') in 0.042681 seconds 
-  Import took 0.056217 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000388 seconds.
-  path: Assets/Resourses/Space Horde/Enemies/Bullet1-0.png
-  artifactKey: Guid(22eff43766985f84ba69775448d01123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Enemies/Bullet1-0.png using Guid(22eff43766985f84ba69775448d01123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '422d68ede6239e1fa55d15f4e54ade09') in 0.053329 seconds 
-  Import took 0.101399 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000339 seconds.
-  path: Assets/Resourses/Space Horde/Enemies
-  artifactKey: Guid(3e7fd7e95e7e4724ab0a1d88c1cea04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Enemies using Guid(3e7fd7e95e7e4724ab0a1d88c1cea04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a045a3c0d3440f0600f92e6fde61a28') in 0.037297 seconds 
-  Import took 0.058743 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 60.592492 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93cc8c068aff24cdd01322c91e27fef9') in 0.040840 seconds 
-  Import took 0.052091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.578067 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e37e524fea3c61b7773016b067e275') in 0.033321 seconds 
-  Import took 0.042766 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.845731 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab06bd1d64a30f330b943ccd6d032975') in 0.028623 seconds 
-  Import took 0.047480 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.186466 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c134c60b0a2eda243506375e931709dc') in 0.037661 seconds 
-  Import took 0.058284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.877450 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda13bcda5a29638793b9fa72bd9111e') in 0.038483 seconds 
-  Import took 0.065958 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.213013 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0801d5c800b6df61314f56ed373c11e') in 0.041456 seconds 
-  Import took 0.048714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.767992 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4c7da05dc447b9ccb21e05f8d58ef2') in 0.024850 seconds 
-  Import took 0.041955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.100899 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2015f840305d94542e56d1412c48597') in 0.023550 seconds 
-  Import took 0.033452 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.073916 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '456fc42a9803c1c7964efe085777c0cc') in 0.026213 seconds 
-  Import took 0.055065 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.342264 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb720ef348b922b9a250aa080291970') in 0.055779 seconds 
-  Import took 0.061143 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 57.146736 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f9f7c1c14942237a70da3ef937f38f7') in 0.032134 seconds 
-  Import took 0.042107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.209616 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27305bc436f30582fd325ccb542785bc') in 0.026949 seconds 
-  Import took 0.041459 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.172833 seconds.
-  path: Assets/Prefabs/Enemies/Red enemy.prefab
-  artifactKey: Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/Red enemy.prefab using Guid(c746461c2a379684b908c2b28e8a8585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff984d26f359c2341858209741cee96e') in 0.030551 seconds 
-  Import took 0.037490 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005516 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.267 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2269ms)
-		BeginReloadAssembly (212ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (68ms)
-		EndReloadAssembly (1937ms)
-			LoadAssemblies (205ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (666ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (83ms)
-			SetupLoadedEditorAssemblies (718ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (100ms)
-				ProcessInitializeOnLoadAttributes (578ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (36ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1976 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 107.9 MB.
-System memory in use after: 108.0 MB.
-
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2495.
-Total: 7.889000 ms (FindLiveObjects: 0.397800 ms CreateObjectMapping: 0.246900 ms MarkObjects: 6.925200 ms  DeleteObjects: 0.316100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 593.226457 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-11 1.obj
-  artifactKey: Guid(8ec9aff661848b040b3bd34506cefb7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-11 1.obj using Guid(8ec9aff661848b040b3bd34506cefb7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d8ccd8b1414dbedc7c27117acc9d344') in 0.239248 seconds 
-  Import took 0.261759 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-11 1.png
-  artifactKey: Guid(ef6561fbc324f3f43b7bd712ef550bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-11 1.png using Guid(ef6561fbc324f3f43b7bd712ef550bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5108f489d6d3220f24e375f24061e53') in 0.031398 seconds 
-  Import took 0.044245 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.633538 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-11.mtl
-  artifactKey: Guid(22f2fa83c1651744e813659eecd38003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-11.mtl using Guid(22f2fa83c1651744e813659eecd38003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db3220e71279ebdb285467f5acc8401b') in 0.024768 seconds 
-  Import took 0.035691 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.688780 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-10 1.obj
-  artifactKey: Guid(6652a6a2a8dc05940850af743df31374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-10 1.obj using Guid(6652a6a2a8dc05940850af743df31374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b199bed0139de0ba208ed11af0d3b940') in 0.113622 seconds 
-  Import took 0.124213 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000576 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-10 1.png
-  artifactKey: Guid(949e80b2cb424e743ae9ed217fb48d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-10 1.png using Guid(949e80b2cb424e743ae9ed217fb48d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed764e8696c35c00e45478fde925fb0d') in 0.016199 seconds 
-  Import took 0.042121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.663750 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-9 1.obj
-  artifactKey: Guid(b751b6c71bcb49245ad4cfb90944ed8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-9 1.obj using Guid(b751b6c71bcb49245ad4cfb90944ed8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b782eaf9a2ed38318a15c06a745a99f') in 0.082512 seconds 
-  Import took 0.091960 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000516 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-9 1.png
-  artifactKey: Guid(1154d393e32ae534094d07211946566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-9 1.png using Guid(1154d393e32ae534094d07211946566d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82fd570ba628e796dfd0f84452e0d924') in 0.009936 seconds 
-  Import took 0.015355 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.558507 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-5 1.obj
-  artifactKey: Guid(7084a1cc96590cb43ab1c072ef647693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-5 1.obj using Guid(7084a1cc96590cb43ab1c072ef647693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96c55555011b522fc11da74abc1773af') in 0.088536 seconds 
-  Import took 0.114714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000620 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-10 2.png
-  artifactKey: Guid(9c568e05330683b48828ab9598b963cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-10 2.png using Guid(9c568e05330683b48828ab9598b963cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cafb93acf4e52e8c6bd043128f7c37f0') in 0.079461 seconds 
-  Import took 0.108570 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001802 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-10 2.obj
-  artifactKey: Guid(f8f529af91cc3cf40922ff9f4dbb65e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-10 2.obj using Guid(f8f529af91cc3cf40922ff9f4dbb65e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a39da1a723d6993eddb5f4cbeb00efd0') in 0.095316 seconds 
-  Import took 0.105153 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-9 2.obj
-  artifactKey: Guid(1aaf8f0821c043b44ab0f124b2f1aa08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-9 2.obj using Guid(1aaf8f0821c043b44ab0f124b2f1aa08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1760a8fe6126e3f63c1a04d4201369') in 0.112521 seconds 
-  Import took 0.127008 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000420 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-5 1.png
-  artifactKey: Guid(6fba4a4dd0783f743b03b074d1229f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-5 1.png using Guid(6fba4a4dd0783f743b03b074d1229f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541202df72bdf06194366e875161cf70') in 0.024036 seconds 
-  Import took 0.031686 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000397 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-8 1.png
-  artifactKey: Guid(6be275c4ea84f5740a8f805e27161012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-8 1.png using Guid(6be275c4ea84f5740a8f805e27161012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9d2a9e3df65cdda367cf12a5ac4923a') in 0.025757 seconds 
-  Import took 0.035788 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-7 1.png
-  artifactKey: Guid(c0498ad088094e54993b6dc7f8b34445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-7 1.png using Guid(c0498ad088094e54993b6dc7f8b34445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a016be854e3d5cdb1af2e9738f745d10') in 0.029532 seconds 
-  Import took 0.037088 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000439 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-8 1.obj
-  artifactKey: Guid(d068ea61f76fb4340ad79c234d2ad72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-8 1.obj using Guid(d068ea61f76fb4340ad79c234d2ad72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240d69f3f45dbf8f4ca3c9304f4dca26') in 0.090615 seconds 
-  Import took 0.112466 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-7 1.obj
-  artifactKey: Guid(f6978b379af1305499688442db83c5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-7 1.obj using Guid(f6978b379af1305499688442db83c5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc67f2e62497ea34b4fef74b560d92d8') in 0.082105 seconds 
-  Import took 0.087324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-6 1.png
-  artifactKey: Guid(662fe9f5922e6984da3c419f184eaecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-6 1.png using Guid(662fe9f5922e6984da3c419f184eaecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2a71bd47c0bbb6d538dc30c8050d0b9') in 0.032140 seconds 
-  Import took 0.048441 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001234 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-6 1.obj
-  artifactKey: Guid(c0b125dcb338ffc4083fa1a9e189921f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-6 1.obj using Guid(c0b125dcb338ffc4083fa1a9e189921f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '174030b50d4d3a805e2c15eb86d7530e') in 0.097045 seconds 
-  Import took 0.102746 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000518 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-9 2.png
-  artifactKey: Guid(97bdb684a5730554aab0c3a603b1f1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-9 2.png using Guid(97bdb684a5730554aab0c3a603b1f1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd60e9e6e48a651af1afffc0286d116') in 0.014981 seconds 
-  Import took 0.023467 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.495417 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-11.obj
-  artifactKey: Guid(017ebef7b4780d14eb11ea079ffbf59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-11.obj using Guid(017ebef7b4780d14eb11ea079ffbf59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b0ff0529a674bd766c01e22a7040e51') in 0.070664 seconds 
-  Import took 0.097646 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013091 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-11.obj
-  artifactKey: Guid(017ebef7b4780d14eb11ea079ffbf59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-11.obj using Guid(017ebef7b4780d14eb11ea079ffbf59f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b0ff0529a674bd766c01e22a7040e51') in 0.090890 seconds 
-  Import took 0.110694 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.657205 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-3 1.obj
-  artifactKey: Guid(32f7c3f89c55d0f4d924b4d7dfb07c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-3 1.obj using Guid(32f7c3f89c55d0f4d924b4d7dfb07c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '162c5c00b785296b393f6fe5ab53b8cd') in 0.077743 seconds 
-  Import took 0.085645 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000462 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-2 1.obj
-  artifactKey: Guid(99c5aabaa2d620b459f0a17cd10fd5d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-2 1.obj using Guid(99c5aabaa2d620b459f0a17cd10fd5d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2389df3af7895074ffeaa2b7eb02ea1') in 0.088722 seconds 
-  Import took 0.115647 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000363 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-3 1.png
-  artifactKey: Guid(8551370e6e942d04d99211c9dae99c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-3 1.png using Guid(8551370e6e942d04d99211c9dae99c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ab1e319a2ea263c7b396a70ab2d2d26') in 0.020465 seconds 
-  Import took 0.030041 seconds .
+  Time since last request: 43.982827 seconds.
+  path: Assets/Resourses/Space Horde/Start Room-1 2.obj
+  artifactKey: Guid(8c35657261e2e044d89a52a64b59e64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-1 2.obj using Guid(8c35657261e2e044d89a52a64b59e64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '037102559b8006dce3e8f8d5dd4d4f49') in 0.217714 seconds 
+  Import took 0.238042 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000476 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-1 1.png
-  artifactKey: Guid(07d6b1d63d063494f8c8c4cb349cbb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-1 1.png using Guid(07d6b1d63d063494f8c8c4cb349cbb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd8cf945a506300215b62824e00fd227') in 0.048193 seconds 
-  Import took 0.062714 seconds .
+  path: Assets/Resourses/Space Horde/Start Room-1 2.png
+  artifactKey: Guid(6eb630530f684d24eb6be8e4c3ccefe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-1 2.png using Guid(6eb630530f684d24eb6be8e4c3ccefe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc02611c69f538ada907fff65bef520c') in 0.021462 seconds 
+  Import took 0.025933 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000467 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-2 1.png
-  artifactKey: Guid(6b9660b9e0172e64ca0ee932cfd80801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-2 1.png using Guid(6b9660b9e0172e64ca0ee932cfd80801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9d40337e8177d096e6273c1f74f083') in 0.019548 seconds 
-  Import took 0.031219 seconds .
+  Time since last request: 0.000370 seconds.
+  path: Assets/Resourses/Space Horde/Start Room-3 2.obj
+  artifactKey: Guid(c573c048f37313d4dae93c80ae6fa84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-3 2.obj using Guid(c573c048f37313d4dae93c80ae6fa84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3826da2d7fc6cb960aabd8ed2f5a35b2') in 0.043608 seconds 
+  Import took 0.048793 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000402 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-1 1.obj
-  artifactKey: Guid(54065e3e315bc024eb486475b2b7e9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-1 1.obj using Guid(54065e3e315bc024eb486475b2b7e9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd076dca178735ff1a04972282d7ea0') in 0.073861 seconds 
-  Import took 0.087211 seconds .
+  Time since last request: 0.957000 seconds.
+  path: Assets/Resourses/Space Horde/Start Room-3 2.png
+  artifactKey: Guid(04709cbd2bc3da944b2f0bd6ba3bb817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-3 2.png using Guid(04709cbd2bc3da944b2f0bd6ba3bb817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b8b887b529248a2266f6ea314cae3c') in 0.014389 seconds 
+  Import took 0.022836 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-0 1.png
-  artifactKey: Guid(370aa68caf66f554198f3eee51db9a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-0 1.png using Guid(370aa68caf66f554198f3eee51db9a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '041845ee64b64ce0a0fbdb3fab924a18') in 0.024925 seconds 
-  Import took 0.051091 seconds .
+  Time since last request: 0.000569 seconds.
+  path: Assets/Resourses/Space Horde/Start Room-3 3.obj
+  artifactKey: Guid(aa1879122c4ce584f9cf32c4e8768a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-3 3.obj using Guid(aa1879122c4ce584f9cf32c4e8768a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0b61a2ab4ff52f033c4b8c0f4c9e90f') in 0.069998 seconds 
+  Import took 0.076123 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000382 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-4 1.png
-  artifactKey: Guid(ed9fe372fde651b4aa8bcef3b0a1abcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-4 1.png using Guid(ed9fe372fde651b4aa8bcef3b0a1abcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8933a8ddf1b5016aa3c3c0827506d303') in 0.034955 seconds 
-  Import took 0.049979 seconds .
+  Time since last request: 0.000301 seconds.
+  path: Assets/Resourses/Space Horde/Start Room-3 2.png
+  artifactKey: Guid(04709cbd2bc3da944b2f0bd6ba3bb817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-3 2.png using Guid(04709cbd2bc3da944b2f0bd6ba3bb817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b8b887b529248a2266f6ea314cae3c') in 0.010169 seconds 
+  Import took 0.016728 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-4 1.obj
-  artifactKey: Guid(c493e184c81f92245bd1af7813e0aecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-4 1.obj using Guid(c493e184c81f92245bd1af7813e0aecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8646a7f29ae026017a7e4cc3ec116502') in 0.074955 seconds 
-  Import took 0.098928 seconds .
+  Time since last request: 0.000544 seconds.
+  path: Assets/Resourses/Space Horde/Start Room-3 3.png
+  artifactKey: Guid(966949bc608580941b998d909578300d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Start Room-3 3.png using Guid(966949bc608580941b998d909578300d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64f8a661f2460b44dba64a5610c620fe') in 0.012649 seconds 
+  Import took 0.028887 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000361 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-0 1.obj
-  artifactKey: Guid(8a34c805afad03a4a8b8042e97f5ed70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-0 1.obj using Guid(8a34c805afad03a4a8b8042e97f5ed70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd004c53ee7c16c1fe1a76f2871cb4eee') in 0.099102 seconds 
-  Import took 0.119249 seconds .
+  Time since last request: 7.592302 seconds.
+  path: Assets/Resourses/Space Horde/Objects-8.obj
+  artifactKey: Guid(a008259faf04f1d49abe088229f576c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-8.obj using Guid(a008259faf04f1d49abe088229f576c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c80a005098bd53a7ff36dfb519f47dc') in 0.061439 seconds 
+  Import took 0.068750 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.009454 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-0 1.obj
-  artifactKey: Guid(8a34c805afad03a4a8b8042e97f5ed70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-0 1.obj using Guid(8a34c805afad03a4a8b8042e97f5ed70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd004c53ee7c16c1fe1a76f2871cb4eee') in 0.076182 seconds 
-  Import took 0.083286 seconds .
+  Time since last request: 0.000475 seconds.
+  path: Assets/Resourses/Space Horde/Objects-8.png
+  artifactKey: Guid(90835c1e338d63440b32d1dd82220464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-8.png using Guid(90835c1e338d63440b32d1dd82220464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe59aecc5d89fe4b94f5169f40d7347a') in 0.009042 seconds 
+  Import took 0.032687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.102518 seconds.
+  path: Assets/Resourses/Space Horde/Objects-5.obj
+  artifactKey: Guid(8598327df298c99449046e1c81f65875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-5.obj using Guid(8598327df298c99449046e1c81f65875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6a8b0dfc2005b5a0fc0c22f49ec830') in 0.094323 seconds 
+  Import took 0.102753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Assets/Resourses/Space Horde/Objects-5.png
+  artifactKey: Guid(6dff7a1f51eebfa428d56224f061474f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-5.png using Guid(6dff7a1f51eebfa428d56224f061474f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ba1099a53d6358bd5028c9222fcff6') in 0.010537 seconds 
+  Import took 0.017540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/Resourses/Space Horde/Objects-6.obj
+  artifactKey: Guid(88a29f240684d364c834be71ade8b0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-6.obj using Guid(88a29f240684d364c834be71ade8b0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da7d92e305fd1ce12018e0d91fd3a9e') in 0.053063 seconds 
+  Import took 0.071881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000394 seconds.
+  path: Assets/Resourses/Space Horde/Objects-7.png
+  artifactKey: Guid(1697e38e234994145ae2cfb884636dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-7.png using Guid(1697e38e234994145ae2cfb884636dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fe1236ee461d2a7d3c5dd153cbc5f61') in 0.019886 seconds 
+  Import took 0.028199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Resourses/Space Horde/Objects-7.obj
+  artifactKey: Guid(b0489c98f22be554fad56c73e65c463a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-7.obj using Guid(b0489c98f22be554fad56c73e65c463a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a29ceab484f471a3f7340713c465ba') in 0.051667 seconds 
+  Import took 0.057988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000522 seconds.
+  path: Assets/Resourses/Space Horde/Objects-4.png
+  artifactKey: Guid(a1262169c3ffc4b40988ccb966c05c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-4.png using Guid(a1262169c3ffc4b40988ccb966c05c14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69fed043baa08858db723507d316a460') in 0.017311 seconds 
+  Import took 0.028927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000543 seconds.
+  path: Assets/Resourses/Space Horde/Objects-2.obj
+  artifactKey: Guid(977a7cf4bc2783f4e8509b9026236b11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-2.obj using Guid(977a7cf4bc2783f4e8509b9026236b11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13f861b7c6655eb96824a7e5e6680d2b') in 0.054452 seconds 
+  Import took 0.060950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Resourses/Space Horde/Objects-2.png
+  artifactKey: Guid(b1476d970381f6047a441a87f1cc7072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-2.png using Guid(b1476d970381f6047a441a87f1cc7072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca8e596625b93af7b52196821c465747') in 0.011841 seconds 
+  Import took 0.022566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/Resourses/Space Horde/Objects-3.obj
+  artifactKey: Guid(8322701291e53ce47b1dca3e13a10daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-3.obj using Guid(8322701291e53ce47b1dca3e13a10daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eeb98d213b9fd70ef5757a8d55faa66') in 0.061690 seconds 
+  Import took 0.111965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Resourses/Space Horde/Objects-4.obj
+  artifactKey: Guid(46c82b09abfe0d64fb5348dafc2ee10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-4.obj using Guid(46c82b09abfe0d64fb5348dafc2ee10c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25beca4d21e1b0269b3c3aa365b7c116') in 0.054617 seconds 
+  Import took 0.075478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/Resourses/Space Horde/Objects-3.obj
+  artifactKey: Guid(8322701291e53ce47b1dca3e13a10daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-3.obj using Guid(8322701291e53ce47b1dca3e13a10daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eeb98d213b9fd70ef5757a8d55faa66') in 0.057451 seconds 
+  Import took 0.064352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Resourses/Space Horde/Objects-3.png
+  artifactKey: Guid(0155ddf3294d87742b6d78b7ad46efd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-3.png using Guid(0155ddf3294d87742b6d78b7ad46efd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a1a83c9ebea11d62993e0f76b19b63') in 0.013168 seconds 
+  Import took 0.028640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Resourses/Space Horde/Objects-6.png
+  artifactKey: Guid(043bffb183df93642ae6fd178042e2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-6.png using Guid(043bffb183df93642ae6fd178042e2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3672710cf6ceb9cd4cdcdd4c246eb7cd') in 0.012808 seconds 
+  Import took 0.054457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.488902 seconds.
+  path: Assets/Resourses/Space Horde/Objects-0.obj
+  artifactKey: Guid(d13011c6fa7bd4b499b7f02624fcdfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-0.obj using Guid(d13011c6fa7bd4b499b7f02624fcdfa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e2a59229f36ee2cdb5e77defa4b70c3') in 0.054980 seconds 
+  Import took 0.061446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/Resourses/Space Horde/Objects-1.png
+  artifactKey: Guid(56c4331f8043821489f69322357603da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-1.png using Guid(56c4331f8043821489f69322357603da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273be17790fab9fd05e97eb6ad099353') in 0.018788 seconds 
+  Import took 0.025708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Resourses/Space Horde/Objects-1.obj
+  artifactKey: Guid(f4e1cd15b810184429c60d1a658cde30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-1.obj using Guid(f4e1cd15b810184429c60d1a658cde30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fdf3537973f878f5dc48738c60c5c8b') in 0.052405 seconds 
+  Import took 0.100288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000517 seconds.
+  path: Assets/Resourses/Space Horde/Objects-0.png
+  artifactKey: Guid(05e050ff69c03ce4eaedaeaec2030919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Objects-0.png using Guid(05e050ff69c03ce4eaedaeaec2030919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa7e8de04a813ab0c6d241dafd51cf57') in 0.020076 seconds 
+  Import took 0.034928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 324.672599 seconds.
+  path: Assets/Prefabs/Player 1.prefab
+  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '122cc136ba45fa361d4c2045e509182c') in 0.083132 seconds 
+  Import took 0.126598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016291 seconds.
+  path: Assets/Prefabs/Player 1.prefab
+  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '122cc136ba45fa361d4c2045e509182c') in 0.027791 seconds 
+  Import took 0.037803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.263172 seconds.
+  path: Assets/Prefabs/Objects/Space Horde
+  artifactKey: Guid(16620bf2adf884d4ca6b21fc7f6e125e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Space Horde using Guid(16620bf2adf884d4ca6b21fc7f6e125e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fec302930052edba3eb8fc0367e41a2') in 0.010741 seconds 
+  Import took 0.017789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.138193 seconds.
+  path: Assets/Prefabs/Chest 1.prefab
+  artifactKey: Guid(da4884a0a4dab0b4795cd6ffdeb60a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Chest 1.prefab using Guid(da4884a0a4dab0b4795cd6ffdeb60a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11d955be702f6a11bc6b747cbb340656') in 0.031717 seconds 
+  Import took 0.038992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.683505 seconds.
+  path: Assets/Prefabs/Objects/Space Horde/Door.prefab
+  artifactKey: Guid(3ea64030679d1074cb635247feafccef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Space Horde/Door.prefab using Guid(3ea64030679d1074cb635247feafccef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01cabec75d36ebd765e95da93c0a8f74') in 0.032328 seconds 
+  Import took 0.038962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.201081 seconds.
+  path: Assets/Prefabs/Objects/Space Horde/Big box.prefab
+  artifactKey: Guid(f9a47ae653f011f40a4ee882d412bc9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Space Horde/Big box.prefab using Guid(f9a47ae653f011f40a4ee882d412bc9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767c7b5328e2821ffeefed1230133934') in 0.028679 seconds 
+  Import took 0.043931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.698287 seconds.
+  path: Assets/Prefabs/Objects/Space Horde/Bed.prefab
+  artifactKey: Guid(553748ffb5e9fa34db31675b31ec8371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Space Horde/Bed.prefab using Guid(553748ffb5e9fa34db31675b31ec8371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd471264a4349613560da8dc575472ca') in 0.044382 seconds 
+  Import took 0.051080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.346580 seconds.
+  path: Assets/Prefabs/Objects/Space Horde/Little box.prefab
+  artifactKey: Guid(900d5a5001c514a4f8716f508267b832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Space Horde/Little box.prefab using Guid(900d5a5001c514a4f8716f508267b832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe54be10eef0464ce2440ac1f843fb68') in 0.028181 seconds 
+  Import took 0.034748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.006498 seconds.
+  path: Assets/Prefabs/Objects/Space Horde/Arch.prefab
+  artifactKey: Guid(d2fd137a53d86e64893befbfe6408247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Space Horde/Arch.prefab using Guid(d2fd137a53d86e64893befbfe6408247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c9ede0feeefd86a449776fa0184ac5b') in 0.024751 seconds 
+  Import took 0.031577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.384484 seconds.
+  path: Assets/Prefabs/Objects/Space Horde/Corridor.prefab
+  artifactKey: Guid(53b6daaecd5b2c54db68e18d0e4dd1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Space Horde/Corridor.prefab using Guid(53b6daaecd5b2c54db68e18d0e4dd1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73024178267cbdccfc18927304da58d1') in 0.028643 seconds 
+  Import took 0.041516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 960.123684 seconds.
+  path: Assets/Resourses/Space Horde/Materials/Start Room-1 2.mat
+  artifactKey: Guid(081d9af7fdc549942b41588e3c3fd7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Materials/Start Room-1 2.mat using Guid(081d9af7fdc549942b41588e3c3fd7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1374660c98961a63d63e0a073ac82822') in 0.055901 seconds 
+  Import took 0.091266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000609 seconds.
+  path: Assets/Resourses/Space Horde/Materials/Start Room-2 1.mat
+  artifactKey: Guid(e9a6804e53f9e2e469ed09e9c65d73fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Materials/Start Room-2 1.mat using Guid(e9a6804e53f9e2e469ed09e9c65d73fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a2218e850c781ebf3afd434973e710') in 0.048575 seconds 
+  Import took 0.057563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000490 seconds.
+  path: Assets/Resourses/Space Horde/Materials/Start Room-1 2.mat
+  artifactKey: Guid(081d9af7fdc549942b41588e3c3fd7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Materials/Start Room-1 2.mat using Guid(081d9af7fdc549942b41588e3c3fd7a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1374660c98961a63d63e0a073ac82822') in 0.036463 seconds 
+  Import took 0.046233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000500 seconds.
+  path: Assets/Resourses/Space Horde/Materials/Start Room-2 1.mat
+  artifactKey: Guid(e9a6804e53f9e2e469ed09e9c65d73fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Materials/Start Room-2 1.mat using Guid(e9a6804e53f9e2e469ed09e9c65d73fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a2218e850c781ebf3afd434973e710') in 0.032290 seconds 
+  Import took 0.041100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000520 seconds.
+  path: Assets/Resourses/Space Horde/Materials/Start Room-10 1.mat
+  artifactKey: Guid(2cb9f3419d466544ab169d58a65948cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resourses/Space Horde/Materials/Start Room-10 1.mat using Guid(2cb9f3419d466544ab169d58a65948cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2891c9881f37cbbb5c1bb5b314b15738') in 0.031302 seconds 
+  Import took 0.039469 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005393 seconds.
+Registered in 0.008568 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.335 seconds
+- Completed reload, in  2.584 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2336ms)
-		BeginReloadAssembly (232ms)
+	ReloadAssembly (2585ms)
+		BeginReloadAssembly (233ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
+			DisableScriptedObjects (13ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (76ms)
-		EndReloadAssembly (1967ms)
-			LoadAssemblies (189ms)
+			CreateAndSetChildDomain (72ms)
+		EndReloadAssembly (2194ms)
+			LoadAssemblies (227ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (605ms)
+			SetupTypeCache (784ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (122ms)
-			SetupLoadedEditorAssemblies (765ms)
+			RebuildScriptCaches (101ms)
+			SetupLoadedEditorAssemblies (811ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (23ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (2ms)
 				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (142ms)
-				ProcessInitializeOnLoadAttributes (586ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				BeforeProcessingInitializeOnLoad (150ms)
+				ProcessInitializeOnLoadAttributes (619ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (19ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1976 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 108.0 MB.
 System memory in use after: 108.1 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2500.
-Total: 4.714800 ms (FindLiveObjects: 0.396900 ms CreateObjectMapping: 0.230100 ms MarkObjects: 3.911500 ms  DeleteObjects: 0.170000 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2496.
+Total: 4.892800 ms (FindLiveObjects: 0.401600 ms CreateObjectMapping: 0.285000 ms MarkObjects: 3.981900 ms  DeleteObjects: 0.220400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -662,349 +538,69 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 246.804756 seconds.
-  path: Assets/Prefabs/Spawner 1.prefab
-  artifactKey: Guid(0fb40fe2d587b014a971df5b31edde5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Spawner 1.prefab using Guid(0fb40fe2d587b014a971df5b31edde5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b1936bf9fc7cbd8c4c0e64d4506aa9') in 0.219135 seconds 
-  Import took 0.268280 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003529 seconds.
-  path: Assets/Prefabs/Spawner 1.prefab
-  artifactKey: Guid(0fb40fe2d587b014a971df5b31edde5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Spawner 1.prefab using Guid(0fb40fe2d587b014a971df5b31edde5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b1936bf9fc7cbd8c4c0e64d4506aa9') in 0.031099 seconds 
-  Import took 0.045597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.130127 seconds.
-  path: Assets/Prefabs/Chest.prefab
-  artifactKey: Guid(9b571e2291a492341b502aedcf58ecbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Chest.prefab using Guid(9b571e2291a492341b502aedcf58ecbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65e0f3a9dd5412681ac4a63c25e57fe') in 0.037709 seconds 
-  Import took 0.058545 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 111.991147 seconds.
+  Time since last request: 390.370299 seconds.
   path: Assets/Prefabs/Player 1.prefab
   artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b5d5d833a17d2cb439adc375f7a2085') in 0.046916 seconds 
-  Import took 0.057758 seconds .
+Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ba0cc9b5df938609be1f4ecb51bc74') in 0.180524 seconds 
+  Import took 0.254045 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.386036 seconds.
-  path: Assets/Prefabs/Player 1.prefab
-  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1eab5ce95a39fcbb20e72e12edef158') in 0.032280 seconds 
-  Import took 0.042107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.791092 seconds.
-  path: Assets/Prefabs/Player 1.prefab
-  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40514998657843e2464406860509c638') in 0.033256 seconds 
-  Import took 0.047424 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.406066 seconds.
-  path: Assets/Prefabs/Player 1.prefab
-  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3540ec90cd99d3a0a3a2c65d65f45c0') in 0.039806 seconds 
-  Import took 0.058919 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.190017 seconds.
-  path: Assets/Prefabs/Player 1.prefab
-  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '207f83d9b203ccae9c096339237d15f8') in 0.056749 seconds 
-  Import took 0.068836 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.273471 seconds.
-  path: Assets/Prefabs/Player 1.prefab
-  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2983ab932c8abc87d6313e53027c83be') in 0.028824 seconds 
-  Import took 0.053199 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.085899 seconds.
-  path: Assets/Prefabs/Player 1.prefab
-  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a91dab0b8ea668ea6f4014780d762a45') in 0.032005 seconds 
-  Import took 0.041606 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.412504 seconds.
-  path: Assets/Prefabs/Player 1.prefab
-  artifactKey: Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player 1.prefab using Guid(c5b7e5f994ccaa0429b86e5598ee32e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9651107fa0d2bcbec6ff50293435b425') in 0.081780 seconds 
-  Import took 0.101511 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 507.576289 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-10 2.mtl
-  artifactKey: Guid(85e4c17ef9f75694faf9737bbd76dc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-10 2.mtl using Guid(85e4c17ef9f75694faf9737bbd76dc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd10d34751733126fecb86470f1b08e') in 0.050460 seconds 
-  Import took 0.106443 seconds .
+  Time since last request: 88.694024 seconds.
+  path: Assets/Prefabs/Weapons/Weapon3.prefab
+  artifactKey: Guid(b666713b227a5d04f99ea69cf7ae3e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapons/Weapon3.prefab using Guid(b666713b227a5d04f99ea69cf7ae3e42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8355b8afc97c5f34d4075f51af27630') in 0.038701 seconds 
+  Import took 0.047701 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008069 seconds.
+Registered in 0.004814 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 3.61 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  5.006 seconds
+- Completed reload, in  1.584 seconds
 Domain Reload Profiling:
-	ReloadAssembly (5007ms)
-		BeginReloadAssembly (376ms)
+	ReloadAssembly (1585ms)
+		BeginReloadAssembly (176ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (152ms)
-		EndReloadAssembly (4372ms)
-			LoadAssemblies (312ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (1314ms)
+			LoadAssemblies (142ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (2537ms)
-			ReleaseScriptCaches (4ms)
-			RebuildScriptCaches (344ms)
-			SetupLoadedEditorAssemblies (759ms)
+			SetupTypeCache (467ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (468ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (22ms)
-				SetLoadedEditorAssemblies (5ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (166ms)
-				ProcessInitializeOnLoadAttributes (550ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (359ms)
 				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.38 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1976 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 108.1 MB.
 System memory in use after: 108.2 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2505.
-Total: 4.024500 ms (FindLiveObjects: 0.284300 ms CreateObjectMapping: 0.114900 ms MarkObjects: 3.479000 ms  DeleteObjects: 0.144000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 19.347270 seconds.
-  path: Assets/Resourses/Space Horde/Start Room-10 1.obj
-  artifactKey: Guid(6652a6a2a8dc05940850af743df31374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Start Room-10 1.obj using Guid(6652a6a2a8dc05940850af743df31374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9985c9159373780cf8c682bf2c0785aa') in 0.340367 seconds 
-  Import took 0.385480 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.591755 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-0 1.mat
-  artifactKey: Guid(7b402e66c08b3904d89643176b043dc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-0 1.mat using Guid(7b402e66c08b3904d89643176b043dc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dbb097e16e9c2d8a91c9c443690e457') in 0.114714 seconds 
-  Import took 0.167594 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000347 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-2.mat
-  artifactKey: Guid(ed50195b34977c54ca476009db417d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-2.mat using Guid(ed50195b34977c54ca476009db417d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d55fcc7b161d5e193804e7fee0fa2b') in 0.038333 seconds 
-  Import took 0.057961 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000531 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-1.mat
-  artifactKey: Guid(8ce1ade0c31671648bb12d66c58bf7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-1.mat using Guid(8ce1ade0c31671648bb12d66c58bf7d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4cb53d747bae64e99d680bd880c7829') in 0.043103 seconds 
-  Import took 0.052015 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000546 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-0.mat
-  artifactKey: Guid(3987a0911e4851b43b93272d13e44c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-0.mat using Guid(3987a0911e4851b43b93272d13e44c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06b0aedbf300becdcbec63dfad0a30a1') in 0.060156 seconds 
-  Import took 0.067849 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001896 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-3.mat
-  artifactKey: Guid(1a311dd8edebc1243bf44c0ef9f02938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-3.mat using Guid(1a311dd8edebc1243bf44c0ef9f02938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b20436468c9590a5c3ea7891e70049') in 0.080491 seconds 
-  Import took 0.106472 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000374 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-4.mat
-  artifactKey: Guid(4b07de1c54413ae47b70e8ed264b1e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-4.mat using Guid(4b07de1c54413ae47b70e8ed264b1e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d8ea3d701bc91f5873cd4adfbe1547a') in 0.048302 seconds 
-  Import took 0.069251 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000345 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-1 1.mat
-  artifactKey: Guid(98b82891e5fff66488879ba25aa9029e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-1 1.mat using Guid(98b82891e5fff66488879ba25aa9029e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9d11a86615f6db5a8c92739ee6010fc') in 0.042142 seconds 
-  Import took 0.056175 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000378 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-10 1-defaultMat.mat
-  artifactKey: Guid(fcc4ad8f33e4c1049a9faabeb5aad4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-10 1-defaultMat.mat using Guid(fcc4ad8f33e4c1049a9faabeb5aad4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46b27220e9f86fa53df0b5708d47b499') in 0.041321 seconds 
-  Import took 0.059001 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000481 seconds.
-  path: Assets/Resourses/Space Horde/Materials/Start Room-10 1.mat
-  artifactKey: Guid(2cb9f3419d466544ab169d58a65948cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resourses/Space Horde/Materials/Start Room-10 1.mat using Guid(2cb9f3419d466544ab169d58a65948cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af3d00261865ce402c754b7d1ab846f') in 0.038630 seconds 
-  Import took 0.052517 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008723 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 4.12 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.697 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2698ms)
-		BeginReloadAssembly (230ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (98ms)
-		EndReloadAssembly (2355ms)
-			LoadAssemblies (224ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (870ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (184ms)
-			SetupLoadedEditorAssemblies (821ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (31ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (130ms)
-				ProcessInitializeOnLoadAttributes (639ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1976 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 108.2 MB.
-System memory in use after: 108.3 MB.
-
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2510.
-Total: 3.839100 ms (FindLiveObjects: 0.275000 ms CreateObjectMapping: 0.114300 ms MarkObjects: 3.312700 ms  DeleteObjects: 0.133900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.021407 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for Lumin target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.947 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2948ms)
-		BeginReloadAssembly (372ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (124ms)
-		EndReloadAssembly (2433ms)
-			LoadAssemblies (312ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1165ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (166ms)
-			SetupLoadedEditorAssemblies (620ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (128ms)
-				ProcessInitializeOnLoadAttributes (462ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1976 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 108.2 MB.
-System memory in use after: 108.3 MB.
-
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2514.
-Total: 4.582400 ms (FindLiveObjects: 0.367300 ms CreateObjectMapping: 0.234200 ms MarkObjects: 3.818700 ms  DeleteObjects: 0.159400 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2501.
+Total: 3.424700 ms (FindLiveObjects: 0.295900 ms CreateObjectMapping: 0.166500 ms MarkObjects: 2.833300 ms  DeleteObjects: 0.126800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

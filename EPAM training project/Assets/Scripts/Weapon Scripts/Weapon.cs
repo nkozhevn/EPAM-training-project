@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
     public event Action AmmoChanged;
+    public event Action Reloaded;
     [SerializeField] private Transform firePoint;
     [SerializeField] private WeaponStats weaponStats;
     
@@ -71,6 +73,7 @@ public class Weapon : MonoBehaviour
     public IEnumerator Reload()
     {
         IsReloading = true;
+        Reloaded?.Invoke();
         _animation.Play();
         yield return new WaitForSeconds(weaponStats.ReloadTime);
         CurrentAmmo = weaponStats.MaxAmmo;
