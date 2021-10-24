@@ -51,8 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d724293f7ec344949a52787a80f60097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 451928517607295948}
+  firePoints:
+  - {fileID: 451928517607295948}
   weaponStats: {fileID: 11400000, guid: e6acc9b5b85519f488895a7e4f7330f9, type: 2}
+  weaponIcon: {fileID: 0}
   OnShoot: 0
 --- !u!111 &8191225950499145034
 Animation:

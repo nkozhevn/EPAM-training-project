@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996660f065428ae418c6a77e2cee1b7e, type: 3}
   m_Name: ShotGun
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3828003064030214221, guid: 82b9fb7a3b1b97f4f973f6be4cbcf00f, type: 3}
+  bulletPrefab: {fileID: 3828003064030214221, guid: 82b9fb7a3b1b97f4f973f6be4cbcf00f,
+    type: 3}
   bulletForce: 30
   coolDown: 0.3
   maxAmmo: 8
   reloadTime: 3
+  weaponType: 2

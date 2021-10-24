@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
@@ -6,9 +7,9 @@ using UnityEngine.UI;
 public class Weapon : MonoBehaviour
 {
     public event Action AmmoChanged;
-    public event Action Reloaded;
-    [SerializeField] private Transform firePoint;
+    [SerializeField] private List<Transform> firePoints;
     [SerializeField] private WeaponStats weaponStats;
+    [SerializeField] private SkillIcon weaponIcon;
     
     private float _shootingTimer = 99999f;
     private int _currentAmmo = 0;
@@ -51,8 +52,22 @@ public class Weapon : MonoBehaviour
                 StartCoroutine(Reload());
                 return;
             }
-            
-            Shoot();
+
+            switch(weaponStats.WeaponType)
+            {
+                case 1:
+                    GunShoot();
+                    break;
+                case 2:
+                    ShotgunShoot();
+                    break;
+                case 3:
+                    LazerShoot();
+                    break;
+                default:
+                    GunShoot();
+                    break;
+            }
 
             _shootingTimer = 0;
         }
@@ -62,18 +77,38 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void Shoot()
+    private void GunShoot()
     {
         CurrentAmmo--;
 
-        var bullet = Instantiate(weaponStats.BulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.AddForce(firePoint.up * weaponStats.BulletForce, ForceMode.Impulse);
+        var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
+        bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
+    }
+
+    private void ShotgunShoot()
+    {
+        CurrentAmmo--;
+
+        var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
+        bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
+        bullet = Instantiate(weaponStats.BulletPrefab, firePoints[1].position, firePoints[1].rotation);
+        bullet.AddForce(firePoints[1].up * weaponStats.BulletForce, ForceMode.Impulse);
+        bullet = Instantiate(weaponStats.BulletPrefab, firePoints[2].position, firePoints[2].rotation);
+        bullet.AddForce(firePoints[2].up * weaponStats.BulletForce, ForceMode.Impulse);
+    }
+
+    private void LazerShoot()
+    {
+        CurrentAmmo--;
+
+        var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
+        bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
     }
 
     public IEnumerator Reload()
     {
         IsReloading = true;
-        Reloaded?.Invoke();
+        weaponIcon.Reload(weaponStats.ReloadTime);
         _animation.Play();
         yield return new WaitForSeconds(weaponStats.ReloadTime);
         CurrentAmmo = weaponStats.MaxAmmo;

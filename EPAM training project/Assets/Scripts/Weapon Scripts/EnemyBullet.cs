@@ -6,6 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {
     [SerializeField] private GameObject hitEffect;
     [SerializeField] private int bulletPower = 1;
+    [SerializeField] private float effectLifetime = 0.33f;
     
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class EnemyBullet : MonoBehaviour
             return;
         }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.33f);
+        Destroy(effect, effectLifetime);
         Health health = collider.gameObject.GetComponent<Health>();
         if(health != null)
         {

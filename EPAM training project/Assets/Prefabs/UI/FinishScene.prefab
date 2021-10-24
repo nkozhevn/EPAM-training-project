@@ -594,7 +594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1606378254443522020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingameUI: {fileID: 0}
-  nextLevelName: 02
+  nextLevelName: 1
   menuSceneName: Main Menu
 --- !u!1 &4093361548835260000
 GameObject:
@@ -757,7 +757,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1606378254443522021}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: RestartButton
+        m_MethodName: NextLevelButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingameUI: {fileID: 0}
+  settingsMenu: {fileID: 0}
   gameLoop: {fileID: 0}
   menuSceneName: Main Menu
 --- !u!1 &8756132739225466890

@@ -8,10 +8,12 @@ public class WeaponStats : ScriptableObject
     [SerializeField] private float coolDown = 0.1f;
     [SerializeField] private int maxAmmo = 40;
     [SerializeField] private float reloadTime = 1f;
+    [SerializeField] private int weaponType = 1;
 
     public Rigidbody BulletPrefab => bulletPrefab;
     public float BulletForce => bulletForce;
     public float CoolDown => coolDown;
     public int MaxAmmo => maxAmmo;
     public float ReloadTime => reloadTime;
+    public int WeaponType => weaponType;
 }

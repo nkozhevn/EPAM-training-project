@@ -4,21 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
-  - Enemy
-  - Trigger
+  - Shootable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Enemies
-  - Bullets
-  - Light
   - 
   - 
+  - Lighting
+  - Ground
+  - Postprocessing
   - 
   - 
   - 
@@ -41,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
