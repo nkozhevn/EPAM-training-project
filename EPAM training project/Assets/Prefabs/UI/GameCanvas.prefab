@@ -111,6 +111,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7875442886822739235}
     m_Modifications:
+    - target: {fileID: 2279693482397365890, guid: 3cc953f09d972b84ba94e0de006b29e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098787272287148033, guid: 3cc953f09d972b84ba94e0de006b29e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342266890085242538, guid: 3cc953f09d972b84ba94e0de006b29e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7342266890146406820, guid: 3cc953f09d972b84ba94e0de006b29e4,
         type: 3}
       propertyPath: m_Name
@@ -388,6 +403,11 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 7875442886509543750}
+    - target: {fileID: 1293425973335579585, guid: 6471a6ccc3f037a48960601541f389d2,
+        type: 3}
+      propertyPath: resolutionDropdown
+      value: 
+      objectReference: {fileID: 9016007964558333066}
     - target: {fileID: 1720592968775985564, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
       propertyPath: m_Name
@@ -512,6 +532,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4030770902566292964}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9016007964558333066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5399648544953358702, guid: 6471a6ccc3f037a48960601541f389d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4030770902566292964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0b652f32a2cc243917e4028fa0f046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5476261730213930214
 PrefabInstance:
   m_ObjectHideFlags: 0

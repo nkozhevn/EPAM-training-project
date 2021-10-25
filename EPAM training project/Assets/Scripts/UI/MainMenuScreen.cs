@@ -35,6 +35,9 @@ public class MainMenuScreen : MonoBehaviour
         PlayerPrefs.SetInt("MaxHealth", 20);
         PlayerPrefs.SetInt("PlayerLevel", 1);
         PlayerPrefs.SetInt("PlayerLevelPoints", 0);
+        PlayerPrefs.SetInt("Shotgun", 0);
+        PlayerPrefs.SetInt("Rifle", 0);
+        PlayerPrefs.SetInt("Granade", 0);
         SceneManager.LoadScene(levelName);
     }
 
@@ -44,6 +47,9 @@ public class MainMenuScreen : MonoBehaviour
         PlayerPrefs.SetInt("MaxHealth", 10);
         PlayerPrefs.SetInt("PlayerLevel", 1);
         PlayerPrefs.SetInt("PlayerLevelPoints", 0);
+        PlayerPrefs.SetInt("Shotgun", 0);
+        PlayerPrefs.SetInt("Rifle", 0);
+        PlayerPrefs.SetInt("Granade", 0);
         SceneManager.LoadScene(levelName);
     }
 

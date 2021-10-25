@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 2681006022364157052}
   - component: {fileID: 4422189076778455295}
   - component: {fileID: 915765277542095570}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3261992577422845220}
   - component: {fileID: 401879932015074414}
   - component: {fileID: 3798356970029644026}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

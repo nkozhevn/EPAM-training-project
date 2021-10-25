@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: QuadrupedTankEasy
   m_EditorClassIdentifier: 
   moveSpeed: 15
-  shootingDist: 50
+  shootingDist: 20
   shootingCoolDown: 0.5
-  bulletPrefab: {fileID: 6137887287921274957, guid: 032a432338449a643b9522b54e2a9b4f, type: 3}
+  bulletPrefab: {fileID: 6137887287921274957, guid: 032a432338449a643b9522b54e2a9b4f,
+    type: 3}
   bulletForce: 50
