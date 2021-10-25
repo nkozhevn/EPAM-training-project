@@ -12,6 +12,8 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private GameOverScreen finishScreen;
     [SerializeField] private GameObject ingameUI;
     [SerializeField] private TriggerObjects finish;
+    [SerializeField] private Health playerHealth;
+    [SerializeField] private List<UpgradeFinder> upgradeFinders;
 
     private void Start()
     {
@@ -44,11 +46,24 @@ public class GameLoop : MonoBehaviour
 
     private void OnPlayerDied()
     {
+        PlayerPrefs.SetInt("Level", 1);
         gameOverScreen.GameOver();
     }
 
     private void OnFinish()
     {
+        PlayerPrefs.SetInt("Level", levelNumber + 1);
+        PlayerPrefs.SetInt("MaxHealth", playerHealth.maxHealthPoints);
+        PlayerPrefs.SetInt("CurrentHealth", playerHealth.HealthPoints);
+        PlayerPrefs.SetInt("PlayerLevel", Player.Instance.level.PlayerLevel());
+        PlayerPrefs.SetInt("PlayerLevelPoints", Player.Instance.level.LevelPoints);
+        for(int i = 0; i < upgradeFinders.Count; i++)
+        {
+            if(upgradeFinders[i].skillGot)
+            {
+                PlayerPrefs.SetInt(upgradeFinders[i].upgradeName, 1);
+            }
+        }
         finishScreen.GameOver();
     }
 

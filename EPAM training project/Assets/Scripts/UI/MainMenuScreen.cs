@@ -33,6 +33,7 @@ public class MainMenuScreen : MonoBehaviour
     {
         PlayerPrefs.SetInt("Difficulty", 0);
         PlayerPrefs.SetInt("MaxHealth", 20);
+        PlayerPrefs.SetInt("CurrentHealth", 20);
         PlayerPrefs.SetInt("PlayerLevel", 1);
         PlayerPrefs.SetInt("PlayerLevelPoints", 0);
         PlayerPrefs.SetInt("Shotgun", 0);
@@ -45,6 +46,7 @@ public class MainMenuScreen : MonoBehaviour
     {
         PlayerPrefs.SetInt("Difficulty", 1);
         PlayerPrefs.SetInt("MaxHealth", 10);
+        PlayerPrefs.SetInt("CurrentHealth", 10);
         PlayerPrefs.SetInt("PlayerLevel", 1);
         PlayerPrefs.SetInt("PlayerLevelPoints", 0);
         PlayerPrefs.SetInt("Shotgun", 0);

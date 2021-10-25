@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
         Instance = this;
 
         health.HealthChanged += OnHealthChanged;
-        health.HealthPoints = PlayerPrefs.GetInt("MaxHealth");
+        health.HealthPoints = PlayerPrefs.GetInt("CurrentHealth");
 
         _rb = GetComponent<Rigidbody>();
     }
@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     {
         if(health.NoHealth)
         {
-            PlayerPrefs.SetInt("Level", 1);
             PlayerDied?.Invoke();
             gameObject.SetActive(false);
         }

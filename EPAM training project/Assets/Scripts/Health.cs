@@ -38,7 +38,6 @@ public class Health : MonoBehaviour, IDamageable
     {
         maxHealthPoints += amount;
         HealthPoints = HealthPoints;
-        PlayerPrefs.SetInt("MaxHealth", maxHealthPoints);
     }
 
     public float HealthPercent() => (float)HealthPoints / maxHealthPoints;

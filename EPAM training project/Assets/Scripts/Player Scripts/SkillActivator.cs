@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SkillActivator : MonoBehaviour
 {
-    [SerializeField] private UpgradesFinder upgradesFinder;
+    [SerializeField] private UpgradeFinder granadeUpgradeFinder;
     [SerializeField] private GranadeSkill granadeSkill;
 
     private void Update()
     {
-        if(upgradesFinder.granadeGot)
+        if(granadeUpgradeFinder.skillGot)
         {
             if(Input.GetButtonDown(granadeSkill.buttonKeyCode))
             {

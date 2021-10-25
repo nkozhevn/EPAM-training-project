@@ -8,10 +8,6 @@ public class GranadeExplosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        /*if (collider.gameObject.tag == "Player")
-        {
-            return;
-        }*/
         Health health = collider.gameObject.GetComponent<Health>();
         if(health != null)
         {

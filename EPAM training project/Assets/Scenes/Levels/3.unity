@@ -4614,7 +4614,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4120707810527301549}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &884028692
+--- !u!114 &884028688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4623,12 +4623,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 884028687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14f414cf86bab564a8f9046066f7008f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0555d94541216124c8b7f577528ba07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  granadeUpgrade: {fileID: 6936876699493215991}
-  granadeIcon: {fileID: 1839710521}
-  granadeGot: 0
+  upgradeName: Granade
+  skillUpgrade: {fileID: 6936876699493215991}
+  skillIcon: {fileID: 1839710521}
+  skillGot: 0
 --- !u!1 &902146259
 GameObject:
   m_ObjectHideFlags: 0
@@ -7188,9 +7189,24 @@ PrefabInstance:
       objectReference: {fileID: 1117117846}
     - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
         type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 6923442511032956727}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 719366691}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: upgradeFinders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: upgradeFinders.Array.data[0]
+      value: 
+      objectReference: {fileID: 884028688}
     - target: {fileID: 702958825393157975, guid: 6e108719598157b42953ca346cc74209,
         type: 3}
       propertyPath: m_Name
@@ -11803,7 +11819,12 @@ PrefabInstance:
         type: 3}
       propertyPath: upgradesFinder
       value: 
-      objectReference: {fileID: 884028692}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336734627384101592, guid: c5b7e5f994ccaa0429b86e5598ee32e5,
+        type: 3}
+      propertyPath: granadeUpgradeFinder
+      value: 
+      objectReference: {fileID: 884028688}
     - target: {fileID: 5940638301364757026, guid: c5b7e5f994ccaa0429b86e5598ee32e5,
         type: 3}
       propertyPath: m_RootOrder
@@ -12244,33 +12265,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6936876699493215989 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3629030511225220991, guid: 917a412b8dd50104ca2b08d3c0108c40,
-    type: 3}
-  m_PrefabInstance: {fileID: 5915571153087758730}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &6936876699493215990
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6936876699493215989}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.1218545
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.4855858, z: 0}
 --- !u!114 &6936876699493215991 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7129708660100325166, guid: 917a412b8dd50104ca2b08d3c0108c40,
     type: 3}
   m_PrefabInstance: {fileID: 5915571153087758730}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6936876699493215989}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0d4f2b704f7f0d40a193ba906737940, type: 3}

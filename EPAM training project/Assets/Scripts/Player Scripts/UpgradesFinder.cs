@@ -74,7 +74,14 @@ public class UpgradesFinder : MonoBehaviour
             } 
         }*/
 
-        if(granadeUpgrade != null)
+        if(granadeUpgrade.IsActivated)
+        {
+            granadeGot = true;
+            PlayerPrefs.SetInt("Granade", 1);
+            granadeIcon.enabled = true;
+        } 
+
+        /*if(granadeUpgrade != null)
         {
             if(granadeUpgrade.IsActivated)
             {
@@ -82,6 +89,6 @@ public class UpgradesFinder : MonoBehaviour
                 PlayerPrefs.SetInt("Granade", 1);
                 granadeIcon.enabled = true;
             } 
-        } 
+        }*/
     }
 }

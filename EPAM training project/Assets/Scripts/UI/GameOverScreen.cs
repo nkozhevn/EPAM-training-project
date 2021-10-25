@@ -19,9 +19,6 @@ public class GameOverScreen : MonoBehaviour
 
     public void NextLevelButton()
     {
-        PlayerPrefs.SetInt("PlayerLevel", Player.Instance.level.PlayerLevel());
-        PlayerPrefs.SetInt("PlayerLevelPoints", Player.Instance.level.LevelPoints);
-        PlayerPrefs.SetInt("Level", Convert.ToInt32(nextLevelName));
         SceneManager.LoadScene(nextLevelName);
         Time.timeScale = 1f;
     }
@@ -34,9 +31,6 @@ public class GameOverScreen : MonoBehaviour
 
     public void MenuButton()
     {
-        PlayerPrefs.SetInt("PlayerLevel", Player.Instance.level.PlayerLevel());
-        PlayerPrefs.SetInt("PlayerLevelPoints", Player.Instance.level.LevelPoints);
-        PlayerPrefs.SetInt("Level", Convert.ToInt32(nextLevelName));
         SceneManager.LoadScene(menuSceneName);
     }
 }
