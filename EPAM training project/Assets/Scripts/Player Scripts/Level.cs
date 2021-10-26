@@ -23,9 +23,9 @@ public class Level : MonoBehaviour
 
     private void Awake()
     {
-        _level = PlayerPrefs.GetInt("PlayerLevel");
+        _level = PlayerPrefs.GetInt("PlayerLevel", 0);
         health.HealthUpgrade((_level - 1) * 5);
-        GainLevelPoints(PlayerPrefs.GetInt("PlayerLevelPoints"));
+        GainLevelPoints(PlayerPrefs.GetInt("PlayerLevelPoints", 0));
     }
 
     public void GainLevelPoints(int amount)

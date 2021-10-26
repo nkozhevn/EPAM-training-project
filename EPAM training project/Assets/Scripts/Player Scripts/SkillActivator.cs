@@ -6,6 +6,8 @@ public class SkillActivator : MonoBehaviour
 {
     [SerializeField] private UpgradeFinder granadeUpgradeFinder;
     [SerializeField] private GranadeSkill granadeSkill;
+    [SerializeField] private UpgradeFinder shieldUpgradeFinder;
+    [SerializeField] private ShieldSkill shieldSkill;
 
     private void Update()
     {
@@ -14,6 +16,14 @@ public class SkillActivator : MonoBehaviour
             if(Input.GetButtonDown(granadeSkill.buttonKeyCode))
             {
                 granadeSkill.Activate();
+            }
+        }
+
+        if(shieldUpgradeFinder.skillGot)
+        {
+            if(Input.GetButtonDown(shieldSkill.buttonKeyCode))
+            {
+                shieldSkill.Activate();
             }
         }
     }

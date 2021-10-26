@@ -15,6 +15,7 @@ public class UpgradeFinder : MonoBehaviour
         if(PlayerPrefs.GetInt(upgradeName, 0) == 0)
         {
             skillIcon.enabled = false;
+            skillGot = false;
         }
         else
         {

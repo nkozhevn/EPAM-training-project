@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,10 +32,11 @@ public class MainMenuScreen : MonoBehaviour
 
     public void EasyButton()
     {
+        PlayerPrefs.SetInt("Level", Convert.ToInt32(levelName));
         PlayerPrefs.SetInt("Difficulty", 0);
         PlayerPrefs.SetInt("MaxHealth", 20);
         PlayerPrefs.SetInt("CurrentHealth", 20);
-        PlayerPrefs.SetInt("PlayerLevel", 1);
+        PlayerPrefs.SetInt("PlayerLevel", 0);
         PlayerPrefs.SetInt("PlayerLevelPoints", 0);
         PlayerPrefs.SetInt("Shotgun", 0);
         PlayerPrefs.SetInt("Rifle", 0);
@@ -44,10 +46,11 @@ public class MainMenuScreen : MonoBehaviour
 
     public void HardButton()
     {
+        PlayerPrefs.SetInt("Level", Convert.ToInt32(levelName));
         PlayerPrefs.SetInt("Difficulty", 1);
         PlayerPrefs.SetInt("MaxHealth", 10);
         PlayerPrefs.SetInt("CurrentHealth", 10);
-        PlayerPrefs.SetInt("PlayerLevel", 1);
+        PlayerPrefs.SetInt("PlayerLevel", 0);
         PlayerPrefs.SetInt("PlayerLevelPoints", 0);
         PlayerPrefs.SetInt("Shotgun", 0);
         PlayerPrefs.SetInt("Rifle", 0);
