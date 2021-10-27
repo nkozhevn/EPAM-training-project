@@ -81,6 +81,73 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5330953746822488997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5298420653821947093}
+  - component: {fileID: 4512494174815956150}
+  - component: {fileID: 4877640795226554386}
+  m_Layer: 0
+  m_Name: FireSkill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5298420653821947093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330953746822488997}
+  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: -0.89, y: 2.66, z: 0.72}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5940638301364757026}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &4512494174815956150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330953746822488997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0555d94541216124c8b7f577528ba07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeName: Fire
+  skillUpgrade: {fileID: 0}
+  skillIcon: {fileID: 0}
+  skillGot: 0
+--- !u!114 &4877640795226554386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330953746822488997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f71e1dbf9dc89a4a8ebda24a77e7b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonKeyCode: Z
+  fireIcon: {fileID: 0}
+  firePrefab: {fileID: 1060827923184184245, guid: 0ded7e6d151cca54583e4592c7661fec,
+    type: 3}
+  throwForce: 50
+  reloadTime: 15
+  timeToDestroy: 10
 --- !u!1 &6429648934735280280
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,10 +184,11 @@ Transform:
   m_Children:
   - {fileID: 6485560861608907642}
   - {fileID: 5297400821435423596}
-  - {fileID: 1677306831670270913}
   - {fileID: 406181879465763768}
   - {fileID: 2060745069447299570}
   - {fileID: 2518092281227562350}
+  - {fileID: 5298420653821947093}
+  - {fileID: 1677306831670270913}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -224,6 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   granadeUpgradeFinder: {fileID: 9194182168895429091}
   granadeSkill: {fileID: 6180722795143102375}
+  fireUpgradeFinder: {fileID: 0}
+  fireSkill: {fileID: 0}
   shieldUpgradeFinder: {fileID: 5124530225527479825}
   shieldSkill: {fileID: 3416434490064863033}
 --- !u!1 &6571097228758628994
@@ -304,7 +374,7 @@ Transform:
   m_Children:
   - {fileID: 7545970024310593761}
   m_Father: {fileID: 5940638301364757026}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5124530225527479825
 MonoBehaviour:
@@ -369,7 +439,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5940638301364757026}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &6180722795143102375
 MonoBehaviour:
@@ -591,7 +661,7 @@ PrefabInstance:
     - target: {fileID: 1777499931764746987, guid: ec12a739967f4234ca58b637f727617b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746987, guid: ec12a739967f4234ca58b637f727617b,
         type: 3}
@@ -701,7 +771,7 @@ PrefabInstance:
     - target: {fileID: 5817839850269629081, guid: 3a186c3e67d50a144a8bfb5a97c94c1d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5817839850269629081, guid: 3a186c3e67d50a144a8bfb5a97c94c1d,
         type: 3}
