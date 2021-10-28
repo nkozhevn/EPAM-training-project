@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private List<Transform> firePoints;
     [SerializeField] private WeaponStats weaponStats;
     [SerializeField] private SkillIcon weaponIcon;
+    [SerializeField] private Image weaponIconBorder;
     
     private float _shootingTimer = 99999f;
     private int _currentAmmo = 0;
@@ -37,6 +38,11 @@ public class Weapon : MonoBehaviour
     {
         IsReloading = false;
         OnShoot = false;
+
+        if(weaponIconBorder != null)
+        {
+            weaponIconBorder.enabled = true;
+        }
     }
 
     private void Update()
@@ -74,6 +80,14 @@ public class Weapon : MonoBehaviour
         else if(_shootingTimer < Stats.CoolDown)
         {
             _shootingTimer += Time.deltaTime;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if(weaponIconBorder != null)
+        {
+            weaponIconBorder.enabled = false;
         }
     }
 
