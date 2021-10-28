@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IHealth
 {
     public event Action HealthChanged;
     [SerializeField] public int maxHealthPoints = 10;
     public bool NoHealth => _healthPoints <= 0;
     protected int _healthPoints;
+    protected bool _isInvulnerable;
     public int HealthPoints
     {
         get => _healthPoints;
@@ -28,6 +29,10 @@ public class Health : MonoBehaviour
 
     public void RecieveDamage(int amount)
     {
+        if (_isInvulnerable)
+        {
+            return;
+        }
         HealthPoints -= amount;
     }
 

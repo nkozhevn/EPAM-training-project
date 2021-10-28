@@ -15,7 +15,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: -182113901211981723, guid: f158432a81081574ab1509dba41b297d,
     type: 3}
   bulletForce: 100
-  coolDown: 0.5
+  coolDown: 0.7
   maxAmmo: 6
   reloadTime: 5
   weaponType: 3

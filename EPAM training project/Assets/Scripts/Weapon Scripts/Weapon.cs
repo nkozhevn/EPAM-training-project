@@ -4,11 +4,11 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
     public event Action AmmoChanged;
-    [SerializeField] private List<Transform> firePoints;
-    [SerializeField] private WeaponStats weaponStats;
+    //[SerializeField] private List<Transform> firePoints;
+    [SerializeField] protected WeaponStats weaponStats;
     [SerializeField] private SkillIcon weaponIcon;
     [SerializeField] private Image weaponIconBorder;
     
@@ -59,7 +59,7 @@ public class Weapon : MonoBehaviour
                 return;
             }
 
-            switch(weaponStats.WeaponType)
+            /*switch(weaponStats.WeaponType)
             {
                 case 1:
                     GunShoot();
@@ -73,7 +73,8 @@ public class Weapon : MonoBehaviour
                 default:
                     GunShoot();
                     break;
-            }
+            }*/
+            Shoot();
 
             _shootingTimer = 0;
         }
@@ -91,15 +92,17 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void GunShoot()
+    public abstract void Shoot();
+
+    /*private void GunShoot()
     {
         CurrentAmmo--;
 
         var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
         bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
-    }
+    }*/
 
-    private void ShotgunShoot()
+    /*private void ShotgunShoot()
     {
         CurrentAmmo--;
 
@@ -109,15 +112,15 @@ public class Weapon : MonoBehaviour
         bullet.AddForce(firePoints[1].up * weaponStats.BulletForce, ForceMode.Impulse);
         bullet = Instantiate(weaponStats.BulletPrefab, firePoints[2].position, firePoints[2].rotation);
         bullet.AddForce(firePoints[2].up * weaponStats.BulletForce, ForceMode.Impulse);
-    }
+    }*/
 
-    private void LazerShoot()
+    /*private void LazerShoot()
     {
         CurrentAmmo--;
 
         var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
         bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
-    }
+    }*/
 
     public IEnumerator Reload()
     {

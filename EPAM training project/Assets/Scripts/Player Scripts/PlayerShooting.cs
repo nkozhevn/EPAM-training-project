@@ -67,7 +67,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void SelectWeapon()
     {
-        for(var i = 0; i < weapons.Count; i++)
+        for(int i = 0; i < weapons.Count; i++)
         {
             weapons[i].gameObject.SetActive(i == _selectedWeaponIndex);
         }

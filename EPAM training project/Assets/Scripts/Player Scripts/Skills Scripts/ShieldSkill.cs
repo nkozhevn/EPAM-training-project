@@ -21,11 +21,11 @@ public class ShieldSkill : Skill
 
         _isActivated = true;
         icon.Reload(reloadTime);
-        Player.Instance.gameObject.tag = "ImmunePlayer";
+        Player.Instance.Health.ToggleInvulnerability(true);
         shield.SetActive(true);
         yield return new WaitForSeconds(activeTime);
         shield.SetActive(false);
-        Player.Instance.gameObject.tag = "Player";
+        Player.Instance.Health.ToggleInvulnerability(false);
         yield return new WaitForSeconds(reloadTime - activeTime);
         _isActivated = false;
     }

@@ -4,36 +4,19 @@ using UnityEngine;
 
 public class SkillActivator : MonoBehaviour
 {
-    [SerializeField] private UpgradeFinder granadeUpgradeFinder;
-    [SerializeField] private GranadeSkill granadeSkill;
-    [SerializeField] private UpgradeFinder fireUpgradeFinder;
-    [SerializeField] private FireSkill fireSkill;
-    [SerializeField] private UpgradeFinder shieldUpgradeFinder;
-    [SerializeField] private ShieldSkill shieldSkill;
+    [SerializeField] private List<Skill> skills;
+    [SerializeField] private List<UpgradeFinder> upgrades;
 
     private void Update()
     {
-        if(granadeUpgradeFinder.skillGot)
+        for(int i = 0; i < skills.Count; i++)
         {
-            if(Input.GetButtonDown(granadeSkill.buttonKeyCode))
+            if(upgrades[i].skillGot)
             {
-                granadeSkill.Activate();
-            }
-        }
-
-        if(fireUpgradeFinder.skillGot)
-        {
-            if(Input.GetButtonDown(fireSkill.buttonKeyCode))
-            {
-                fireSkill.Activate();
-            }
-        }
-
-        if(shieldUpgradeFinder.skillGot)
-        {
-            if(Input.GetButtonDown(shieldSkill.buttonKeyCode))
-            {
-                shieldSkill.Activate();
+                if(Input.GetButtonDown(skills[i].buttonKeyCode))
+                {
+                    skills[i].Activate();
+                }
             }
         }
     }

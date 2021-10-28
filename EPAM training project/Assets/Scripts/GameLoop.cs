@@ -19,6 +19,8 @@ public class GameLoop : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
+
         ingameUI.SetActive(true);
 
         Time.timeScale = 1f;

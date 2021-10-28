@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : Health
-{
+{ 
     private void Awake()
     {
         HealthPoints = maxHealthPoints;
@@ -13,5 +13,10 @@ public class PlayerHealth : Health
     {
         maxHealthPoints += amount;
         HealthPoints = HealthPoints;
+    }
+
+    public void ToggleInvulnerability(bool isOn)
+    {
+        _isInvulnerable = isOn;
     }
 }
