@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class RunningEnemyMovement : MonoBehaviour
+public class RunningEnemyMovement : Enemy
 {
     [SerializeField] private List<RunningEnemyStats> enemyStatsList;
     private RunningEnemyStats _enemyStats;
     private bool _hitCheck = false;
-    [SerializeField] private Enemy enemy;
 
     private void Awake()
     {
@@ -19,19 +18,19 @@ public class RunningEnemyMovement : MonoBehaviour
     {
         if(!_hitCheck)
         {
-            enemy.Rigidbody().MovePosition(enemy.Rigidbody().position + enemy.directionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+            Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * (_enemyStats.MoveSpeed * Time.fixedDeltaTime));
             transform.LookAt(Player.Instance.transform);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Health health = collision.gameObject.GetComponent<Health>();
             if(health != null)
             {
-                health.RecieveDamage(_enemyStats.EnemyPower);
+                health.ReceiveDamage(_enemyStats.EnemyPower);
                 StartCoroutine(Stunning());
             }
         }

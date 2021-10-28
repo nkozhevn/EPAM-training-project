@@ -8,7 +8,7 @@ public class Heart : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player" || collider.gameObject.tag == "ImmunePlayer")
+        if (collider.gameObject.CompareTag("Player") || collider.gameObject.tag == "ImmunePlayer")
         {
             Health health = collider.gameObject.GetComponent<Health>();
             if(health != null)

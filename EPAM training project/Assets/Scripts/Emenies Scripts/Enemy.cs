@@ -6,10 +6,12 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private Health health;
     private Rigidbody _rb;
-    [SerializeField] public Vector3 direction{ get; set; }
-    [SerializeField] public Vector3 directionNorm{ get; set; }
+    
     [SerializeField] private int levelPoints;
-    public Rigidbody Rigidbody() => _rb;
+
+    protected Rigidbody Rigidbody => _rb;
+    protected Vector3 Direction { get; set; }
+    protected Vector3 DirectionNorm { get; set; }
 
     private void Awake()
     {
@@ -19,8 +21,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        direction = Player.Instance.GetPosition() - _rb.position;
-        directionNorm = direction / direction.magnitude;
+        Direction = Player.Instance.GetPosition() - _rb.position;
+        DirectionNorm = Direction / Direction.magnitude;
     }
 
     public void OnHealthChanged()

@@ -11,7 +11,7 @@ public class GranadeExplosion : MonoBehaviour
         Health health = collider.gameObject.GetComponent<Health>();
         if(health != null)
         {
-            health.RecieveDamage(granadePower);
+            health.ReceiveDamage(granadePower);
         }
     }
 }

@@ -9,6 +9,9 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] public int maxHealthPoints = 10;
     public bool NoHealth => _healthPoints <= 0;
     private int _healthPoints;
+
+    private bool _isInvulnerable;
+
     public int HealthPoints
     {
         get => _healthPoints;
@@ -24,8 +27,11 @@ public class Health : MonoBehaviour, IDamageable
         HealthPoints = maxHealthPoints;
     }
 
-    public void RecieveDamage(int amount)
+    public void ReceiveDamage(int amount)
     {
+        if (_isInvulnerable)
+            return;
+
         HealthPoints -= amount;
     }
 
@@ -38,6 +44,11 @@ public class Health : MonoBehaviour, IDamageable
     {
         maxHealthPoints += amount;
         HealthPoints = HealthPoints;
+    }
+
+    public void ToggleInvulnerability(bool isOn)
+    {
+        _isInvulnerable = isOn;
     }
 
     public float HealthPercent() => (float)HealthPoints / maxHealthPoints;

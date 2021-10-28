@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingEnemyMovement : MonoBehaviour
+public class ShootingEnemyMovement : Enemy
 {
     [SerializeField] private List<ShootingEnemyStats> enemyStatsList;
     private ShootingEnemyStats _enemyStats;
     private float _shootingTimer = 99999f;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private Enemy enemy;
     private bool _onShoot;
 
     private void Awake()
@@ -18,12 +17,12 @@ public class ShootingEnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _onShoot = !(enemy.direction.magnitude > _enemyStats.ShootingDist);
+        _onShoot = !(Direction.magnitude > _enemyStats.ShootingDist);
 
         transform.LookAt(Player.Instance.transform);
         if(!_onShoot)
         {
-            enemy.Rigidbody().MovePosition(enemy.Rigidbody().position + enemy.directionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+            Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * (_enemyStats.MoveSpeed * Time.fixedDeltaTime));
         }
         else
         {

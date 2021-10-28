@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     private Rigidbody _rb;
     [SerializeField] public Camera cam;
 
+
+    public Health Health => health;
+
     private void Awake()
     {
         Instance = this;

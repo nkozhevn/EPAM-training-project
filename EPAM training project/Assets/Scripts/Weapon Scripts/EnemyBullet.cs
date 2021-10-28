@@ -24,7 +24,7 @@ public class EnemyBullet : MonoBehaviour
         Health health = collider.gameObject.GetComponent<Health>();
         if(health != null)
         {
-            health.RecieveDamage(bulletPower);
+            health.ReceiveDamage(bulletPower);
         }
         Destroy(gameObject);
     }

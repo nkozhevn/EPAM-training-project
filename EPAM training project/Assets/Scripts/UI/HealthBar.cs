@@ -13,7 +13,8 @@ public class HealthBar : MonoBehaviour
         health.HealthChanged += OnHealthChanged;
     }
 
-    private void OnDestroy() {
+    private void OnDestroy() 
+    {
         health.HealthChanged -= OnHealthChanged;
     }
 

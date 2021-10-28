@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public class GameLoop : MonoBehaviour
@@ -11,9 +13,35 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private GameOverScreen finishScreen;
     [SerializeField] private GameObject ingameUI;
+
     [SerializeField] private TriggerObjects finish;
-    [SerializeField] private Health playerHealth;
+
+    //[SerializeField] private Health playerHealth;
     [SerializeField] private List<UpgradeFinder> upgradeFinders;
+
+
+    public event Action<bool> Paused;
+
+    public event Action LevelLoaded;
+
+    private Player _player;
+    public Player Player
+    {
+        get
+        {
+            if (_player == null)
+            {
+                _player = Instantiate(playerPrefab);
+            }
+
+            return _player;
+        }
+        set
+        {
+
+        }
+    }
+
 
     private void Start()
     {
@@ -22,6 +50,8 @@ public class GameLoop : MonoBehaviour
         Time.timeScale = 1f;
 
         Player.Instance.PlayerDied += OnPlayerDied;
+
+
     }
 
     private void Update()
@@ -30,11 +60,11 @@ public class GameLoop : MonoBehaviour
         {
             if(gameIsPaused)
             {
-                pauseScreen.Resume();
+                Paused?.Invoke(false);
             }
             else
             {
-                pauseScreen.Pause();
+                Paused?.Invoke(true);
             }
         }
 
@@ -50,6 +80,19 @@ public class GameLoop : MonoBehaviour
         gameOverScreen.GameOver();
     }
 
+    public PlayerData PlayerData { get; private set; }
+
+    private void Save()
+    {
+        PlayerData = new PlayerData(levelNumber + 1, playerHealth.maxHealthPoints);
+        Save
+    }
+
+    private void Load()
+    {
+        PlayerData = Load
+    }
+
     private void OnFinish()
     {
         PlayerPrefs.SetInt("Level", levelNumber + 1);
@@ -57,6 +100,13 @@ public class GameLoop : MonoBehaviour
         PlayerPrefs.SetInt("CurrentHealth", playerHealth.HealthPoints);
         PlayerPrefs.SetInt("PlayerLevel", Player.Instance.level.PlayerLevel());
         PlayerPrefs.SetInt("PlayerLevelPoints", Player.Instance.level.LevelPoints);
+
+
+        
+        
+
+
+
         for(int i = 0; i < upgradeFinders.Count; i++)
         {
             if(upgradeFinders[i].skillGot)
@@ -71,4 +121,19 @@ public class GameLoop : MonoBehaviour
     {
         Player.Instance.PlayerDied -= OnPlayerDied;
     }
+}
+
+
+[Serializable]
+public class PlayerData
+{
+    public int Level { get; set; }
+    public int MaxHealth { get; set; }
+
+    public PlayerData(int level, int maxHealth)
+    {
+        Level = level;
+        MaxHealth = maxHealth;
+    }
+
 }
