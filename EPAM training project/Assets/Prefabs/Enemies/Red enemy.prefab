@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8543054555844590742}
   - component: {fileID: 7078384075382473629}
   - component: {fileID: 5612815537783899503}
-  - component: {fileID: 3680034015516910494}
   - component: {fileID: 1573552092437420723}
   m_Layer: 0
   m_Name: Red enemy
@@ -78,20 +77,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 5
---- !u!114 &3680034015516910494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2165085791204567715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 5612815537783899503}
-  levelPoints: 2
 --- !u!114 &1573552092437420723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,10 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff40e5dae7e7eb14dbea83ce36634c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 5612815537783899503}
+  levelPoints: 1
   enemyStatsList:
   - {fileID: 11400000, guid: 2c4dfae3af942274b852edcf6f789632, type: 2}
   - {fileID: 11400000, guid: 64c08b0e9faee1649926c61a09c4925b, type: 2}
-  enemy: {fileID: 3680034015516910494}
 --- !u!1 &7171461161254982266
 GameObject:
   m_ObjectHideFlags: 0

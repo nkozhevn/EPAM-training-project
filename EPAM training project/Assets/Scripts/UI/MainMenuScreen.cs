@@ -14,7 +14,7 @@ public class MainMenuScreen : MonoBehaviour
     private void Awake()
     {
         modsButtons.SetActive(false);
-        if(PlayerPrefs.GetInt("Level") > 1)
+        if(PlayerPrefs.GetString("Level") != levelName)
         {
             loadPlug.SetActive(false);
         }
@@ -22,7 +22,7 @@ public class MainMenuScreen : MonoBehaviour
 
     public void LoadButton()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("Level").ToString());
+        SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
     }
 
     public void PlayButton()
@@ -32,7 +32,7 @@ public class MainMenuScreen : MonoBehaviour
 
     public void EasyButton()
     {
-        PlayerPrefs.SetInt("Level", Convert.ToInt32(levelName));
+        PlayerPrefs.SetString("Level", levelName);
         PlayerPrefs.SetInt("Difficulty", 0);
         PlayerPrefs.SetInt("MaxHealth", 20);
         PlayerPrefs.SetInt("CurrentHealth", 20);
@@ -46,7 +46,7 @@ public class MainMenuScreen : MonoBehaviour
 
     public void HardButton()
     {
-        PlayerPrefs.SetInt("Level", Convert.ToInt32(levelName));
+        PlayerPrefs.SetString("Level", levelName);
         PlayerPrefs.SetInt("Difficulty", 1);
         PlayerPrefs.SetInt("MaxHealth", 10);
         PlayerPrefs.SetInt("CurrentHealth", 10);

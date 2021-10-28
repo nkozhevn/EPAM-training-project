@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance{ get; private set; }
     public event Action PlayerDied;
-    [SerializeField] private Health health;
+    [SerializeField] private PlayerHealth health;
     [SerializeField] public Level level;
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float turnSpeed = 10f;
@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
     
-    public Vector3 GetPosition() => transform.position;
-    public Rigidbody Rigidbody() => _rb;
+    public Vector3 GetPosition => transform.position;
+    public Rigidbody Rigidbody => _rb;
 
     public void OnHealthChanged()
     {

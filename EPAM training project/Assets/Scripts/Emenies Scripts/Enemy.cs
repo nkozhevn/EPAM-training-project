@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] private Health health;
-    private Rigidbody _rb;
-    [SerializeField] public Vector3 direction{ get; set; }
-    [SerializeField] public Vector3 directionNorm{ get; set; }
-    [SerializeField] private int levelPoints;
-    public Rigidbody Rigidbody() => _rb;
+    [SerializeField] protected Health health;
+    protected Rigidbody _rb;
+    [SerializeField] protected int levelPoints;
+    protected Vector3 Direction { get; set; }
+    protected Vector3 DirectionNorm { get; set; }
+    protected Rigidbody Rigidbody => _rb;
 
-    private void Awake()
+    /*private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
@@ -19,8 +19,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        direction = Player.Instance.GetPosition() - _rb.position;
-        directionNorm = direction / direction.magnitude;
+        Direction = Player.Instance.GetPosition - _rb.position;
+        DirectionNorm = Direction / Direction.magnitude;
     }
 
     public void OnHealthChanged()
@@ -30,5 +30,5 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             Player.Instance.level.GainLevelPoints(levelPoints);
         }
-    }
+    }*/
 }

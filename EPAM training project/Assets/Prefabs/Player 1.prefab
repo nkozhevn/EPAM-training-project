@@ -142,11 +142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonKeyCode: Z
-  fireIcon: {fileID: 0}
-  firePrefab: {fileID: 1060827923184184245, guid: 0ded7e6d151cca54583e4592c7661fec,
-    type: 3}
-  throwForce: 50
+  icon: {fileID: 0}
   reloadTime: 15
+  firePrefab: {fileID: -5857985936353919375, guid: 3ea4981e9a43f284382421e55f1b0fbf,
+    type: 3}
+  throwForce: 20
   timeToDestroy: 10
 --- !u!1 &6429648934735280280
 GameObject:
@@ -162,8 +162,8 @@ GameObject:
   - component: {fileID: 6011059716241713482}
   - component: {fileID: 5772072715159616703}
   - component: {fileID: 8332765358380007414}
-  - component: {fileID: 5393479790752798059}
   - component: {fileID: 6970608186529817223}
+  - component: {fileID: 4733793882949672753}
   m_Layer: 3
   m_Name: Player 1
   m_TagString: Player
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc90af00ca5bda4c8e12807e17f055d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5393479790752798059}
+  health: {fileID: 0}
   level: {fileID: 8332765358380007414}
   moveSpeed: 20
   turnSpeed: 10
@@ -264,20 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLevelPoints: 10
-  health: {fileID: 5393479790752798059}
---- !u!114 &5393479790752798059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6429648934735280280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealthPoints: 10
+  health: {fileID: 0}
 --- !u!114 &6970608186529817223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,10 +279,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   granadeUpgradeFinder: {fileID: 9194182168895429091}
   granadeSkill: {fileID: 6180722795143102375}
-  fireUpgradeFinder: {fileID: 0}
-  fireSkill: {fileID: 0}
+  fireUpgradeFinder: {fileID: 4512494174815956150}
+  fireSkill: {fileID: 4877640795226554386}
   shieldUpgradeFinder: {fileID: 5124530225527479825}
   shieldSkill: {fileID: 3416434490064863033}
+--- !u!114 &4733793882949672753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6429648934735280280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76184e6515a7a4a419c4d3eb916f842a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 10
 --- !u!1 &6571097228758628994
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,9 +405,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonKeyCode: Q
-  shieldIcon: {fileID: 0}
-  activeTime: 5
+  icon: {fileID: 0}
   reloadTime: 30
+  activeTime: 5
   shield: {fileID: 7543373781798010747}
 --- !u!1 &9019285991491880015
 GameObject:
@@ -454,11 +454,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonKeyCode: X
-  granadeIcon: {fileID: 0}
+  icon: {fileID: 0}
+  reloadTime: 10
   granadePrefab: {fileID: 1060827923184184245, guid: 0ded7e6d151cca54583e4592c7661fec,
     type: 3}
   throwForce: 30
-  reloadTime: 10
 --- !u!114 &9194182168895429091
 MonoBehaviour:
   m_ObjectHideFlags: 0

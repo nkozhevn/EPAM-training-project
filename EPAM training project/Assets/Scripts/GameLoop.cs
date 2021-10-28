@@ -6,7 +6,9 @@ public class GameLoop : MonoBehaviour
 {
     public static GameLoop Instance{ get; private set; }
     public bool gameIsPaused = false;
-    [SerializeField] private int levelNumber;
+    [SerializeField] private string levelName;
+    [SerializeField] private string firstLevelName;
+    [SerializeField] private string nextLevelName;
     [SerializeField] private PauseScreen pauseScreen;
     [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private GameOverScreen finishScreen;
@@ -46,13 +48,13 @@ public class GameLoop : MonoBehaviour
 
     private void OnPlayerDied()
     {
-        PlayerPrefs.SetInt("Level", 1);
+        PlayerPrefs.SetString("Level", firstLevelName);
         gameOverScreen.GameOver();
     }
 
     private void OnFinish()
     {
-        PlayerPrefs.SetInt("Level", levelNumber + 1);
+        PlayerPrefs.SetString("Level", nextLevelName);
         PlayerPrefs.SetInt("MaxHealth", playerHealth.maxHealthPoints);
         PlayerPrefs.SetInt("CurrentHealth", playerHealth.HealthPoints);
         PlayerPrefs.SetInt("PlayerLevel", Player.Instance.level.PlayerLevel());

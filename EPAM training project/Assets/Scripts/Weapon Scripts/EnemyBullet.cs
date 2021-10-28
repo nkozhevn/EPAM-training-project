@@ -15,13 +15,13 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Enemy" || collider.gameObject.tag == "Bullet" || collider.gameObject.tag == "Trigger")
+        if (collider.gameObject.CompareTag("Enemy") || collider.gameObject.CompareTag("Bullet") || collider.gameObject.CompareTag("Trigger"))
         {
             return;
         }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, effectLifetime);
-        Health health = collider.gameObject.GetComponent<Health>();
+        PlayerHealth health = collider.gameObject.GetComponent<PlayerHealth>();
         if(health != null)
         {
             health.RecieveDamage(bulletPower);

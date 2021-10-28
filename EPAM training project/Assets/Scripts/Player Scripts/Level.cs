@@ -9,7 +9,7 @@ public class Level : MonoBehaviour
     private int _level = 0;
     private int _levelPoints;
     [SerializeField] private int maxLevelPoints = 10;
-    [SerializeField] private Health health;
+    [SerializeField] private PlayerHealth health;
     public int PlayerLevel() => _level;
     public int LevelPoints
     {

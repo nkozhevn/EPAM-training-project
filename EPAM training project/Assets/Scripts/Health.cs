@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Health : MonoBehaviour, IDamageable
+public class Health : MonoBehaviour
 {
     public event Action HealthChanged;
     [SerializeField] public int maxHealthPoints = 10;
     public bool NoHealth => _healthPoints <= 0;
-    private int _healthPoints;
+    protected int _healthPoints;
     public int HealthPoints
     {
         get => _healthPoints;
@@ -18,6 +18,8 @@ public class Health : MonoBehaviour, IDamageable
             HealthChanged?.Invoke();
         }
     }
+
+    public float HealthPercent => (float)HealthPoints / maxHealthPoints;
 
     private void Awake()
     {
@@ -33,12 +35,4 @@ public class Health : MonoBehaviour, IDamageable
     {
         HealthPoints += amount;
     }
-
-    public void HealthUpgrade(int amount)
-    {
-        maxHealthPoints += amount;
-        HealthPoints = HealthPoints;
-    }
-
-    public float HealthPercent() => (float)HealthPoints / maxHealthPoints;
 }

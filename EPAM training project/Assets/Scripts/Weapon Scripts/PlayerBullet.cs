@@ -15,7 +15,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player" || collider.gameObject.tag == "Bullet" || collider.gameObject.tag == "Trigger")
+        if (collider.gameObject.CompareTag("Player") || collider.gameObject.CompareTag("Bullet") || collider.gameObject.CompareTag("Trigger"))
         {
             return;
         }

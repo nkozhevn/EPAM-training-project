@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 1976909197314819020}
   - component: {fileID: 6707819352521611526}
   - component: {fileID: 5825624412611844391}
-  - component: {fileID: 480607430446171004}
   - component: {fileID: 7470086907714523559}
   m_Layer: 0
   m_Name: ShootingZombie
@@ -161,20 +160,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 10
---- !u!114 &480607430446171004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6125581095431605511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 5825624412611844391}
-  levelPoints: 2
 --- !u!114 &7470086907714523559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,11 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc318eb3bc8cbd747b53395c32cb5720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 5825624412611844391}
+  levelPoints: 2
   enemyStatsList:
   - {fileID: 11400000, guid: d10809fd9ab08cf43a52572b67d9b249, type: 2}
   - {fileID: 11400000, guid: 9244c55bac5e07d4ea974e797e4f24c6, type: 2}
   firePoint: {fileID: 8668664686705617349}
-  enemy: {fileID: 480607430446171004}
 --- !u!1 &8764330910102618068
 GameObject:
   m_ObjectHideFlags: 0

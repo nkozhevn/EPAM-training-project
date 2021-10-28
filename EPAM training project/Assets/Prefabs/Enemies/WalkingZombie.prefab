@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 463141149201877268}
   - component: {fileID: 4898057204057222202}
   - component: {fileID: 6529758039746509272}
-  - component: {fileID: 8971941687426693612}
   - component: {fileID: 7674644226779593857}
   m_Layer: 0
   m_Name: WalkingZombie
@@ -159,20 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 20
---- !u!114 &8971941687426693612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7523548273926703362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 6529758039746509272}
-  levelPoints: 3
 --- !u!114 &7674644226779593857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff40e5dae7e7eb14dbea83ce36634c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 6529758039746509272}
+  levelPoints: 3
   enemyStatsList:
   - {fileID: 11400000, guid: 98f686023725d824787f45f64f68c953, type: 2}
   - {fileID: 11400000, guid: 9e6ea31bb2627eb47925061117ecf05b, type: 2}
-  enemy: {fileID: 8971941687426693612}

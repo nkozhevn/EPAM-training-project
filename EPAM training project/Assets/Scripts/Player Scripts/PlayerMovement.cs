@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Player.Instance.Rigidbody().MovePosition(Player.Instance.Rigidbody().position + _movement * Player.Instance.moveSpeed * Time.fixedDeltaTime);
+        Player.Instance.Rigidbody.MovePosition(Player.Instance.Rigidbody.position + _movement * Player.Instance.moveSpeed * Time.fixedDeltaTime);
 
         Plane playerPlane = new Plane(Vector3.up, transform.position);
         Ray ray = Player.Instance.cam.ScreenPointToRay(Input.mousePosition);

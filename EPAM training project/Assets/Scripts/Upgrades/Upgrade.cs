@@ -9,7 +9,7 @@ public class Upgrade : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.CompareTag("Player"))
         {
             _isActivated = true;
             Destroy(gameObject);

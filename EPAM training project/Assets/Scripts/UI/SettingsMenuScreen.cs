@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 
 public class SettingsMenuScreen : MonoBehaviour
 {
-    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject menu;
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private Dropdown resolutionDropdown;
     private Resolution[] _resolutions;
@@ -45,7 +45,7 @@ public class SettingsMenuScreen : MonoBehaviour
 
     private void Back()
     {
-        mainMenu.SetActive(true);
+        menu.SetActive(true);
         gameObject.SetActive(false);
     }
 
