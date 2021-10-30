@@ -5,29 +5,28 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance{ get; private set; }
     public event Action PlayerDied;
-    [SerializeField] private PlayerHealth health;
+    [SerializeField] private PlayerHealth _health;
     [SerializeField] public Level level;
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float turnSpeed = 10f;
     private Rigidbody _rb;
     [SerializeField] public Camera cam;
-    public PlayerHealth Health => health;
+    public PlayerHealth Health => _health;
 
     private void Awake()
     {
-        Instance = this;
-
-        health.HealthChanged += OnHealthChanged;
+        Health.HealthChanged += OnHealthChanged;
 
         _rb = GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        health.maxHealthPoints = PlayerPrefs.GetInt("MaxHealth", health.maxHealthPoints);
-        health.HealthPoints = PlayerPrefs.GetInt("CurrentHealth", health.maxHealthPoints);
+        /*Health.maxHealthPoints = PlayerPrefs.GetInt("MaxHealth", Health.maxHealthPoints);
+        Health.HealthPoints = PlayerPrefs.GetInt("CurrentHealth", Health.maxHealthPoints);*/
+        Health.maxHealthPoints = GameLoop.Instance.GameData.maxHealth;
+        Health.HealthPoints = GameLoop.Instance.GameData.currentHealth;
     }
     
     public Vector3 GetPosition => transform.position;
@@ -35,7 +34,7 @@ public class Player : MonoBehaviour
 
     public void OnHealthChanged()
     {
-        if(health.NoHealth)
+        if(Health.NoHealth)
         {
             PlayerDied?.Invoke();
             gameObject.SetActive(false);

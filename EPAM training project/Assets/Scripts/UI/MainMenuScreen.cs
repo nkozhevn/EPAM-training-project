@@ -11,10 +11,11 @@ public class MainMenuScreen : MonoBehaviour
     [SerializeField] private GameObject modsButtons;
     [SerializeField] private GameObject loadPlug;
 
-    private void Awake()
+    private void Start()
     {
         modsButtons.SetActive(false);
-        if(PlayerPrefs.GetString("Level") != levelName)
+        //if(PlayerPrefs.GetString("Level") != levelName)
+        if(GameLoop.Instance.GameData.level != levelName)
         {
             loadPlug.SetActive(false);
         }
@@ -22,7 +23,8 @@ public class MainMenuScreen : MonoBehaviour
 
     public void LoadButton()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
+        //SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
+        SceneManager.LoadScene(GameLoop.Instance.GameData.level);
     }
 
     public void PlayButton()
@@ -32,29 +34,13 @@ public class MainMenuScreen : MonoBehaviour
 
     public void EasyButton()
     {
-        PlayerPrefs.SetString("Level", levelName);
-        PlayerPrefs.SetInt("Difficulty", 0);
-        PlayerPrefs.SetInt("MaxHealth", 20);
-        PlayerPrefs.SetInt("CurrentHealth", 20);
-        PlayerPrefs.SetInt("PlayerLevel", 0);
-        PlayerPrefs.SetInt("PlayerLevelPoints", 0);
-        PlayerPrefs.SetInt("Shotgun", 0);
-        PlayerPrefs.SetInt("Rifle", 0);
-        PlayerPrefs.SetInt("Granade", 0);
+        GameLoop.Instance.SetDifficulty(0);
         SceneManager.LoadScene(levelName);
     }
 
     public void HardButton()
     {
-        PlayerPrefs.SetString("Level", levelName);
-        PlayerPrefs.SetInt("Difficulty", 1);
-        PlayerPrefs.SetInt("MaxHealth", 10);
-        PlayerPrefs.SetInt("CurrentHealth", 10);
-        PlayerPrefs.SetInt("PlayerLevel", 0);
-        PlayerPrefs.SetInt("PlayerLevelPoints", 0);
-        PlayerPrefs.SetInt("Shotgun", 0);
-        PlayerPrefs.SetInt("Rifle", 0);
-        PlayerPrefs.SetInt("Granade", 0);
+        GameLoop.Instance.SetDifficulty(1);
         SceneManager.LoadScene(levelName);
     }
 

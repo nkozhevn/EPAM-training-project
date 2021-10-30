@@ -14,12 +14,13 @@ public class RunningEnemyMovement : Enemy
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
 
-        _enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
+        //_enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
+        _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
     }
 
     private void Update() 
     {
-        Direction = Player.Instance.GetPosition - Rigidbody.position;
+        Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
         DirectionNorm = Direction / Direction.magnitude;
     }
 
@@ -28,7 +29,7 @@ public class RunningEnemyMovement : Enemy
         if(!_hitCheck)
         {
             Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
-            transform.LookAt(Player.Instance.transform);
+            transform.LookAt(GameLoop.Instance.Player.transform);
         }
     }
 
@@ -57,7 +58,7 @@ public class RunningEnemyMovement : Enemy
         if(health.NoHealth)
         {
             Destroy(gameObject);
-            Player.Instance.level.GainLevelPoints(levelPoints);
+            GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
         }
     }
 }

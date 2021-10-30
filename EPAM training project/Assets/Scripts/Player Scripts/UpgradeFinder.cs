@@ -12,14 +12,15 @@ public class UpgradeFinder : MonoBehaviour
 
     private void Start() 
     {
-        if(PlayerPrefs.GetInt(upgradeName, 0) == 0)
+        //if(PlayerPrefs.GetInt(upgradeName, 0) == 1)
+        if(GameLoop.Instance.GameData.skills[upgradeName] == true)
         {
-            skillIcon.enabled = false;
-            skillGot = false;
+            skillGot = true;
         }
         else
         {
-            skillGot = true;
+            skillIcon.enabled = false;
+            skillGot = false;
         }
     }
 

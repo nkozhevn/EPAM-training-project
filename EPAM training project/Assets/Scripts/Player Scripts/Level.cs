@@ -10,7 +10,7 @@ public class Level : MonoBehaviour
     private int _levelPoints;
     [SerializeField] private int maxLevelPoints = 10;
     [SerializeField] private PlayerHealth health;
-    public int PlayerLevel() => _level;
+    public int PlayerLevel => _level;
     public int LevelPoints
     {
         get => _levelPoints;
@@ -23,9 +23,11 @@ public class Level : MonoBehaviour
 
     private void Awake()
     {
-        _level = PlayerPrefs.GetInt("PlayerLevel", 0);
+        //_level = PlayerPrefs.GetInt("PlayerLevel", 0);
+        _level = GameLoop.Instance.GameData.playerLevel;
         health.HealthUpgrade((_level - 1) * 5);
-        GainLevelPoints(PlayerPrefs.GetInt("PlayerLevelPoints", 0));
+        //GainLevelPoints(PlayerPrefs.GetInt("PlayerLevelPoints", 0));
+        GainLevelPoints(GameLoop.Instance.GameData.playerLevelPoints);
     }
 
     public void GainLevelPoints(int amount)

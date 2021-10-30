@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 702958825393157977}
   - component: {fileID: 702958825393157974}
+  - component: {fileID: 3676306620813735061}
+  - component: {fileID: 6237983625257449731}
   m_Layer: 0
   m_Name: GameLoop
   m_TagString: Untagged
@@ -44,13 +46,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameIsPaused: 0
-  levelNumber: 1
-  pauseScreen: {fileID: 0}
-  gameOverScreen: {fileID: 0}
-  finishScreen: {fileID: 0}
-  ingameUI: {fileID: 0}
+  levelName: 3
+  firstLevelName: 3
+  nextLevelName: 3
+  uIController: {fileID: 3676306620813735061}
   finish: {fileID: 0}
   playerHealth: {fileID: 0}
   upgradeFinders:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  upgradeFindersNames:
+  - Granade
+  - Fire
+  - Shield
+  gameData: {fileID: 6237983625257449731}
+  player: {fileID: 0}
+--- !u!114 &3676306620813735061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702958825393157975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083af48e7a5bd674b8ef0377122121fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  finishScreen: {fileID: 0}
+  ingameUI: {fileID: 0}
+--- !u!114 &6237983625257449731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702958825393157975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9adfc304f37bb99428e8bbbd8cfbf5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficulty: 0
+  level: 
+  maxHealth: 0
+  currentHealth: 0
+  playerLevel: 0
+  playerLevelPoints: 0

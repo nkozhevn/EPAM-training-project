@@ -6,19 +6,20 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Image barImage;
+    [SerializeField] private PlayerHealth health;
 
     private void Awake()
     {
-        Player.Instance.Health.HealthChanged += OnHealthChanged;
+        health.HealthChanged += OnHealthChanged;
     }
 
     private void OnDestroy() 
     {
-        Player.Instance.Health.HealthChanged -= OnHealthChanged;
+        health.HealthChanged -= OnHealthChanged;
     }
 
     public void OnHealthChanged()
     {
-        barImage.fillAmount = Player.Instance.Health.HealthPercent;
+        barImage.fillAmount = health.HealthPercent;
     }
 }
