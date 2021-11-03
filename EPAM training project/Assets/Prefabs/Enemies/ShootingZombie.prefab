@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6707819352521611526}
   - component: {fileID: 5825624412611844391}
   - component: {fileID: 7470086907714523559}
+  - component: {fileID: 2980904173834825445}
   m_Layer: 0
   m_Name: ShootingZombie
   m_TagString: Untagged
@@ -178,6 +179,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d10809fd9ab08cf43a52572b67d9b249, type: 2}
   - {fileID: 11400000, guid: 9244c55bac5e07d4ea974e797e4f24c6, type: 2}
   firePoint: {fileID: 8668664686705617349}
+--- !u!195 &2980904173834825445
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6125581095431605511}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 15
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 500
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &8764330910102618068
 GameObject:
   m_ObjectHideFlags: 0

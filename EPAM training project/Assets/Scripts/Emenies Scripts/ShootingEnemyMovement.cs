@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ShootingEnemyMovement : Enemy
 {
@@ -8,10 +9,13 @@ public class ShootingEnemyMovement : Enemy
     private ShootingEnemyStats _enemyStats;
     private float _shootingTimer = 99999f;
     [SerializeField] private Transform firePoint;
-    private bool _onShoot;
+    //private bool _onShoot;
+    private State _state;
+    private enum State { Running, Shooting }
 
     private void Awake()
     {
+        navMeshAgent = GetComponent<NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
 
@@ -22,15 +26,45 @@ public class ShootingEnemyMovement : Enemy
     private void Update() 
     {
         Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
-        DirectionNorm = Direction / Direction.magnitude;
+        //DirectionNorm = Direction / Direction.magnitude;
+
+        if(Direction.magnitude > _enemyStats.ShootingDist)
+        {
+            _state = State.Running;
+        }
+        else
+        {
+            _state = State.Shooting;
+        }
     }
 
     private void FixedUpdate()
     {
-        _onShoot = !(Direction.magnitude > _enemyStats.ShootingDist);
+        //_onShoot = !(Direction.magnitude > _enemyStats.ShootingDist);
 
         transform.LookAt(GameLoop.Instance.Player.transform);
-        if(!_onShoot)
+
+        switch(_state)
+        {
+            case State.Running:
+                //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                break;
+            case State.Shooting:
+                transform.LookAt(GameLoop.Instance.Player.transform);
+                navMeshAgent.destination = transform.position;
+                if(_shootingTimer >= _enemyStats.ShootingCoolDown)
+                {
+                    Shoot();
+                    _shootingTimer = 0;
+                }
+                else
+                {
+                    _shootingTimer += Time.deltaTime;
+                }
+                break;
+        }
+        /*if(!_onShoot)
         {
             Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
         }
@@ -45,7 +79,7 @@ public class ShootingEnemyMovement : Enemy
             {
                 _shootingTimer += Time.deltaTime;
             }
-        }
+        }*/
     }
 
     private void Shoot()

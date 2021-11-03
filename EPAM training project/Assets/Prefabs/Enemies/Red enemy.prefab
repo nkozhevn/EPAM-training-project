@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7078384075382473629}
   - component: {fileID: 5612815537783899503}
   - component: {fileID: 1573552092437420723}
+  - component: {fileID: 6052978953369819361}
   m_Layer: 0
   m_Name: Red enemy
   m_TagString: Untagged
@@ -94,6 +95,28 @@ MonoBehaviour:
   enemyStatsList:
   - {fileID: 11400000, guid: 2c4dfae3af942274b852edcf6f789632, type: 2}
   - {fileID: 11400000, guid: 64c08b0e9faee1649926c61a09c4925b, type: 2}
+--- !u!195 &6052978953369819361
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165085791204567715}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 18
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 500
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7171461161254982266
 GameObject:
   m_ObjectHideFlags: 0

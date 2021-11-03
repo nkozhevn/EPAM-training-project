@@ -10,11 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4355041834672549843}
   - component: {fileID: 5223863184758936417}
-  - component: {fileID: 3197612246287811145}
   - component: {fileID: 2524553967369097596}
   - component: {fileID: -8703922337119386250}
-  - component: {fileID: 4435125031277387755}
-  - component: {fileID: 473685065727340327}
+  - component: {fileID: 4428879636964502744}
   m_Layer: 0
   m_Name: Arachnoid
   m_TagString: Enemy
@@ -50,22 +48,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.8, y: 4, z: 3.6}
   m_Center: {x: 0, y: 2, z: 0}
---- !u!111 &3197612246287811145
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3980029598182094185}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9ad4acad6becae84592565ae2040b446, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 9ad4acad6becae84592565ae2040b446, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!114 &2524553967369097596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +77,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &4435125031277387755
+--- !u!114 &4428879636964502744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,27 +86,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3980029598182094185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff40e5dae7e7eb14dbea83ce36634c7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyStatsList:
-  - {fileID: 11400000, guid: 2c4dfae3af942274b852edcf6f789632, type: 2}
-  - {fileID: 11400000, guid: 64c08b0e9faee1649926c61a09c4925b, type: 2}
-  enemy: {fileID: 473685065727340327}
---- !u!114 &473685065727340327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3980029598182094185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
+  m_Script: {fileID: 11500000, guid: 8176d9db2720f1944a6fe5223a3db2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 2524553967369097596}
   levelPoints: 1
+  moveSpeed: 15
 --- !u!1 &5383539012102016432
 GameObject:
   m_ObjectHideFlags: 0

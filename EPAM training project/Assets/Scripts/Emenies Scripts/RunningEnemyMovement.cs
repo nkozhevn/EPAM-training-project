@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AI;
 
 public class RunningEnemyMovement : Enemy
 {
@@ -11,6 +12,7 @@ public class RunningEnemyMovement : Enemy
 
     private void Awake()
     {
+        navMeshAgent = GetComponent<NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
 
@@ -20,16 +22,17 @@ public class RunningEnemyMovement : Enemy
 
     private void Update() 
     {
-        Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
-        DirectionNorm = Direction / Direction.magnitude;
+        //Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
+        //DirectionNorm = Direction / Direction.magnitude;
     }
 
     private void FixedUpdate()
     {
         if(!_hitCheck)
         {
-            Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+            //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
             transform.LookAt(GameLoop.Instance.Player.transform);
+            navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
         }
     }
 
