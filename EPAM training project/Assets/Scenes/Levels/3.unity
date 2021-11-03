@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 1
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.33333334
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -4759,30 +4759,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 4226602308217314731, guid: d2fd137a53d86e64893befbfe6408247,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226602308217314731, guid: d2fd137a53d86e64893befbfe6408247,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4767298277731533804, guid: d2fd137a53d86e64893befbfe6408247,
         type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4767298277731533804, guid: d2fd137a53d86e64893befbfe6408247,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0071428586
-      objectReference: {fileID: 0}
-    - target: {fileID: 4767298277731533804, guid: d2fd137a53d86e64893befbfe6408247,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4767298277731533804, guid: d2fd137a53d86e64893befbfe6408247,
         type: 3}
@@ -12514,6 +12494,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1222570396}
     m_Modifications:
+    - target: {fileID: 3462299790991756145, guid: 0fb40fe2d587b014a971df5b31edde5e,
+        type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 3980029598182094185, guid: 323e7513d1686cb4a8c7974ce4a1c181,
+        type: 3}
     - target: {fileID: 4000944888263410209, guid: 0fb40fe2d587b014a971df5b31edde5e,
         type: 3}
       propertyPath: m_RootOrder
@@ -12732,6 +12718,11 @@ PrefabInstance:
       propertyPath: fireIcon
       value: 
       objectReference: {fileID: 1682524882}
+    - target: {fileID: 5079582186672367729, guid: c5b7e5f994ccaa0429b86e5598ee32e5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5124530225527479825, guid: c5b7e5f994ccaa0429b86e5598ee32e5,
         type: 3}
       propertyPath: skillIcon
@@ -13072,11 +13063,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226602308217314731, guid: d2fd137a53d86e64893befbfe6408247,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4767298277731533804, guid: d2fd137a53d86e64893befbfe6408247,
         type: 3}

@@ -42,12 +42,13 @@ public class ShootingEnemyMovement : Enemy
     {
         //_onShoot = !(Direction.magnitude > _enemyStats.ShootingDist);
 
-        transform.LookAt(GameLoop.Instance.Player.transform);
+        //transform.LookAt(GameLoop.Instance.Player.transform);
 
         switch(_state)
         {
             case State.Running:
                 //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+                _shootingTimer = _enemyStats.ShootingCoolDown;
                 navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
                 break;
             case State.Shooting:

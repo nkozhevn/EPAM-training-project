@@ -9,6 +9,8 @@ public class RunningEnemyMovement : Enemy
     [SerializeField] private List<RunningEnemyStats> enemyStatsList;
     private RunningEnemyStats _enemyStats;
     private bool _hitCheck = false;
+    private State _state;
+    private enum State { Running, Standing }
 
     private void Awake()
     {
@@ -20,6 +22,10 @@ public class RunningEnemyMovement : Enemy
         _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
     }
 
+    private void Start() {
+        _state = State.Running;
+    }
+
     private void Update() 
     {
         //Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
@@ -28,10 +34,10 @@ public class RunningEnemyMovement : Enemy
 
     private void FixedUpdate()
     {
-        if(!_hitCheck)
+        if(_state == State.Running)
         {
             //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
-            transform.LookAt(GameLoop.Instance.Player.transform);
+            //transform.LookAt(GameLoop.Instance.Player.transform);
             navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
         }
     }
@@ -51,9 +57,9 @@ public class RunningEnemyMovement : Enemy
 
     private IEnumerator Stunning()
     {
-        _hitCheck = true;
+        _state = State.Standing;
         yield return new WaitForSeconds(_enemyStats.StunTime);
-        _hitCheck = false;
+        _state = State.Running;
     }
 
     public void OnHealthChanged()
