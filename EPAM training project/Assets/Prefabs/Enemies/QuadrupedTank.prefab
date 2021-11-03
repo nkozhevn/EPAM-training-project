@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2544180785758961106}
   - component: {fileID: 2649250781368657543}
-  - component: {fileID: 2649250781368657539}
   - component: {fileID: 2649250781368657538}
   - component: {fileID: -2226733663730261915}
-  - component: {fileID: 4870276614895376727}
-  - component: {fileID: -6333987927217703609}
+  - component: {fileID: 2294870478069212157}
+  - component: {fileID: 539927357}
   m_Layer: 0
   m_Name: QuadrupedTank
   m_TagString: Enemy
@@ -51,22 +50,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.8, y: 5.6, z: 5}
   m_Center: {x: 0, y: 2.8, z: 0}
---- !u!111 &2649250781368657539
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2883832484011255656}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 9ad4acad6becae84592565ae2040b446, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 9ad4acad6becae84592565ae2040b446, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!114 &2649250781368657538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0d27f1b2cb4e74296af7569f3be953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 3
+  maxHealthPoints: 30
 --- !u!54 &-2226733663730261915
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96,7 +79,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &4870276614895376727
+--- !u!114 &2294870478069212157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,28 +88,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 2883832484011255656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc318eb3bc8cbd747b53395c32cb5720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyStatsList:
-  - {fileID: 11400000, guid: d10809fd9ab08cf43a52572b67d9b249, type: 2}
-  - {fileID: 11400000, guid: 9244c55bac5e07d4ea974e797e4f24c6, type: 2}
-  firePoint: {fileID: 2607566374527185665}
-  enemy: {fileID: -6333987927217703609}
---- !u!114 &-6333987927217703609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2883832484011255656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11de2f05fc5c5d44b91f51e9e2d08a30, type: 3}
+  m_Script: {fileID: 11500000, guid: d15ff4278db2b5d46a9ae5452720ebb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 2649250781368657538}
-  levelPoints: 3
+  levelPoints: 10
+  enemyStatsList:
+  - {fileID: 11400000, guid: 3ff18405f33bc324583c72e6fd39aceb, type: 2}
+  - {fileID: 11400000, guid: 3ff18405f33bc324583c72e6fd39aceb, type: 2}
+  firePoint: {fileID: 2607566374527185665}
+--- !u!195 &539927357
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883832484011255656}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 15
+  m_Acceleration: 50
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &6163358322177761201
 GameObject:
   m_ObjectHideFlags: 0

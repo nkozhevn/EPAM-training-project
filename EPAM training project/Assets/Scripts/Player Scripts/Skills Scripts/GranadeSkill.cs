@@ -12,7 +12,8 @@ public class GranadeSkill : Skill
         if(!_isActivated)
         {
             var granade = Instantiate(granadePrefab, gameObject.transform.position, gameObject.transform.rotation);
-            granade.AddForce(gameObject.transform.up * throwForce, ForceMode.Impulse);
+            Rigidbody rb = granade.GetComponent<Rigidbody>();
+            rb.AddForce(gameObject.transform.up * throwForce, ForceMode.Impulse);
 
             StartCoroutine(Reload());
         }

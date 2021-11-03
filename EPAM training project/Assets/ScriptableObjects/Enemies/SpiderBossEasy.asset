@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3370d019e19d4f46a4ae7bdc5562390, type: 3}
+  m_Name: SpiderBossEasy
+  m_EditorClassIdentifier: 
+  moveSpeed: 17
+  enemyPower: 50
+  activationDist: 30
+  shootingCoolDown: 0.3
+  bulletPrefab: {fileID: 6137887287921274957, guid: 032a432338449a643b9522b54e2a9b4f,
+    type: 3}
+  bulletForce: 70
+  shootingWaitTime: 0
+  shootingActiveTime: 5
+  shootingReloadTime: 1
+  launchingCoolDown: 1
+  granadePrefab: {fileID: 1903286783813314171, guid: 0ded7e6d151cca54583e4592c7661fec,
+    type: 3}
+  granadeForce: 50
+  launchingWaitTime: 0.5
+  launchingActiveTime: 5
+  launchingReloadTime: 2
+  dashSpeed: 30
+  dashWaitTime: 2
+  dashActiveTime: 10
+  dashReloadTime: 4

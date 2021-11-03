@@ -17,13 +17,15 @@ public class RunningEnemyMovement : Enemy
         navMeshAgent = GetComponent<NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
-
-        //_enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
-        _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
     }
 
-    private void Start() {
+    private void Start()
+    {
+        //_enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
+        _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
         _state = State.Running;
+
+        navMeshAgent.speed = _enemyStats.MoveSpeed;
     }
 
     private void Update() 
@@ -34,11 +36,14 @@ public class RunningEnemyMovement : Enemy
 
     private void FixedUpdate()
     {
-        if(_state == State.Running)
+        if(navMeshAgent.enabled == true)
         {
-            //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
-            //transform.LookAt(GameLoop.Instance.Player.transform);
-            navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+            if(_state == State.Running)
+            {
+                //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+                //transform.LookAt(GameLoop.Instance.Player.transform);
+                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+            }
         }
     }
 

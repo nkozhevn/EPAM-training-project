@@ -17,8 +17,13 @@ public class JumpingEnemy : Enemy
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
+    }
 
+    private void Start()
+    {
         _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
+
+        navMeshAgent.speed = _enemyStats.MoveSpeed;
     }
 
     private void Update() 
@@ -37,38 +42,41 @@ public class JumpingEnemy : Enemy
 
     private void LateUpdate()
     {
-        switch(_state)
+        if(navMeshAgent.enabled == true)
         {
-            case State.Running:
-                _jumpingWaitTimer = 0;
-                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
-                break;
-            case State.Jumping:
-                transform.LookAt(GameLoop.Instance.Player.transform);
-                navMeshAgent.destination = transform.position;
-                if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
-                {
-                    Jump();
-                    _state = State.Standing;
+            switch(_state)
+            {
+                case State.Running:
                     _jumpingWaitTimer = 0;
-                }
-                else
-                {
-                    _jumpingWaitTimer += Time.deltaTime;
-                }
-                break;
-            case State.Standing:
-                navMeshAgent.destination = transform.position;
-                if(_jumpingCoolDownTimer >= _enemyStats.JumpingCoolDown)
-                {
-                    _state = State.Running;
-                    _jumpingCoolDownTimer = 0;
-                }
-                else
-                {
-                    _jumpingCoolDownTimer += Time.deltaTime;
-                }
-                break;
+                    navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                    break;
+                case State.Jumping:
+                    transform.LookAt(GameLoop.Instance.Player.transform);
+                    navMeshAgent.destination = transform.position;
+                    if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
+                    {
+                        Jump();
+                        _state = State.Standing;
+                        _jumpingWaitTimer = 0;
+                    }
+                    else
+                    {
+                        _jumpingWaitTimer += Time.deltaTime;
+                    }
+                    break;
+                case State.Standing:
+                    navMeshAgent.destination = transform.position;
+                    if(_jumpingCoolDownTimer >= _enemyStats.JumpingCoolDown)
+                    {
+                        _state = State.Running;
+                        _jumpingCoolDownTimer = 0;
+                    }
+                    else
+                    {
+                        _jumpingCoolDownTimer += Time.deltaTime;
+                    }
+                    break;
+            }
         }
     }
 

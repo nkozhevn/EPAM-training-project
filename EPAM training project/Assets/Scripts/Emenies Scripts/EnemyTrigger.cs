@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerTrigger : MonoBehaviour
+public class EnemyTrigger : MonoBehaviour
 {
-    [SerializeField] private Spawn spawner;
+    [SerializeField] private UnityEngine.AI.NavMeshAgent enemy;
     private bool triggered = false;
 
     private void OnTriggerEnter(Collider collider)
@@ -13,7 +13,7 @@ public class SpawnerTrigger : MonoBehaviour
         {
             if (collider.gameObject.CompareTag("Player"))
             {
-                StartCoroutine(spawner.Spawning());
+                enemy.enabled = true;
                 triggered = true;
             }
         }

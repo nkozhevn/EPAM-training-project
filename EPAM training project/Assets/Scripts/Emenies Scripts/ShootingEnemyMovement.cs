@@ -18,9 +18,14 @@ public class ShootingEnemyMovement : Enemy
         navMeshAgent = GetComponent<NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
+    }
 
+    private void Start()
+    {
         //_enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
         _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
+
+        navMeshAgent.speed = _enemyStats.MoveSpeed;
     }
 
     private void Update() 
@@ -44,26 +49,29 @@ public class ShootingEnemyMovement : Enemy
 
         //transform.LookAt(GameLoop.Instance.Player.transform);
 
-        switch(_state)
+        if(navMeshAgent.enabled == true)
         {
-            case State.Running:
-                //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
-                _shootingTimer = _enemyStats.ShootingCoolDown;
-                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
-                break;
-            case State.Shooting:
-                transform.LookAt(GameLoop.Instance.Player.transform);
-                navMeshAgent.destination = transform.position;
-                if(_shootingTimer >= _enemyStats.ShootingCoolDown)
-                {
-                    Shoot();
-                    _shootingTimer = 0;
-                }
-                else
-                {
-                    _shootingTimer += Time.deltaTime;
-                }
-                break;
+            switch(_state)
+            {
+                case State.Running:
+                    //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+                    _shootingTimer = _enemyStats.ShootingCoolDown;
+                    navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                    break;
+                case State.Shooting:
+                    transform.LookAt(GameLoop.Instance.Player.transform);
+                    navMeshAgent.destination = transform.position;
+                    if(_shootingTimer >= _enemyStats.ShootingCoolDown)
+                    {
+                        Shoot();
+                        _shootingTimer = 0;
+                    }
+                    else
+                    {
+                        _shootingTimer += Time.deltaTime;
+                    }
+                    break;
+            }
         }
         /*if(!_onShoot)
         {
