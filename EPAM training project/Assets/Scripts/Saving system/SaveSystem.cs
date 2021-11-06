@@ -10,11 +10,16 @@ public static class SaveSystem
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/game.data";
-        FileStream stream = new FileStream(path, FileMode.Create);
+        //FileStream stream = new FileStream(path, FileMode.Create);
+        using(FileStream stream = new FileStream(path, FileMode.Create))
+        {
+            Data data = new Data(gameData);
+            formatter.Serialize(stream, data);
+        }
 
-        Data data = new Data(gameData);
+        /*Data data = new Data(gameData);
         formatter.Serialize(stream, data);
-        stream.Close();
+        stream.Close();*/
     }
 
     public static Data LoadPlayer()
@@ -23,10 +28,15 @@ public static class SaveSystem
         if(File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
+            //FileStream stream = new FileStream(path, FileMode.Open);
+            Data data;
+            using(FileStream stream = new FileStream(path, FileMode.Open))
+            {
+                data = formatter.Deserialize(stream) as Data;
+            }
 
-            Data data = formatter.Deserialize(stream) as Data;
-            stream.Close();
+            /*Data data = formatter.Deserialize(stream) as Data;
+            stream.Close();*/
             return data;
         }
         else

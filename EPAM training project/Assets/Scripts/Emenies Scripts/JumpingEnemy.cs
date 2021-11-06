@@ -42,17 +42,23 @@ public class JumpingEnemy : Enemy
 
     private void LateUpdate()
     {
-        if(navMeshAgent.enabled == true)
+        if(navMeshAgent.enabled)
         {
             switch(_state)
             {
                 case State.Running:
+                    //navMeshAgent.enabled = true;
+                    //if(navMeshAgent.enabled)
+                    //{
+                        //_jumpingWaitTimer = 0;
+                        //navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                    //}
                     _jumpingWaitTimer = 0;
                     navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
                     break;
                 case State.Jumping:
                     transform.LookAt(GameLoop.Instance.Player.transform);
-                    navMeshAgent.destination = transform.position;
+                    navMeshAgent.enabled = false;
                     if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
                     {
                         Jump();
@@ -65,7 +71,7 @@ public class JumpingEnemy : Enemy
                     }
                     break;
                 case State.Standing:
-                    navMeshAgent.destination = transform.position;
+                    navMeshAgent.enabled = false;
                     if(_jumpingCoolDownTimer >= _enemyStats.JumpingCoolDown)
                     {
                         _state = State.Running;

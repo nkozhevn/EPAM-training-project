@@ -141,6 +141,7 @@ public class SpiderBossEnemy : Enemy
     {
         if(health.NoHealth)
         {
+            GameLoop.Instance.objective = true;
             Destroy(gameObject);
             GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
         }

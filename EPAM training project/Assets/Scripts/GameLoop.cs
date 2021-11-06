@@ -9,6 +9,7 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private string levelName;
     [SerializeField] private string firstLevelName;
     [SerializeField] private string nextLevelName;
+    public bool objective = false;
     [SerializeField] private UIController uIController;
     [SerializeField] private TriggerObjects finish;
     [SerializeField] private PlayerHealth playerHealth;
@@ -51,7 +52,7 @@ public class GameLoop : MonoBehaviour
     {
         if(finish != null)
         {
-            if(finish.IsActivated)
+            if(finish.IsActivated && objective)
             {
                 OnFinish();
             }

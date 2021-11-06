@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 17
   enemyPower: 50
-  activationDist: 30
+  activationDist: 20
   shootingCoolDown: 0.3
   bulletPrefab: {fileID: 6137887287921274957, guid: 032a432338449a643b9522b54e2a9b4f,
     type: 3}
@@ -25,7 +25,7 @@ MonoBehaviour:
   launchingCoolDown: 1
   granadePrefab: {fileID: 1903286783813314171, guid: 0ded7e6d151cca54583e4592c7661fec,
     type: 3}
-  granadeForce: 50
+  granadeForce: 70
   launchingWaitTime: 0.5
   launchingActiveTime: 5
   launchingReloadTime: 2

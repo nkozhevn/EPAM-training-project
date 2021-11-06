@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
-    [SerializeField] public List<Weapon> weapons;
+    [SerializeField] private List<Weapon> weapons;
     private readonly Dictionary<KeyCode, int> keyMap = new Dictionary<KeyCode, int>
     {
         {KeyCode.Alpha1, 0},
@@ -28,7 +28,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Awake()
     {
-        SelectWeapon();
+        SelectWeapon(_selectedWeaponIndex);
     }
 
     private void Update()
@@ -48,7 +48,7 @@ public class PlayerShooting : MonoBehaviour
         {
             var pressed = Input.GetKey(key);
 
-            if(pressed)
+            if(pressed && keyMap[key] < weapons.Count)
             {
                 _selectedWeaponIndex = keyMap[key];
             }
@@ -56,7 +56,7 @@ public class PlayerShooting : MonoBehaviour
 
         if(_previousSelectedWeaponIndex != _selectedWeaponIndex)
         {
-            SelectWeapon();
+            SelectWeapon(_selectedWeaponIndex);
         }
 
         if(Input.GetKeyDown(KeyCode.R) && _selectedWeapon.IsReloading == false)
@@ -65,13 +65,18 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    private void SelectWeapon()
+    private void SelectWeapon(int selectedWeaponIndex)
     {
         for(int i = 0; i < weapons.Count; i++)
         {
-            weapons[i].gameObject.SetActive(i == _selectedWeaponIndex);
+            weapons[i].gameObject.SetActive(i == selectedWeaponIndex);
         }
-        _selectedWeapon = weapons[_selectedWeaponIndex];
+        _selectedWeapon = weapons[selectedWeaponIndex];
         WeaponChanged?.Invoke(_selectedWeapon);
+    }
+
+    public void AddWeapon(Weapon weapon)
+    {
+        weapons.Add(weapon);
     }
 }
