@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
-    [SerializeField] private List<Weapon> weapons;
+    [SerializeField] public List<Weapon> weapons;
     private readonly Dictionary<KeyCode, int> keyMap = new Dictionary<KeyCode, int>
     {
         {KeyCode.Alpha1, 0},

@@ -36,15 +36,15 @@ public class RunningEnemyMovement : Enemy
 
     private void FixedUpdate()
     {
-        if(navMeshAgent.enabled == true)
-        {
+        //if(navMeshAgent.enabled == true)
+        //{
             if(_state == State.Running)
             {
                 //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
                 //transform.LookAt(GameLoop.Instance.Player.transform);
                 navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
             }
-        }
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -63,8 +63,10 @@ public class RunningEnemyMovement : Enemy
     private IEnumerator Stunning()
     {
         _state = State.Standing;
+        navMeshAgent.isStopped = true;
         yield return new WaitForSeconds(_enemyStats.StunTime);
         _state = State.Running;
+        navMeshAgent.isStopped = false;
     }
 
     public void OnHealthChanged()

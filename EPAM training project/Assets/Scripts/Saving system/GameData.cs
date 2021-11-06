@@ -16,6 +16,12 @@ public class GameData : MonoBehaviour
         {"Fire", false},
         {"Shield", false}
     };
+    /*public Dictionary<string, bool> weapons = new Dictionary<string, bool>
+    {
+        {"Pistol", true},
+        {"Shotgun", false},
+        {"Rifle", false}
+    };*/
     /*public int Difficulty => _difficulty;
     public string level => _level;
     public int maxHealth => _maxHealth;
@@ -63,5 +69,17 @@ public class GameData : MonoBehaviour
                 skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
             }
         }
+
+        /*for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
+        {
+            if(data.weapons[i] == 0)
+            {
+                weapons[GameLoop.Instance.upgradeFindersNames[i]] = false;
+            }
+            else
+            {
+                skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
+            }
+        }*/
     }
 }

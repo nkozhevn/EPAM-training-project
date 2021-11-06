@@ -12,7 +12,7 @@ public class Upgrade : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             _isActivated = true;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

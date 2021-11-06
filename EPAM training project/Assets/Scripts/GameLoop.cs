@@ -15,7 +15,8 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] public List<UpgradeFinder> upgradeFinders;
     [SerializeField] public List<string> upgradeFindersNames;
-
+    /*[SerializeField] public List<WeaponFinder> weaponFinders;
+    [SerializeField] public List<string> weaponFindersNames;*/
     [SerializeField] private GameData gameData;
     public GameData GameData
     {
@@ -105,6 +106,11 @@ public class GameLoop : MonoBehaviour
         {
             GameData.skills[upgradeFindersNames[i]] = false;
         }
+        /*GameData.weapons[weaponFindersNames[0]] = true;
+        for(int i = 1; i < weaponFinders.Count; i++)
+        {
+            GameData.weapons[weaponFindersNames[i]] = false;
+        }*/
         GameData.SaveGame();
     }
 
@@ -128,6 +134,13 @@ public class GameLoop : MonoBehaviour
                 GameData.skills[upgradeFindersNames[i]] = true;
             }
         }
+        /*for(int i = 0; i < weaponFinders.Count; i++)
+        {
+            if(weaponFinders[i].weaponGot)
+            {
+                GameData.weapons[weaponFindersNames[i]] = true;
+            }
+        }*/
         GameData.SaveGame();
         uIController.Finish();
     }

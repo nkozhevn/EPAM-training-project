@@ -39,7 +39,8 @@ public class SpiderBossEnemy : Enemy
             }
             else if(_state == State.Running)
             {
-                navMeshAgent.destination = transform.position;
+                navMeshAgent.isStopped = true;
+                //navMeshAgent.destination = transform.position;
                 int abilityNum = Random.Range(0, 3);
                 switch(abilityNum)
                 {
@@ -59,11 +60,12 @@ public class SpiderBossEnemy : Enemy
 
     private void LateUpdate()
     {
-        if(navMeshAgent.enabled == true)
-        {
+        //if(navMeshAgent.enabled == true)
+        //{
             switch(_state)
             {
                 case State.Running:
+                    navMeshAgent.isStopped = false;
                     navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
                     break;
                 case State.Standing:
@@ -94,10 +96,11 @@ public class SpiderBossEnemy : Enemy
                     }
                     break;
                 case State.Dashing:
+                    navMeshAgent.isStopped = false;
                     navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
                     break;
             }
-        }
+        //}
     }
 
     private IEnumerator AttackActivate(State state, float waitTime, float activeTime, float coolDown)

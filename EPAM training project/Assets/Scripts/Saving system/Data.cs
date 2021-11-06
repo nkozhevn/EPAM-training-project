@@ -11,8 +11,9 @@ public class Data
     public int currentHealth;
     public int playerLevel;
     public int playerLevelPoints;
-    public int[] skills = { 0, 0, 0};
-
+    public int[] skills = { 0, 0, 0 };
+    //public int[] weapons = { 0, 0, 0 };
+ 
     public Data(GameData gameData)
     {
         difficulty = gameData.difficulty;
@@ -46,5 +47,17 @@ public class Data
                 skills[i] = 0;
             }
         }
+
+        /*for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
+        {
+            if(gameData.weapons[GameLoop.Instance.weaponFindersNames[i]])
+            {
+                weapons[i] = 1;
+            }
+            else
+            {
+                weapons[i] = 0;
+            }
+        }*/
     }
 }

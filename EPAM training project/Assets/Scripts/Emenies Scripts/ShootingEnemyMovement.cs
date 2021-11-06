@@ -49,18 +49,20 @@ public class ShootingEnemyMovement : Enemy
 
         //transform.LookAt(GameLoop.Instance.Player.transform);
 
-        if(navMeshAgent.enabled == true)
-        {
+        //if(navMeshAgent.enabled == true)
+        //{
             switch(_state)
             {
                 case State.Running:
                     //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
+                    navMeshAgent.isStopped = false;
                     _shootingTimer = _enemyStats.ShootingCoolDown;
                     navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
                     break;
                 case State.Shooting:
                     transform.LookAt(GameLoop.Instance.Player.transform);
-                    navMeshAgent.destination = transform.position;
+                    navMeshAgent.isStopped = true;
+                    //navMeshAgent.destination = transform.position;
                     if(_shootingTimer >= _enemyStats.ShootingCoolDown)
                     {
                         Shoot();
@@ -72,7 +74,7 @@ public class ShootingEnemyMovement : Enemy
                     }
                     break;
             }
-        }
+        //}
         /*if(!_onShoot)
         {
             Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
