@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] public Level level;
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float turnSpeed = 10f;
+    //[SerializeField] public float turnSmoothTime = 0.1f;
     private Rigidbody _rb;
     [SerializeField] public Camera cam;
     public PlayerHealth Health => _health;
