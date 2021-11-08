@@ -19,7 +19,6 @@ public class Health : MonoBehaviour, IHealth
             HealthChanged?.Invoke();
         }
     }
-
     public float HealthPercent => (float)HealthPoints / maxHealthPoints;
 
     private void Awake()

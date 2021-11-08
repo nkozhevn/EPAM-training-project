@@ -5,12 +5,12 @@ using UnityEngine;
 public class SpiderBossEnemy : Enemy
 {
     [SerializeField] private List<SpiderBossStats> enemyStatsList;
-    private SpiderBossStats _enemyStats;
     [SerializeField] private Transform firePoint;
+    private SpiderBossStats _enemyStats;
     float _shootingTimer = 99999f;
     float _launchingTimer = 99999f;
-    private State _state = State.Running;
     private enum State { Running, Standing, Shooting, Launching, Dashing }
+    private State _state = State.Running;
     //private int _abilitiesCount = Enum.GetNames(typeof(State)).Length - 2;
 
     private void Awake()

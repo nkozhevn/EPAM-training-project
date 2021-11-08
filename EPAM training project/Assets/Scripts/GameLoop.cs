@@ -5,11 +5,9 @@ using UnityEngine;
 public class GameLoop : MonoBehaviour
 {
     public static GameLoop Instance{ get; private set; }
-    public bool gameIsPaused = false;
     [SerializeField] private string levelName;
     [SerializeField] private string firstLevelName;
     [SerializeField] private string nextLevelName;
-    public bool objective = false;
     [SerializeField] private UIController uIController;
     [SerializeField] private TriggerObjects finish;
     [SerializeField] private PlayerHealth playerHealth;
@@ -18,6 +16,9 @@ public class GameLoop : MonoBehaviour
     /*[SerializeField] public List<WeaponFinder> weaponFinders;
     [SerializeField] public List<string> weaponFindersNames;*/
     [SerializeField] private GameData gameData;
+    [SerializeField] private Player player;
+    public bool gameIsPaused = false;
+    public bool objective = false;
     public GameData GameData
     {
         get
@@ -29,7 +30,6 @@ public class GameLoop : MonoBehaviour
             gameData = value;
         }
     }
-    [SerializeField] private Player player;
     public Player Player => player;
 
     private void Awake()

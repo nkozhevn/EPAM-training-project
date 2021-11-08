@@ -6,11 +6,10 @@ using System;
 public class Level : MonoBehaviour
 {
     public event Action LevelPointsChanged;
-    private int _level = 0;
-    private int _levelPoints;
     [SerializeField] private int maxLevelPoints = 10;
     [SerializeField] private PlayerHealth health;
-    public int PlayerLevel => _level;
+    private int _level = 0;
+    private int _levelPoints;
     public int LevelPoints
     {
         get => _levelPoints;
@@ -20,6 +19,9 @@ public class Level : MonoBehaviour
             LevelPointsChanged?.Invoke();
         }
     }
+    public int PlayerLevel => _level;
+    public float LevelPointsPercent() => (float)LevelPoints / maxLevelPoints;
+    public string StringLevelNumber() => _level.ToString();
 
     private void Awake()
     {
@@ -43,8 +45,4 @@ public class Level : MonoBehaviour
             }
         }
     }
-
-    public float LevelPointsPercent() => (float)LevelPoints / maxLevelPoints;
-
-    public string StringLevelNumber() => _level.ToString();
 }

@@ -14,10 +14,9 @@ public abstract class Weapon : MonoBehaviour
     
     private float _shootingTimer = 99999f;
     private int _currentAmmo = 0;
-    public bool IsReloading{ get; private set; }
     public bool OnShoot;
-    public WeaponStats Stats => weaponStats;
     private Animation _animation;
+    public bool IsReloading{ get; private set; }
     public int CurrentAmmo
     {
         get => _currentAmmo;
@@ -27,6 +26,7 @@ public abstract class Weapon : MonoBehaviour
             AmmoChanged?.Invoke();
         }
     }
+    public WeaponStats Stats => weaponStats;
 
     private void Start()
     {
