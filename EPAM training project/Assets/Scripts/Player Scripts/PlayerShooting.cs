@@ -6,10 +6,10 @@ using System;
 public class PlayerShooting : MonoBehaviour
 {
     public event Action<Weapon> WeaponChanged;
+    [SerializeField] public List<Weapon> weapons;
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
-    [SerializeField] public List<Weapon> weapons;
     private readonly Dictionary<KeyCode, int> keyMap = new Dictionary<KeyCode, int>
     {
         {KeyCode.Alpha1, 0},

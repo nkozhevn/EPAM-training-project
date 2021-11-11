@@ -10,9 +10,12 @@ public class Player : MonoBehaviour
     [SerializeField] public Level level;
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float turnSpeed = 10f;
-    private Rigidbody _rb;
+    //[SerializeField] public float turnSmoothTime = 0.1f;
     [SerializeField] public Camera cam;
+    private Rigidbody _rb;
     public PlayerHealth Health => _health;
+    public Vector3 GetPosition => transform.position;
+    public Rigidbody Rigidbody => _rb;
 
     private void Awake()
     {
@@ -29,9 +32,6 @@ public class Player : MonoBehaviour
         Health.HealthPoints = GameLoop.Instance.GameData.currentHealth;
     }
     
-    public Vector3 GetPosition => transform.position;
-    public Rigidbody Rigidbody => _rb;
-
     public void OnHealthChanged()
     {
         if(Health.NoHealth)

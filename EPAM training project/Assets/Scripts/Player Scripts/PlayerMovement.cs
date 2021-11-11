@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //[SerializeField] private Transform camera;
     private Vector3 _movement;
+    //private Vector3 _moveDirection;
+    //private float _rotateAngle;
+    //private float _angle;
+    //private float _turnSmoothVelocity;
     private Vector3 _mousePosition;
     private Rigidbody _rigidbody;
 
@@ -18,12 +23,21 @@ public class PlayerMovement : MonoBehaviour
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.z = Input.GetAxisRaw("Vertical");
 
+        /*_rotateAngle = Mathf.Atan2(_movement.x, _movement.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
+        _angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _rotateAngle, ref _turnSmoothVelocity, GameLoop.Instance.Player.turnSmoothTime);
+
+        _moveDirection = Quaternion.Euler(0f, _rotateAngle, 0f) * Vector3.forward;*/
+
         _mousePosition = GameLoop.Instance.Player.cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private void FixedUpdate()
     {
-        _rigidbody.MovePosition(_rigidbody.position + _movement * GameLoop.Instance.Player.moveSpeed * Time.fixedDeltaTime);
+        if(_movement.magnitude >= 0.1f)
+        {
+            _rigidbody.MovePosition(_rigidbody.position + _movement * GameLoop.Instance.Player.moveSpeed * Time.fixedDeltaTime);
+            //transform.rotation = Quaternion.Euler(0f, _angle, 0f);
+        }
 
         Plane playerPlane = new Plane(Vector3.up, transform.position);
         Ray ray = GameLoop.Instance.Player.cam.ScreenPointToRay(Input.mousePosition);

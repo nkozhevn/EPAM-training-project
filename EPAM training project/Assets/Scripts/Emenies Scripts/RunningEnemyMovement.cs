@@ -9,8 +9,8 @@ public class RunningEnemyMovement : Enemy
     [SerializeField] private List<RunningEnemyStats> enemyStatsList;
     private RunningEnemyStats _enemyStats;
     private bool _hitCheck = false;
-    private State _state;
     private enum State { Running, Standing }
+    private State _state;
 
     private void Awake()
     {

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SkillIcon : MonoBehaviour
 {
-    private float _coolDown;
     [SerializeField] private Image image;
+    private float _coolDown;
 
     private void Update()
     {

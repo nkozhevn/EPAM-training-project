@@ -5,12 +5,12 @@ using UnityEngine;
 public class JumpingEnemy : Enemy
 {
     [SerializeField] private List<JumpingEnemyStats> enemyStatsList;
+    [SerializeField] private Transform jumpPoint;
     private JumpingEnemyStats _enemyStats;
     private float _jumpingWaitTimer = 99999f;
-    private float _jumpingCoolDownTimer = 0f;
-    [SerializeField] private Transform jumpPoint;
-    private State _state;
+    private float _jumpingCoolDownTimer = 0f; 
     private enum State { Running, Jumping, Standing }
+    private State _state;
 
     private void Awake()
     {

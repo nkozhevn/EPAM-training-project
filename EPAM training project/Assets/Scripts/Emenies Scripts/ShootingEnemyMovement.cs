@@ -6,12 +6,12 @@ using UnityEngine.AI;
 public class ShootingEnemyMovement : Enemy
 {
     [SerializeField] private List<ShootingEnemyStats> enemyStatsList;
+    [SerializeField] private Transform firePoint;
     private ShootingEnemyStats _enemyStats;
     private float _shootingTimer = 99999f;
-    [SerializeField] private Transform firePoint;
     //private bool _onShoot;
-    private State _state;
     private enum State { Running, Shooting }
+    private State _state;
 
     private void Awake()
     {

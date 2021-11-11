@@ -7,8 +7,8 @@ public class Spawn : MonoBehaviour
     [SerializeField] private float spawnTimer = 0.1f;
     [SerializeField] private int enemyToSpawn = 10;
     [SerializeField] private GameObject enemyPrefab;
-    private int _count;
     [SerializeField] private TriggerObjects trigger;
+    private int _count;
 
     public IEnumerator Spawning()
     {
