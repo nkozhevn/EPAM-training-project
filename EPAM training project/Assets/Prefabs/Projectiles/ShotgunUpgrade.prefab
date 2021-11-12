@@ -90,8 +90,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4681044497005968187}
-  - component: {fileID: 4420457510871820811}
   - component: {fileID: 8925526069387445501}
+  - component: {fileID: 163434970698842451}
   m_Layer: 0
   m_Name: ShotgunUpgrade
   m_TagString: Untagged
@@ -114,18 +114,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &4420457510871820811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5457722315857338753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d4f2b704f7f0d40a193ba906737940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8925526069387445501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -139,3 +127,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0077375, z: 0.7014735}
   m_Center: {x: 0, y: 0.50433964, z: 0.043900996}
+--- !u!114 &163434970698842451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457722315857338753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b522c70d6245339832de0354a55d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventoryItem: {fileID: 0}

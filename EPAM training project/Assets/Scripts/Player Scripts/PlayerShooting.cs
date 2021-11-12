@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class PlayerShooting : MonoBehaviour
 {
     public event Action<Weapon> WeaponChanged;
-    [SerializeField] public List<Weapon> weapons;
+    [SerializeField] private List<Weapon> weapons;
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
@@ -26,8 +27,13 @@ public class PlayerShooting : MonoBehaviour
     public Weapon SelectedWeapon => _selectedWeapon;
     public int SelectedWeaponIndex => _selectedWeaponIndex;
 
+    private List<Weapon> _pickedWeapons => 
+        weapons.Where(x => x.IsPicked).ToList();
+
     private void Awake()
     {
+        weapons.First().IsPicked = true;
+
         SelectWeapon(_selectedWeaponIndex);
     }
 
@@ -48,7 +54,7 @@ public class PlayerShooting : MonoBehaviour
         {
             var pressed = Input.GetKey(key);
 
-            if(pressed && keyMap[key] < weapons.Count)
+            if(pressed && keyMap[key] < _pickedWeapons.Count)
             {
                 _selectedWeaponIndex = keyMap[key];
             }
@@ -67,16 +73,17 @@ public class PlayerShooting : MonoBehaviour
 
     private void SelectWeapon(int selectedWeaponIndex)
     {
-        for(int i = 0; i < weapons.Count; i++)
+        for(int i = 0; i < _pickedWeapons.Count; i++)
         {
-            weapons[i].gameObject.SetActive(i == selectedWeaponIndex);
+            _pickedWeapons[i].gameObject.SetActive(i == selectedWeaponIndex);
         }
-        _selectedWeapon = weapons[selectedWeaponIndex];
+        _selectedWeapon = _pickedWeapons[selectedWeaponIndex];
         WeaponChanged?.Invoke(_selectedWeapon);
     }
 
-    public void AddWeapon(Weapon weapon)
+   public void AddWeaponByName(string name)
     {
-        weapons.Add(weapon);
+        var weapon = weapons.First(x => x.InventoryItem.Name == name);
+        weapon.IsPicked = true;
     }
 }

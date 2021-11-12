@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -58,28 +57,28 @@ public class GameData : MonoBehaviour
                 skill = true;
             }
         }*/
-        for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
-        {
-            if(data.skills[i] == 0)
-            {
-                skills[GameLoop.Instance.upgradeFindersNames[i]] = false;
-            }
-            else
-            {
-                skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
-            }
-        }
+        //for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
+        //{
+        //    if(data.skills[i] == 0)
+        //    {
+        //        skills[GameLoop.Instance.upgradeFindersNames[i]] = false;
+        //    }
+        //    else
+        //    {
+        //        skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
+        //    }
+        //}
 
-        for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
-        {
-            if(data.weapons[i] == 0)
-            {
-                weapons[GameLoop.Instance.upgradeFindersNames[i]] = false;
-            }
-            else
-            {
-                skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
-            }
-        }
+        //for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
+        //{
+        //    if(data.weapons[i] == 0)
+        //    {
+        //        weapons[GameLoop.Instance.upgradeFindersNames[i]] = false;
+        //    }
+        //    else
+        //    {
+        //        skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
+        //    }
+        //}
     }
 }

@@ -11,12 +11,15 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] protected WeaponStats weaponStats;
     [SerializeField] private SkillIcon weaponIcon;
     [SerializeField] private Image weaponIconBorder;
+    [SerializeField] private InventoryItem inventoryItem;
     
     private float _shootingTimer = 99999f;
     private int _currentAmmo = 0;
     public bool OnShoot;
     private Animation _animation;
     public bool IsReloading{ get; private set; }
+    public bool IsPicked { get; set; }
+
     public int CurrentAmmo
     {
         get => _currentAmmo;
@@ -27,6 +30,7 @@ public abstract class Weapon : MonoBehaviour
         }
     }
     public WeaponStats Stats => weaponStats;
+    public InventoryItem InventoryItem => inventoryItem;
 
     private void Start()
     {

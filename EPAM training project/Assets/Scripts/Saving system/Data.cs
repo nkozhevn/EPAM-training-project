@@ -36,28 +36,28 @@ public class Data
             }
             i++;
         }*/
-        for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
-        {
-            if(gameData.skills[GameLoop.Instance.upgradeFindersNames[i]])
-            {
-                skills[i] = 1;
-            }
-            else
-            {
-                skills[i] = 0;
-            }
-        }
+        //for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
+        //{
+        //    if(gameData.skills[GameLoop.Instance.upgradeFindersNames[i]])
+        //    {
+        //        skills[i] = 1;
+        //    }
+        //    else
+        //    {
+        //        skills[i] = 0;
+        //    }
+        //}
 
-        for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
-        {
-            if(gameData.weapons[GameLoop.Instance.weaponFindersNames[i]])
-            {
-                weapons[i] = 1;
-            }
-            else
-            {
-                weapons[i] = 0;
-            }
-        }
+        //for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
+        //{
+        //    if(gameData.weapons[GameLoop.Instance.weaponFindersNames[i]])
+        //    {
+        //        weapons[i] = 1;
+        //    }
+        //    else
+        //    {
+        //        weapons[i] = 0;
+        //    }
+        //}
     }
 }
