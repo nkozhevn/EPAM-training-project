@@ -12,12 +12,15 @@ public class ShootingEnemyMovement : Enemy
     //private bool _onShoot;
     private enum State { Running, Shooting }
     private State _state;
-
+    [SerializeField] private Animator animator;
+    private int _isWalkingHash;
+ 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
+        _isWalkingHash = Animator.StringToHash("isWalking");
     }
 
     private void Start()
@@ -36,10 +39,12 @@ public class ShootingEnemyMovement : Enemy
         if(Direction.magnitude > _enemyStats.ShootingDist)
         {
             _state = State.Running;
+            animator.SetBool(_isWalkingHash, true);
         }
         else
         {
             _state = State.Shooting;
+            animator.SetBool(_isWalkingHash, false);
         }
     }
 

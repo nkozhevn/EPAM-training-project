@@ -12,10 +12,14 @@ public class PlayerMovement : MonoBehaviour
     //private float _turnSmoothVelocity;
     private Vector3 _mousePosition;
     private Rigidbody _rigidbody;
+    [SerializeField] private Animator animator;
+    private bool _isMoving = false;
+    private int _isWalkingHash;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _isWalkingHash = Animator.StringToHash("isWalking");
     }
 
     private void Update()
@@ -29,11 +33,22 @@ public class PlayerMovement : MonoBehaviour
         _moveDirection = Quaternion.Euler(0f, _rotateAngle, 0f) * Vector3.forward;*/
 
         _mousePosition = GameLoop.Instance.Player.cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if(_movement.magnitude >= 0.1f)
+        {
+            _isMoving = true;
+            animator.SetBool(_isWalkingHash, true);
+        }
+        else
+        {
+            _isMoving = false;
+            animator.SetBool(_isWalkingHash, false);
+        }
     }
 
     private void FixedUpdate()
     {
-        if(_movement.magnitude >= 0.1f)
+        if(_isMoving)
         {
             _rigidbody.MovePosition(_rigidbody.position + _movement * GameLoop.Instance.Player.moveSpeed * Time.fixedDeltaTime);
             //transform.rotation = Quaternion.Euler(0f, _angle, 0f);
