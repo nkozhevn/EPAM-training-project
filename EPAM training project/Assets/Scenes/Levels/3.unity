@@ -889,7 +889,6 @@ MonoBehaviour:
   weaponIcon: {fileID: 1276739783}
   weaponIconBorder: {fileID: 1351550603}
   OnShoot: 0
-  _shootAnimation: {fileID: 248492643}
   firePoints:
   - {fileID: 751885871}
   - {fileID: 914757592}
@@ -1993,22 +1992,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &248492643
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248492637}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 350d0130a6f095c439dc7570fc74cf9a, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 350d0130a6f095c439dc7570fc74cf9a, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1001 &270377995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3711,6 +3694,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555576779}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &579087684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4420457510871820811, guid: 4dd145a8882c32f4e88cf9ca78660dc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6763116762534595969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d4f2b704f7f0d40a193ba906737940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &579485795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7956560420106860472, guid: f9a47ae653f011f40a4ee882d412bc9f,
@@ -3975,6 +3970,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5834d0f7172e6241aaee67ac923bcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeName: Rifle
+  weaponUpgrade: {fileID: 0}
+  weaponIcon: {fileID: 2106422167}
+  weaponGot: 0
+  weapon: {fileID: 1829162011}
+  playerShooting: {fileID: 472465415}
 --- !u!1 &675364132
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,6 +4675,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1585302105}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &765333468 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 625940157923304327, guid: 87d317480ee999a49a8525a1c1e35d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945407052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &766501396 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6492348828549088334, guid: cc4fc13c68663614da2c776348f6478f,
@@ -9117,7 +9130,6 @@ MonoBehaviour:
   weaponIcon: {fileID: 1340221039}
   weaponIconBorder: {fileID: 1411805825}
   OnShoot: 0
-  _shootAnimation: {fileID: 248492643}
   firePoint: {fileID: 1897682771}
 --- !u!1 &1476839371
 GameObject:
@@ -9162,6 +9174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5834d0f7172e6241aaee67ac923bcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeName: Shotgun
+  weaponUpgrade: {fileID: 579087684}
+  weaponIcon: {fileID: 765333468}
+  weaponGot: 0
+  weapon: {fileID: 65644024}
+  playerShooting: {fileID: 472465415}
 --- !u!114 &1485450004 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4241685980411701189, guid: 87d317480ee999a49a8525a1c1e35d10,
@@ -10803,6 +10821,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5834d0f7172e6241aaee67ac923bcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeName: Pistol
+  weaponUpgrade: {fileID: 0}
+  weaponIcon: {fileID: 1819364490}
+  weaponGot: 1
+  weapon: {fileID: 1459586597}
+  playerShooting: {fileID: 472465415}
 --- !u!1 &1769169698
 GameObject:
   m_ObjectHideFlags: 0
@@ -11289,6 +11313,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818928994}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1819364490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 625940156455067923, guid: 87d317480ee999a49a8525a1c1e35d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945407052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1829162007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2511810472704310570, guid: b666713b227a5d04f99ea69cf7ae3e42,
@@ -11311,7 +11347,6 @@ MonoBehaviour:
   weaponIcon: {fileID: 2144135024}
   weaponIconBorder: {fileID: 646775631}
   OnShoot: 0
-  _shootAnimation: {fileID: 248492643}
   firePoint: {fileID: 1700993164}
 --- !u!1001 &1833377834
 PrefabInstance:
@@ -12707,6 +12742,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1204948755}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2106422167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 625940156546679760, guid: 87d317480ee999a49a8525a1c1e35d10,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945407052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2113873671
 GameObject:
   m_ObjectHideFlags: 0
@@ -14625,7 +14672,7 @@ PrefabInstance:
     - target: {fileID: 5457722315857338753, guid: 4dd145a8882c32f4e88cf9ca78660dc3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5869536549663299517, guid: 4dd145a8882c32f4e88cf9ca78660dc3,
         type: 3}

@@ -16,7 +16,6 @@ public abstract class Weapon : MonoBehaviour
     private int _currentAmmo = 0;
     public bool OnShoot;
     private Animation _animation;
-    [SerializeField] Animation _shootAnimation;
     public bool IsReloading{ get; private set; }
     public int CurrentAmmo
     {
@@ -76,7 +75,6 @@ public abstract class Weapon : MonoBehaviour
                     break;
             }*/
             Shoot();
-            _shootAnimation.Play();
 
             _shootingTimer = 0;
         }

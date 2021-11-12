@@ -12,7 +12,7 @@ public class Data
     public int playerLevel;
     public int playerLevelPoints;
     public int[] skills = { 0, 0, 0 };
-    //public int[] weapons = { 0, 0, 0 };
+    public int[] weapons = { 0, 0, 0 };
  
     public Data(GameData gameData)
     {
@@ -48,7 +48,7 @@ public class Data
             }
         }
 
-        /*for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
+        for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
         {
             if(gameData.weapons[GameLoop.Instance.weaponFindersNames[i]])
             {
@@ -58,6 +58,6 @@ public class Data
             {
                 weapons[i] = 0;
             }
-        }*/
+        }
     }
 }

@@ -507,6 +507,26 @@ PrefabInstance:
       propertyPath: upgradeFinders.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: weaponFindersNames.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: weaponFindersNames.Array.data[0]
+      value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: weaponFindersNames.Array.data[1]
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: weaponFindersNames.Array.data[2]
+      value: Rifle
+      objectReference: {fileID: 0}
     - target: {fileID: 702958825393157975, guid: 6e108719598157b42953ca346cc74209,
         type: 3}
       propertyPath: m_Name

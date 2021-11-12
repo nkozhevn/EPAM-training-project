@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WeaponFinder : MonoBehaviour
 {
-    /*[SerializeField] public string upgradeName;
+    [SerializeField] public string upgradeName;
     [SerializeField] private Upgrade weaponUpgrade;
     [SerializeField] private Image weaponIcon;
     [SerializeField] public bool weaponGot = false;
@@ -37,5 +37,5 @@ public class WeaponFinder : MonoBehaviour
                 weaponIcon.enabled = true;
             }
         }
-    }*/
+    }
 }
