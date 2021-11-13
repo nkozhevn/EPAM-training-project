@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: -8703922337119386250}
   - component: {fileID: 4593271524141031653}
   - component: {fileID: 1055050954597633357}
+  - component: {fileID: 4351926085137353349}
   m_Layer: 0
-  m_Name: Arachnoid
+  m_Name: Spider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +98,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0fdfadc2ca9afbf4fba9523b33a1a551, type: 2}
   - {fileID: 11400000, guid: f7b751eae2e7a914e911b948c594a233, type: 2}
   jumpPoint: {fileID: 6757160292082322374}
+  animator: {fileID: 4351926085137353349}
 --- !u!195 &1055050954597633357
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -119,6 +121,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &4351926085137353349
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980029598182094185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5134c99c161a154084f629410b4f324, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4710228579593014899
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fe87811b3b0cee24c992baa8716eda59,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-2
+      value: Leg3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe87811b3b0cee24c992baa8716eda59, type: 3}
@@ -327,7 +348,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b4dc0215e19721b4e983eb9609c1c70f,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-6
+      value: Leg7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4dc0215e19721b4e983eb9609c1c70f, type: 3}
@@ -402,7 +423,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e232da5c4e1c17b4aab090bebad98d9f,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-1
+      value: Leg2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e232da5c4e1c17b4aab090bebad98d9f, type: 3}
@@ -427,7 +448,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0d54cb967563b79489baf0d3e068df9e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0d54cb967563b79489baf0d3e068df9e,
         type: 3}
@@ -477,7 +498,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0d54cb967563b79489baf0d3e068df9e,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-7
+      value: Body
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d54cb967563b79489baf0d3e068df9e, type: 3}
@@ -552,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cf15eb03b6936514a88e3c386b0079da,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-3
+      value: Leg4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf15eb03b6936514a88e3c386b0079da, type: 3}
@@ -627,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9152a1c05d068ab49b3aa505397ecc10,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-0
+      value: Leg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9152a1c05d068ab49b3aa505397ecc10, type: 3}
@@ -677,12 +698,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bb1fa7441e0c8744dbc3c8b981ba5cab,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb1fa7441e0c8744dbc3c8b981ba5cab,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb1fa7441e0c8744dbc3c8b981ba5cab,
         type: 3}
@@ -702,7 +723,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bb1fa7441e0c8744dbc3c8b981ba5cab,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-4
+      value: Leg5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb1fa7441e0c8744dbc3c8b981ba5cab, type: 3}
@@ -777,7 +798,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 01608551999ff5348b12abb67b096c00,
         type: 3}
       propertyPath: m_Name
-      value: Mini-spider-5
+      value: Leg6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01608551999ff5348b12abb67b096c00, type: 3}

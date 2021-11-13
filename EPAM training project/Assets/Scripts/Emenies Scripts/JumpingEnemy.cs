@@ -11,12 +11,17 @@ public class JumpingEnemy : Enemy
     private float _jumpingCoolDownTimer = 0f; 
     private enum State { Running, Jumping, Standing }
     private State _state;
+    [SerializeField] private Animator animator;
+    private int _isWalkingHash;
+    private int _isJumpingHash;
 
     private void Awake()
     {
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
+        _isWalkingHash = Animator.StringToHash("isWalking");
+        _isJumpingHash = Animator.StringToHash("isJumping");
     }
 
     private void Start()
@@ -33,10 +38,14 @@ public class JumpingEnemy : Enemy
         if(Direction.magnitude > _enemyStats.JumpingDist && _state != State.Standing)
         {
             _state = State.Running;
+            animator.SetBool(_isWalkingHash, true);
+            animator.SetBool(_isJumpingHash, false);
         }
         else if(_state != State.Standing)
         {
             _state = State.Jumping;
+            animator.SetBool(_isWalkingHash, false);
+            animator.SetBool(_isJumpingHash, false);
         }
     }
 
@@ -64,6 +73,8 @@ public class JumpingEnemy : Enemy
                     if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
                     {
                         Jump();
+                        animator.SetBool(_isWalkingHash, false);
+                        animator.SetBool(_isJumpingHash, true);
                         _state = State.Standing;
                         _jumpingWaitTimer = 0;
                     }
@@ -78,6 +89,8 @@ public class JumpingEnemy : Enemy
                     if(_jumpingCoolDownTimer >= _enemyStats.JumpingCoolDown)
                     {
                         _state = State.Running;
+                        animator.SetBool(_isWalkingHash, true);
+                        animator.SetBool(_isJumpingHash, false);
                         _jumpingCoolDownTimer = 0;
                     }
                     else

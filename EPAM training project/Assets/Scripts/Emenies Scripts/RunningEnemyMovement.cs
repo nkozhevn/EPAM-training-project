@@ -11,12 +11,15 @@ public class RunningEnemyMovement : Enemy
     private bool _hitCheck = false;
     private enum State { Running, Standing }
     private State _state;
+    [SerializeField] private Animator animator;
+    private int _isWalkingHash;
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
+        _isWalkingHash = Animator.StringToHash("isWalking");
     }
 
     private void Start()
@@ -24,6 +27,7 @@ public class RunningEnemyMovement : Enemy
         //_enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
         _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
         _state = State.Running;
+        animator.SetBool(_isWalkingHash, true);
 
         navMeshAgent.speed = _enemyStats.MoveSpeed;
     }
@@ -63,9 +67,11 @@ public class RunningEnemyMovement : Enemy
     private IEnumerator Stunning()
     {
         _state = State.Standing;
+        animator.SetBool(_isWalkingHash, false);
         navMeshAgent.isStopped = true;
         yield return new WaitForSeconds(_enemyStats.StunTime);
         _state = State.Running;
+        animator.SetBool(_isWalkingHash, true);
         navMeshAgent.isStopped = false;
     }
 

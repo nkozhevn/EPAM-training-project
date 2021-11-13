@@ -10,7 +10,10 @@ public class SpiderBossEnemy : Enemy
     float _shootingTimer = 99999f;
     float _launchingTimer = 99999f;
     private enum State { Running, Standing, Shooting, Launching, Dashing }
-    private State _state = State.Running;
+    private State _state;
+    [SerializeField] private Animator animator;
+    private int _isWalkingHash;
+    private int _isRunningHash;
     //private int _abilitiesCount = Enum.GetNames(typeof(State)).Length - 2;
 
     private void Awake()
@@ -18,6 +21,8 @@ public class SpiderBossEnemy : Enemy
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
+        _isWalkingHash = Animator.StringToHash("isWalking");
+        _isRunningHash = Animator.StringToHash("isRunning");
     }
 
     private void Start()
@@ -25,6 +30,8 @@ public class SpiderBossEnemy : Enemy
         _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
 
         navMeshAgent.speed = _enemyStats.MoveSpeed;
+        _state = State.Running;
+        animator.SetBool(_isWalkingHash, true);
     }
 
     private void Update()
@@ -98,6 +105,8 @@ public class SpiderBossEnemy : Enemy
                 case State.Dashing:
                     navMeshAgent.isStopped = false;
                     navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                    animator.SetBool(_isWalkingHash, false);
+                    animator.SetBool(_isRunningHash, true);
                     break;
             }
         //}
@@ -106,12 +115,15 @@ public class SpiderBossEnemy : Enemy
     private IEnumerator AttackActivate(State state, float waitTime, float activeTime, float coolDown)
     {
         _state = State.Standing;
+        animator.SetBool(_isWalkingHash, false);
         yield return new WaitForSeconds(waitTime);
         _state = state;
         yield return new WaitForSeconds(activeTime);
         _state = State.Standing;
         yield return new WaitForSeconds(coolDown);
         _state = State.Running;
+        animator.SetBool(_isWalkingHash, true);
+        animator.SetBool(_isRunningHash, false);
     }
 
     private void Shoot()

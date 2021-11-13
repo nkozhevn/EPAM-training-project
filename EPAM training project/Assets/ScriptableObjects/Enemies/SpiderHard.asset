@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 19
   enemyPower: 5
-  jumpingDist: 30
+  jumpingDist: 20
   jumpingWaitTime: 1.5
   jumpingCoolDown: 5
   jumpForce: 50

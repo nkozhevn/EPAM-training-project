@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5612815537783899503}
   - component: {fileID: 1573552092437420723}
   - component: {fileID: 6052978953369819361}
+  - component: {fileID: -7486097795539615050}
   m_Layer: 0
-  m_Name: Red enemy
+  m_Name: RedBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,6 +96,7 @@ MonoBehaviour:
   enemyStatsList:
   - {fileID: 11400000, guid: 2c4dfae3af942274b852edcf6f789632, type: 2}
   - {fileID: 11400000, guid: 64c08b0e9faee1649926c61a09c4925b, type: 2}
+  animator: {fileID: -7486097795539615050}
 --- !u!195 &6052978953369819361
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -104,7 +106,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2165085791204567715}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1.38
   m_Speed: 18
   m_Acceleration: 50
   avoidancePriority: 50
@@ -117,6 +119,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &-7486097795539615050
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165085791204567715}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9047fd7e42d3be4418ebe44e65d92ab8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6355971253222837503
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,12 +213,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 498c2b9f2ab1bd043b4c2cf42cfee245,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 498c2b9f2ab1bd043b4c2cf42cfee245,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 498c2b9f2ab1bd043b4c2cf42cfee245,
         type: 3}
@@ -222,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 498c2b9f2ab1bd043b4c2cf42cfee245,
         type: 3}
       propertyPath: m_Name
-      value: Red Crab-2
+      value: RightLeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 498c2b9f2ab1bd043b4c2cf42cfee245, type: 3}
@@ -302,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7675304de53fc4f4fa0cd960bf15cf5d,
         type: 3}
       propertyPath: m_Name
-      value: Red Crab-0
+      value: Head
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7675304de53fc4f4fa0cd960bf15cf5d, type: 3}
@@ -352,12 +373,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4b640346a419f67428de62c6e5d2958f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b640346a419f67428de62c6e5d2958f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b640346a419f67428de62c6e5d2958f,
         type: 3}
@@ -382,7 +403,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4b640346a419f67428de62c6e5d2958f,
         type: 3}
       propertyPath: m_Name
-      value: Red Crab-3
+      value: LeftLeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b640346a419f67428de62c6e5d2958f, type: 3}
@@ -462,7 +483,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8da7f9f8453e2d24892c73957dc7c8c7,
         type: 3}
       propertyPath: m_Name
-      value: Red Crab-1
+      value: BackLeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da7f9f8453e2d24892c73957dc7c8c7, type: 3}
@@ -542,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 120cf592e2ff2634f861929e4d0bb598,
         type: 3}
       propertyPath: m_Name
-      value: Red Crab-4
+      value: Body
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 120cf592e2ff2634f861929e4d0bb598, type: 3}

@@ -30,6 +30,63 @@ public class GameData : MonoBehaviour
     public int playerLevelPoints => _playerLevelPoints;
     public Dictionary<string, bool> skills => _skills;*/
 
+    public void SetGameStart(int value)
+    {
+        switch(value)
+        {
+            case 0:
+                difficulty = 0;
+                maxHealth = 20;
+                currentHealth = 20;
+                break;
+            case 1:
+                difficulty = 1;
+                maxHealth = 10;
+                currentHealth = 10;
+                break;
+        }
+        level = GameLoop.Instance.firstLevelName;
+        playerLevel = 0;
+        playerLevelPoints = 0;
+        for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
+        {
+            skills[GameLoop.Instance.upgradeFindersNames[i]] = false;
+        }
+        weapons[GameLoop.Instance.weaponFindersNames[0]] = true;
+        for(int i = 1; i < GameLoop.Instance.weaponFinders.Count; i++)
+        {
+            weapons[GameLoop.Instance.weaponFindersNames[i]] = false;
+        }
+    }
+
+    public void SetLevelEnd()
+    {
+        level = GameLoop.Instance.nextLevelName;
+        maxHealth = GameLoop.Instance.Player.Health.maxHealthPoints;
+        currentHealth = GameLoop.Instance.Player.Health.HealthPoints;
+        playerLevel = GameLoop.Instance.Player.level.PlayerLevel;
+        playerLevelPoints = GameLoop.Instance.Player.level.LevelPoints;
+        for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
+        {
+            if(GameLoop.Instance.upgradeFinders[i].skillGot)
+            {
+                skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
+            }
+        }
+        for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
+        {
+            if(GameLoop.Instance.weaponFinders[i].weaponGot)
+            {
+                weapons[GameLoop.Instance.weaponFindersNames[i]] = true;
+            }
+        }
+    }
+    
+    public void SetGameEnd(string firstLevelName)
+    {
+        level = firstLevelName;
+    }
+
     public void SaveGame()
     {
         SaveSystem.SaveGame(this);

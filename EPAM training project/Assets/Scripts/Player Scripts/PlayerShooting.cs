@@ -6,7 +6,7 @@ using System;
 public class PlayerShooting : MonoBehaviour
 {
     public event Action<Weapon> WeaponChanged;
-    [SerializeField] public List<Weapon> weapons;
+    [SerializeField] private List<Weapon> weapons;
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
@@ -25,11 +25,12 @@ public class PlayerShooting : MonoBehaviour
 
     public Weapon SelectedWeapon => _selectedWeapon;
     public int SelectedWeaponIndex => _selectedWeaponIndex;
+    public List<Weapon> Weapons => weapons;
 
-    private void Awake()
+    /*private void Start()
     {
         SelectWeapon(_selectedWeaponIndex);
-    }
+    }*/
 
     private void Update()
     {
@@ -65,7 +66,7 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    private void SelectWeapon(int selectedWeaponIndex)
+    public void SelectWeapon(int selectedWeaponIndex)
     {
         for(int i = 0; i < weapons.Count; i++)
         {

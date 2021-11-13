@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6529758039746509272}
   - component: {fileID: 7674644226779593857}
   - component: {fileID: 2884276899673870524}
+  - component: {fileID: 1096956297587440762}
   m_Layer: 0
   m_Name: WalkingZombie
   m_TagString: Untagged
@@ -177,6 +178,7 @@ MonoBehaviour:
   enemyStatsList:
   - {fileID: 11400000, guid: 98f686023725d824787f45f64f68c953, type: 2}
   - {fileID: 11400000, guid: 9e6ea31bb2627eb47925061117ecf05b, type: 2}
+  animator: {fileID: 1096956297587440762}
 --- !u!195 &2884276899673870524
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -186,7 +188,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7523548273926703362}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.89
+  m_Radius: 1.11
   m_Speed: 12
   m_Acceleration: 50
   avoidancePriority: 50
@@ -199,6 +201,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &1096956297587440762
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523548273926703362}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91ca7f6b1dc0d674fbd6d9a5c9ce83cb, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7637260115362852283
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1d31fa1003c7ea648aed6d6553744538,
         type: 3}
       propertyPath: m_Name
-      value: Walking Zombie-1
+      value: RightHand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d31fa1003c7ea648aed6d6553744538, type: 3}
@@ -385,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 63f70ae458a695947a4d9f9d2eb4d8a3,
         type: 3}
       propertyPath: m_Name
-      value: Walking Zombie-4
+      value: LeftLeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f70ae458a695947a4d9f9d2eb4d8a3, type: 3}
@@ -465,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ba9a4ef9bc12946b2076eadae34997,
         type: 3}
       propertyPath: m_Name
-      value: Walking Zombie-5
+      value: Body
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ba9a4ef9bc12946b2076eadae34997, type: 3}
@@ -545,7 +566,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 471eb7c5b6ddd2f48a188f251dbb6afd,
         type: 3}
       propertyPath: m_Name
-      value: Walking Zombie-2
+      value: LeftHand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471eb7c5b6ddd2f48a188f251dbb6afd, type: 3}
@@ -625,7 +646,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8598cba01a0794b4890c9fd68a9df0db,
         type: 3}
       propertyPath: m_Name
-      value: Walking Zombie-3
+      value: RightLeg
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8598cba01a0794b4890c9fd68a9df0db, type: 3}
@@ -705,7 +726,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4aae1a7069a08fc4a9d87c1a338ae391,
         type: 3}
       propertyPath: m_Name
-      value: Walking Zombie-0
+      value: Head
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aae1a7069a08fc4a9d87c1a338ae391, type: 3}

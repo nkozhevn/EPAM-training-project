@@ -52,8 +52,9 @@ GameObject:
   - component: {fileID: -2226733663730261915}
   - component: {fileID: 2294870478069212157}
   - component: {fileID: 539927357}
+  - component: {fileID: 8563803165412790316}
   m_Layer: 0
-  m_Name: QuadrupedTank
+  m_Name: Spider-boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +136,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ff18405f33bc324583c72e6fd39aceb, type: 2}
   - {fileID: 11400000, guid: 3ff18405f33bc324583c72e6fd39aceb, type: 2}
   firePoint: {fileID: 2607566374527185665}
+  animator: {fileID: 8563803165412790316}
 --- !u!195 &539927357
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -157,6 +159,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &8563803165412790316
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2883832484011255656}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a9a1ff4e1e15ee46878cf0f5d482ea1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6647912959969728479
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6647912959969728479}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.8, z: 3}
+  m_LocalPosition: {x: 0, y: 2.5, z: 3}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2544180785758961106}
@@ -252,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7d5f181546191914cb3f646ca4036807,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-7
+      value: Body
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d5f181546191914cb3f646ca4036807, type: 3}
@@ -327,7 +348,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ef8e7881a75b6047bf13b40facc4d70,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-5
+      value: Leg6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef8e7881a75b6047bf13b40facc4d70, type: 3}
@@ -402,7 +423,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f76ad406aa9570e4b99ef338f6e05469,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-1
+      value: Leg2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f76ad406aa9570e4b99ef338f6e05469, type: 3}
@@ -477,7 +498,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad43de178202e99468145c968cf97ef9,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-4
+      value: Leg5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad43de178202e99468145c968cf97ef9, type: 3}
@@ -552,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9006a2084da103247a01e14376f213f2,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-2
+      value: Leg3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9006a2084da103247a01e14376f213f2, type: 3}
@@ -627,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e5c323c1b3f3c794ba806bfc3368ad2b,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-6
+      value: Leg7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5c323c1b3f3c794ba806bfc3368ad2b, type: 3}
@@ -702,7 +723,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 04cfc2ddbff51ad46aa4a2ceab4a53f2,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-0
+      value: Leg1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04cfc2ddbff51ad46aa4a2ceab4a53f2, type: 3}
@@ -777,7 +798,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d1bfc5e78ace7364fb338f0fe0b0ebe6,
         type: 3}
       propertyPath: m_Name
-      value: Spider-boss-3
+      value: Leg4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1bfc5e78ace7364fb338f0fe0b0ebe6, type: 3}

@@ -12,12 +12,13 @@ public class WeaponFinder : MonoBehaviour
     [SerializeField] private Weapon weapon;
     [SerializeField] private PlayerShooting playerShooting;
  
-    private void Start()
+    private void Awake()
     {
         if(GameLoop.Instance.GameData.weapons[upgradeName] == true)
         {
             weaponGot = true;
-            playerShooting.weapons.Add(weapon);
+            playerShooting.Weapons.Add(weapon);
+            playerShooting.SelectWeapon(0);
         }
         else
         {
@@ -33,7 +34,7 @@ public class WeaponFinder : MonoBehaviour
             if(weaponUpgrade.IsActivated && !weaponGot)
             {
                 weaponGot = true;
-                playerShooting.weapons.Add(weapon);
+                playerShooting.Weapons.Add(weapon);
                 weaponIcon.enabled = true;
             }
         }
