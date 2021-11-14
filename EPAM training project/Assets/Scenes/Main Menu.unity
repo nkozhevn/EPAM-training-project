@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &108426733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1036732610660355844, guid: fb71195a3430cc7499e014c8b5e26116,
+    type: 3}
+  m_PrefabInstance: {fileID: 635660907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0b652f32a2cc243917e4028fa0f046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &139452034
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,9 +379,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330621236068877189, guid: fb71195a3430cc7499e014c8b5e26116,
         type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 396389292}
+    - target: {fileID: 6330621236068877189, guid: fb71195a3430cc7499e014c8b5e26116,
+        type: 3}
       propertyPath: mainMenu
       value: 
       objectReference: {fileID: 396389292}
+    - target: {fileID: 6330621236068877189, guid: fb71195a3430cc7499e014c8b5e26116,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1013059783}
+    - target: {fileID: 6330621236068877189, guid: fb71195a3430cc7499e014c8b5e26116,
+        type: 3}
+      propertyPath: clickSoundName
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330621236068877189, guid: fb71195a3430cc7499e014c8b5e26116,
+        type: 3}
+      propertyPath: resolutionDropdown
+      value: 
+      objectReference: {fileID: 108426733}
     - target: {fileID: 6330621236068877191, guid: fb71195a3430cc7499e014c8b5e26116,
         type: 3}
       propertyPath: m_Name
@@ -485,6 +517,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1013059783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3383639740872044534, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1764887483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2327c9dc28e62924d9d8bab7fe8be5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1030263508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -504,6 +548,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
         type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1013059783}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
       propertyPath: uIController
       value: 
       objectReference: {fileID: 0}
@@ -516,6 +565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: firstLevelName
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: gameThemeSoundName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 702958825393157974, guid: 6e108719598157b42953ca346cc74209,
         type: 3}
@@ -692,6 +746,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485317600}
   m_CullTransparentMesh: 1
+--- !u!1001 &1764887483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3383639740872044528, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383639740872044535, guid: a1f946d9ab0f6e54c82e7568a82cb02d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a1f946d9ab0f6e54c82e7568a82cb02d, type: 3}
 --- !u!1 &1804323081
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,13 +1010,33 @@ PrefabInstance:
     - target: {fileID: 1111515650111270072, guid: a0cffbe3802799249980b6dd68b6556e,
         type: 3}
       propertyPath: levelName
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1111515650111270072, guid: a0cffbe3802799249980b6dd68b6556e,
+        type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1013059783}
     - target: {fileID: 1111515650111270072, guid: a0cffbe3802799249980b6dd68b6556e,
         type: 3}
       propertyPath: settingsMenu
       value: 
       objectReference: {fileID: 702458686}
+    - target: {fileID: 1111515650111270072, guid: a0cffbe3802799249980b6dd68b6556e,
+        type: 3}
+      propertyPath: clickSoundName
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111515650111270072, guid: a0cffbe3802799249980b6dd68b6556e,
+        type: 3}
+      propertyPath: gameThemeSoundName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111515650111270072, guid: a0cffbe3802799249980b6dd68b6556e,
+        type: 3}
+      propertyPath: menuThemeSoundName
+      value: MenuTheme
+      objectReference: {fileID: 0}
     - target: {fileID: 1111515650111270074, guid: a0cffbe3802799249980b6dd68b6556e,
         type: 3}
       propertyPath: m_Name

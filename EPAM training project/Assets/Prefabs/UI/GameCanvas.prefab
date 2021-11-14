@@ -173,6 +173,8 @@ MonoBehaviour:
   menu: {fileID: 7875442886509543750}
   audioMixer: {fileID: 24100000, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
   resolutionDropdown: {fileID: 9016007964558333066}
+  audioManager: {fileID: 0}
+  clickSoundName: Click
 --- !u!1 &3506229735712021687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1619,21 @@ PrefabInstance:
       propertyPath: settingsMenu
       value: 
       objectReference: {fileID: 2310604958784595064}
+    - target: {fileID: 8756132738970538031, guid: c880d5061d7435d408e1c9ade099eaa5,
+        type: 3}
+      propertyPath: clickSoundName
+      value: Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756132738970538031, guid: c880d5061d7435d408e1c9ade099eaa5,
+        type: 3}
+      propertyPath: gameThemeSoundName
+      value: LevelAmbient
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756132738970538031, guid: c880d5061d7435d408e1c9ade099eaa5,
+        type: 3}
+      propertyPath: menuThemeSoundName
+      value: MenuTheme
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c880d5061d7435d408e1c9ade099eaa5, type: 3}
 --- !u!1 &7875442886509543750 stripped
@@ -1641,12 +1658,12 @@ PrefabInstance:
     - target: {fileID: 701100303248676447, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 701100303248676447, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1293425973335579585, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
@@ -1661,17 +1678,17 @@ PrefabInstance:
     - target: {fileID: 1403862828129332557, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1403862828129332557, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1403862828129332557, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1720592968775985564, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
@@ -1912,6 +1929,11 @@ PrefabInstance:
       propertyPath: ingameUI
       value: 
       objectReference: {fileID: 7875442887086314321}
+    - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f,
+        type: 3}
+      propertyPath: clickSoundName
+      value: Click
+      objectReference: {fileID: 0}
     - target: {fileID: 2789037220699407005, guid: 05b60ebf382f8a84785beff5eaf9c96f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2147,6 +2169,16 @@ PrefabInstance:
       propertyPath: ingameUI
       value: 
       objectReference: {fileID: 7875442887086314321}
+    - target: {fileID: 1606378254443522021, guid: c4db0f686319061499c70f5875785419,
+        type: 3}
+      propertyPath: nextLevelName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606378254443522021, guid: c4db0f686319061499c70f5875785419,
+        type: 3}
+      propertyPath: clickSoundName
+      value: Click
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4db0f686319061499c70f5875785419, type: 3}
 --- !u!224 &5476261729455528683 stripped

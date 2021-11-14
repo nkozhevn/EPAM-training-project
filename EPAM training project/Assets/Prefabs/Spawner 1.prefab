@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3462299790991756146}
   m_Layer: 0
   m_Name: Spawner 1
-  m_TagString: Untagged
+  m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4381411454569109659}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.6, y: -0.05, z: 220.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -61,7 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTimer: 1
   enemyToSpawn: 5
-  enemyPrefab: {fileID: 2165085791204567715, guid: c746461c2a379684b908c2b28e8a8585, type: 3}
+  enemyPrefab: {fileID: 2165085791204567715, guid: c746461c2a379684b908c2b28e8a8585,
+    type: 3}
   trigger: {fileID: 3462299790991756146}
 --- !u!114 &3462299790991756146
 MonoBehaviour:

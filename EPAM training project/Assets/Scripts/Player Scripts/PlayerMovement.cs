@@ -15,11 +15,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     private bool _isMoving = false;
     private int _isWalkingHash;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string soundName;
+    
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _isWalkingHash = Animator.StringToHash("isWalking");
+        audioManager.Play(soundName);
     }
 
     private void Update()
@@ -38,11 +42,13 @@ public class PlayerMovement : MonoBehaviour
         {
             _isMoving = true;
             animator.SetBool(_isWalkingHash, true);
+            audioManager.Mute(soundName, false);
         }
         else
         {
             _isMoving = false;
             animator.SetBool(_isWalkingHash, false);
+            audioManager.Mute(soundName, true);
         }
     }
 

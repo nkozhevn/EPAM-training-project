@@ -17,6 +17,10 @@ public abstract class Weapon : MonoBehaviour
     public bool OnShoot;
     private Animation _animation;
     public bool IsReloading{ get; private set; }
+    [SerializeField] private Animator playerAnimator;
+    private int _onShootHash;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string soundName;
     public int CurrentAmmo
     {
         get => _currentAmmo;
@@ -32,6 +36,7 @@ public abstract class Weapon : MonoBehaviour
     {
         CurrentAmmo = weaponStats.MaxAmmo;
         _animation = transform.GetComponent<Animation>();
+        _onShootHash = Animator.StringToHash("onShoot");
     }
 
     private void OnEnable()
@@ -75,12 +80,15 @@ public abstract class Weapon : MonoBehaviour
                     break;
             }*/
             Shoot();
+            playerAnimator.SetTrigger(_onShootHash);
+            audioManager.Play(soundName);
 
             _shootingTimer = 0;
         }
         else if(_shootingTimer < Stats.CoolDown)
         {
             _shootingTimer += Time.deltaTime;
+            playerAnimator.ResetTrigger(_onShootHash);
         }
     }
 

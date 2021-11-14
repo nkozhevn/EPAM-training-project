@@ -14,6 +14,8 @@ public class SpiderBossEnemy : Enemy
     [SerializeField] private Animator animator;
     private int _isWalkingHash;
     private int _isRunningHash;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string soundName;
     //private int _abilitiesCount = Enum.GetNames(typeof(State)).Length - 2;
 
     private void Awake()
@@ -32,6 +34,11 @@ public class SpiderBossEnemy : Enemy
         navMeshAgent.speed = _enemyStats.MoveSpeed;
         _state = State.Running;
         animator.SetBool(_isWalkingHash, true);
+    }
+
+    private void OnEnable()
+    {
+        audioManager.Play(soundName);
     }
 
     private void Update()
@@ -152,10 +159,16 @@ public class SpiderBossEnemy : Enemy
         }
     }
 
+    private void OnDisable()
+    {
+        audioManager.Stop(soundName);
+    }
+
     public void OnHealthChanged()
     {
         if(health.NoHealth)
         {
+            audioManager.Stop(soundName);
             GameLoop.Instance.objective = true;
             Destroy(gameObject);
             GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);

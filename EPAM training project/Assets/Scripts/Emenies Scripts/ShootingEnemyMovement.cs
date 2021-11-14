@@ -14,6 +14,7 @@ public class ShootingEnemyMovement : Enemy
     private State _state;
     [SerializeField] private Animator animator;
     private int _isWalkingHash;
+    private int _onShootHash;
  
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class ShootingEnemyMovement : Enemy
         _rb = GetComponent<Rigidbody>();
         health.HealthChanged += OnHealthChanged;
         _isWalkingHash = Animator.StringToHash("isWalking");
+        _onShootHash = Animator.StringToHash("onShoot");
     }
 
     private void Start()
@@ -71,6 +73,7 @@ public class ShootingEnemyMovement : Enemy
                     if(_shootingTimer >= _enemyStats.ShootingCoolDown)
                     {
                         Shoot();
+                        animator.SetTrigger(_onShootHash);
                         _shootingTimer = 0;
                     }
                     else

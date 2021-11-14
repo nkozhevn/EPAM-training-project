@@ -137,6 +137,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ff18405f33bc324583c72e6fd39aceb, type: 2}
   firePoint: {fileID: 2607566374527185665}
   animator: {fileID: 8563803165412790316}
+  audioManager: {fileID: 0}
+  soundName: BossTheme
 --- !u!195 &539927357
 NavMeshAgent:
   m_ObjectHideFlags: 0

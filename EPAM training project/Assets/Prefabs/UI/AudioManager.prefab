@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3383639740872044528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3383639740872044535}
+  - component: {fileID: 3383639740872044534}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3383639740872044535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383639740872044528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3383639740872044534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383639740872044528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2327c9dc28e62924d9d8bab7fe8be5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixerGroup: {fileID: 24300002, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
+  sounds:
+  - name: GunShoot
+    clip: {fileID: 8300000, guid: a7696a2bf114ed3438fefac35ec6ec66, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
+    source: {fileID: 0}
+  - name: ShotgunShoot
+    clip: {fileID: 8300000, guid: 8b8b193dd11d0f140b03e7fd362e521a, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
+    source: {fileID: 0}
+  - name: RifleShoot
+    clip: {fileID: 8300000, guid: c36ca4d8a59972f4982bad4365937c3e, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: PlayerWalk
+    clip: {fileID: 8300000, guid: d9021579f79e6f343a27381860bcad4a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: LevelAmbient
+    clip: {fileID: 8300000, guid: 81ed50c0a41260545b133c95f07b2afe, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: BossTheme
+    clip: {fileID: 8300000, guid: e16b4112847c4a24a8bf3d8a485b19c3, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: b0fc492aab7d64a4c84664fef97133f9, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: eb29844b03df258489a10c01c6e51552, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}

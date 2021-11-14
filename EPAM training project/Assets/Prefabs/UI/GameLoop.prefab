@@ -45,10 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b33075865363d84c8dbe4ef8d9fc564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameIsPaused: 0
-  levelName: 3
-  firstLevelName: 3
-  nextLevelName: 3
+  levelName: 1
+  firstLevelName: 1
+  nextLevelName: 1
   uIController: {fileID: 3676306620813735061}
   finish: {fileID: 0}
   playerHealth: {fileID: 0}
@@ -60,8 +59,21 @@ MonoBehaviour:
   - Granade
   - Fire
   - Shield
+  weaponFinders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  weaponFindersNames:
+  - Pistol
+  - Shotgun
+  - Rifle
   gameData: {fileID: 6237983625257449731}
   player: {fileID: 0}
+  audioManager: {fileID: 0}
+  gameThemeSoundName: LevelAmbient
+  menuThemeSoundName: MenuTheme
+  gameIsPaused: 0
+  objective: 0
 --- !u!114 &3676306620813735061
 MonoBehaviour:
   m_ObjectHideFlags: 0

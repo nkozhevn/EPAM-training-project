@@ -10,6 +10,8 @@ public class SettingsMenuScreen : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private Dropdown resolutionDropdown;
     private Resolution[] _resolutions;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string clickSoundName;
 
     void Start()
     {
@@ -45,33 +47,39 @@ public class SettingsMenuScreen : MonoBehaviour
 
     private void Back()
     {
+        audioManager.Play(clickSoundName);
         menu.SetActive(true);
         gameObject.SetActive(false);
     }
 
     public void FullScreenToggle(bool isFullscreen)
     {
+        audioManager.Play(clickSoundName);
         Screen.fullScreen = isFullscreen;
     }
 
     public void ResolutionDropdown(int resolutionIndex)
     {
+        audioManager.Play(clickSoundName);
         Resolution resolution = _resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
     public void QualityDropdown(int qualityIndex)
     {
+        audioManager.Play(clickSoundName);
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
     public void VolumeSlider(float volume)
     {
+        audioManager.Play(clickSoundName);
         audioMixer.SetFloat("mainVolume", volume);
     }
 
     public void BackButton()
     {
+        audioManager.Play(clickSoundName);
         Back();
     }
 }

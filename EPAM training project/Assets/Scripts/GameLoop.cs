@@ -17,6 +17,9 @@ public class GameLoop : MonoBehaviour
     [SerializeField] public List<string> weaponFindersNames;
     [SerializeField] private GameData gameData;
     [SerializeField] private Player player;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private string gameThemeSoundName;
+    [SerializeField] private string menuThemeSoundName;
     public bool gameIsPaused = false;
     public bool objective = false;
     public GameData GameData
@@ -47,6 +50,8 @@ public class GameLoop : MonoBehaviour
         {
             Player.PlayerDied += OnPlayerDied;
         }
+
+        audioManager.Play(gameThemeSoundName);
     }
 
     private void Update()
@@ -64,6 +69,8 @@ public class GameLoop : MonoBehaviour
     {
         //PlayerPrefs.SetString("Level", firstLevelName);
         //GameData.level = firstLevelName;
+        audioManager.Pause(gameThemeSoundName);
+        audioManager.Play(menuThemeSoundName);
         GameData.SetGameEnd(firstLevelName);
         GameData.SaveGame();
         uIController.GameOver();
@@ -143,6 +150,8 @@ public class GameLoop : MonoBehaviour
         //         GameData.weapons[weaponFindersNames[i]] = true;
         //     }
         // }
+        audioManager.Pause(gameThemeSoundName);
+        audioManager.Play(menuThemeSoundName);
         GameData.SetLevelEnd();
         GameData.SaveGame();
         uIController.Finish();
