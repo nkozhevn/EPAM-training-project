@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d4f2b704f7f0d40a193ba906737940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  soundName: Finding
 --- !u!65 &8925526069387445501
 BoxCollider:
   m_ObjectHideFlags: 0

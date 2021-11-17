@@ -179,6 +179,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 98f686023725d824787f45f64f68c953, type: 2}
   - {fileID: 11400000, guid: 9e6ea31bb2627eb47925061117ecf05b, type: 2}
   animator: {fileID: 1096956297587440762}
+  deathEffect: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
+    type: 3}
+  effectLifeTime: 2
 --- !u!195 &2884276899673870524
 NavMeshAgent:
   m_ObjectHideFlags: 0

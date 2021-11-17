@@ -79,10 +79,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
-  granadePower: 10
   timeToExplosion: 3
-  effectLifetime: 0.33
-  collider: {fileID: 6436536614366586912}
+  effectLifetime: 1
 --- !u!136 &6436536614366586912
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848da79de4f053c43ba93e8d94cec94c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c, type: 3}
+  hitEffect: {fileID: 1329845292236604, guid: 0bfac5163cd47e44fa5209cf14d3649f, type: 3}
   bulletPower: 1
   effectLifetime: 2
 --- !u!1001 &3272168271408541693

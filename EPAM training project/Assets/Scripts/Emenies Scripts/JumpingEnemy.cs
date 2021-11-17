@@ -14,6 +14,8 @@ public class JumpingEnemy : Enemy
     [SerializeField] private Animator animator;
     private int _isWalkingHash;
     private int _isJumpingHash;
+    [SerializeField] private GameObject deathEffect;
+    [SerializeField] private float effectLifeTime;
 
     private void Awake()
     {
@@ -123,8 +125,10 @@ public class JumpingEnemy : Enemy
     {
         if(health.NoHealth)
         {
-            Destroy(gameObject);
             GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
+            GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
+            Destroy(effect, effectLifeTime);
+            Destroy(gameObject);
         }
     }
 }

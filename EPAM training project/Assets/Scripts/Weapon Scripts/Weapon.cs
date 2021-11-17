@@ -19,8 +19,7 @@ public abstract class Weapon : MonoBehaviour
     public bool IsReloading{ get; private set; }
     [SerializeField] private Animator playerAnimator;
     private int _onShootHash;
-    [SerializeField] private AudioManager audioManager;
-    [SerializeField] private string soundName;
+    [SerializeField] private AudioSource shootingAudio;
     public int CurrentAmmo
     {
         get => _currentAmmo;
@@ -81,7 +80,7 @@ public abstract class Weapon : MonoBehaviour
             }*/
             Shoot();
             playerAnimator.SetTrigger(_onShootHash);
-            audioManager.Play(soundName);
+            shootingAudio.Play();
 
             _shootingTimer = 0;
         }

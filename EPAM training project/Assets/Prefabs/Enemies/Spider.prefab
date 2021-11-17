@@ -99,6 +99,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7b751eae2e7a914e911b948c594a233, type: 2}
   jumpPoint: {fileID: 6757160292082322374}
   animator: {fileID: 4351926085137353349}
+  deathEffect: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
+    type: 3}
+  effectLifeTime: 2
 --- !u!195 &1055050954597633357
 NavMeshAgent:
   m_ObjectHideFlags: 0

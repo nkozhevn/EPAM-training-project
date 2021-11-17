@@ -131,11 +131,11 @@ public class GameData : MonoBehaviour
         {
             if(data.weapons[i] == 0)
             {
-                weapons[GameLoop.Instance.upgradeFindersNames[i]] = false;
+                weapons[GameLoop.Instance.weaponFindersNames[i]] = false;
             }
             else
             {
-                skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
+                weapons[GameLoop.Instance.weaponFindersNames[i]] = true;
             }
         }
     }

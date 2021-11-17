@@ -13,6 +13,9 @@ public class RunningEnemyMovement : Enemy
     private State _state;
     [SerializeField] private Animator animator;
     private int _isWalkingHash;
+    //[SerializeField] private SpawnEffect deathEffect;
+    [SerializeField] private GameObject deathEffect;
+    [SerializeField] private float effectLifeTime;
 
     private void Awake()
     {
@@ -79,8 +82,11 @@ public class RunningEnemyMovement : Enemy
     {
         if(health.NoHealth)
         {
-            Destroy(gameObject);
+            //deathEffect.check = true;
             GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
+            GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
+            Destroy(effect, effectLifeTime);
+            Destroy(gameObject);
         }
     }
 }

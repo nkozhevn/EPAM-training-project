@@ -17,6 +17,8 @@ public class SpiderBossEnemy : Enemy
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string soundName;
     //private int _abilitiesCount = Enum.GetNames(typeof(State)).Length - 2;
+    [SerializeField] private GameObject deathEffect;
+    [SerializeField] private float effectLifeTime;
 
     private void Awake()
     {
@@ -170,8 +172,10 @@ public class SpiderBossEnemy : Enemy
         {
             audioManager.Stop(soundName);
             GameLoop.Instance.objective = true;
-            Destroy(gameObject);
             GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
+            GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
+            Destroy(effect, effectLifeTime);
+            Destroy(gameObject);
         }
     }
 }

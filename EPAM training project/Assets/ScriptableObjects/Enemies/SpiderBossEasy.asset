@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3370d019e19d4f46a4ae7bdc5562390, type: 3}
   m_Name: SpiderBossEasy
   m_EditorClassIdentifier: 
-  moveSpeed: 17
+  moveSpeed: 19
   enemyPower: 10
   activationDist: 20
   shootingCoolDown: 0.3
@@ -23,7 +23,7 @@ MonoBehaviour:
   shootingActiveTime: 5
   shootingReloadTime: 1
   launchingCoolDown: 1
-  granadePrefab: {fileID: 1903286783813314171, guid: 0ded7e6d151cca54583e4592c7661fec,
+  granadePrefab: {fileID: 1903286783813314171, guid: 03a7f087a9e631d40a0966203cd0c81c,
     type: 3}
   granadeForce: 70
   launchingWaitTime: 0.5
