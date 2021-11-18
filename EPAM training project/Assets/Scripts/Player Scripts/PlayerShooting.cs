@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using System;
 
@@ -10,6 +11,7 @@ public class PlayerShooting : MonoBehaviour
     private int _selectedWeaponIndex = 0;
     private Weapon _selectedWeapon;
     private int _previousSelectedWeaponIndex;
+
     private readonly Dictionary<KeyCode, int> keyMap = new Dictionary<KeyCode, int>
     {
         {KeyCode.Alpha1, 0},
@@ -25,12 +27,14 @@ public class PlayerShooting : MonoBehaviour
 
     public Weapon SelectedWeapon => _selectedWeapon;
     public int SelectedWeaponIndex => _selectedWeaponIndex;
-    public List<Weapon> Weapons => weapons;
+    private List<Weapon> _pickedWeapons => weapons.Where(x => x.IsPicked).ToList();
 
-    /*private void Start()
+    private void Awake()
     {
+        weapons.First().IsPicked = true;
+
         SelectWeapon(_selectedWeaponIndex);
-    }*/
+    }
 
     private void Update()
     {
@@ -49,7 +53,7 @@ public class PlayerShooting : MonoBehaviour
         {
             var pressed = Input.GetKey(key);
 
-            if(pressed && keyMap[key] < weapons.Count)
+            if(pressed && keyMap[key] < _pickedWeapons.Count)
             {
                 _selectedWeaponIndex = keyMap[key];
             }
@@ -66,18 +70,19 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    public void SelectWeapon(int selectedWeaponIndex)
+    private void SelectWeapon(int selectedWeaponIndex)
     {
-        for(int i = 0; i < weapons.Count; i++)
+        for(int i = 0; i < _pickedWeapons.Count; i++)
         {
-            weapons[i].gameObject.SetActive(i == selectedWeaponIndex);
+            _pickedWeapons[i].gameObject.SetActive(i == selectedWeaponIndex);
         }
-        _selectedWeapon = weapons[selectedWeaponIndex];
+        _selectedWeapon = _pickedWeapons[selectedWeaponIndex];
         WeaponChanged?.Invoke(_selectedWeapon);
     }
 
-    public void AddWeapon(Weapon weapon)
+    public void AddWeaponByName(string name)
     {
-        weapons.Add(weapon);
+        var weapon = weapons.First(x => x.InventoryItem.Name == name);
+        weapon.IsPicked = true;
     }
 }

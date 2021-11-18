@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTimer: 1
   enemyToSpawn: 5
-  enemyPrefab: {fileID: 2165085791204567715, guid: c746461c2a379684b908c2b28e8a8585,
+  enemyPrefab: {fileID: 3980029598182094185, guid: 323e7513d1686cb4a8c7974ce4a1c181,
     type: 3}
   trigger: {fileID: 3462299790991756146}
 --- !u!114 &3462299790991756146

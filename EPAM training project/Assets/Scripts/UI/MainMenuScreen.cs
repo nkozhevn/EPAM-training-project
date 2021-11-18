@@ -18,7 +18,6 @@ public class MainMenuScreen : MonoBehaviour
     private void Start()
     {
         modsButtons.SetActive(false);
-        //if(PlayerPrefs.GetString("Level") != levelName)
         if(GameLoop.Instance.GameData.level != levelName)
         {
             loadPlug.SetActive(false);
@@ -30,7 +29,6 @@ public class MainMenuScreen : MonoBehaviour
 
     public void LoadButton()
     {
-        //SceneManager.LoadScene(PlayerPrefs.GetString("Level"));
         audioManager.Play(clickSoundName);
         SceneManager.LoadScene(GameLoop.Instance.GameData.level);
     }

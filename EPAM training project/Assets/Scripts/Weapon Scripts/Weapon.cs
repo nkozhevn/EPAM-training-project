@@ -7,19 +7,38 @@ using UnityEngine.UI;
 public abstract class Weapon : MonoBehaviour
 {
     public event Action AmmoChanged;
-    //[SerializeField] private List<Transform> firePoints;
     [SerializeField] protected WeaponStats weaponStats;
     [SerializeField] private SkillIcon weaponIcon;
     [SerializeField] private Image weaponIconBorder;
-    
+    [SerializeField] private Image icon;
+    [SerializeField] private InventoryItem inventoryItem;
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private AudioSource shootingAudio;
+
+    private int _onShootHash;
     private float _shootingTimer = 99999f;
     private int _currentAmmo = 0;
     public bool OnShoot;
     private Animation _animation;
+    private bool _isPicked;
+
     public bool IsReloading{ get; private set; }
-    [SerializeField] private Animator playerAnimator;
-    private int _onShootHash;
-    [SerializeField] private AudioSource shootingAudio;
+    public bool IsPicked
+    { 
+        get => _isPicked;
+        set
+        {
+            _isPicked = value;
+            if(_isPicked)
+            {
+                icon.enabled = true;
+            }
+            else
+            {
+                icon.enabled = false;
+            }
+        }
+    }
     public int CurrentAmmo
     {
         get => _currentAmmo;
@@ -30,6 +49,7 @@ public abstract class Weapon : MonoBehaviour
         }
     }
     public WeaponStats Stats => weaponStats;
+    public InventoryItem InventoryItem => inventoryItem;
 
     private void Start()
     {
@@ -63,21 +83,6 @@ public abstract class Weapon : MonoBehaviour
                 return;
             }
 
-            /*switch(weaponStats.WeaponType)
-            {
-                case 1:
-                    GunShoot();
-                    break;
-                case 2:
-                    ShotgunShoot();
-                    break;
-                case 3:
-                    LazerShoot();
-                    break;
-                default:
-                    GunShoot();
-                    break;
-            }*/
             Shoot();
             playerAnimator.SetTrigger(_onShootHash);
             shootingAudio.Play();
@@ -100,34 +105,6 @@ public abstract class Weapon : MonoBehaviour
     }
 
     public abstract void Shoot();
-
-    /*private void GunShoot()
-    {
-        CurrentAmmo--;
-
-        var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
-        bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
-    }*/
-
-    /*private void ShotgunShoot()
-    {
-        CurrentAmmo--;
-
-        var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
-        bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
-        bullet = Instantiate(weaponStats.BulletPrefab, firePoints[1].position, firePoints[1].rotation);
-        bullet.AddForce(firePoints[1].up * weaponStats.BulletForce, ForceMode.Impulse);
-        bullet = Instantiate(weaponStats.BulletPrefab, firePoints[2].position, firePoints[2].rotation);
-        bullet.AddForce(firePoints[2].up * weaponStats.BulletForce, ForceMode.Impulse);
-    }*/
-
-    /*private void LazerShoot()
-    {
-        CurrentAmmo--;
-
-        var bullet = Instantiate(weaponStats.BulletPrefab, firePoints[0].position, firePoints[0].rotation);
-        bullet.AddForce(firePoints[0].up * weaponStats.BulletForce, ForceMode.Impulse);
-    }*/
 
     public IEnumerator Reload()
     {

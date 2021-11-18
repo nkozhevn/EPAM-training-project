@@ -7,9 +7,10 @@ public class Health : MonoBehaviour, IHealth
 {
     public event Action HealthChanged;
     [SerializeField] public int maxHealthPoints = 10;
-    public bool NoHealth => _healthPoints <= 0;
+
     protected int _healthPoints;
     protected bool _isInvulnerable;
+
     public int HealthPoints
     {
         get => _healthPoints;
@@ -19,6 +20,7 @@ public class Health : MonoBehaviour, IHealth
             HealthChanged?.Invoke();
         }
     }
+    public bool NoHealth => _healthPoints <= 0;
     public float HealthPercent => (float)HealthPoints / maxHealthPoints;
 
     private void Awake()

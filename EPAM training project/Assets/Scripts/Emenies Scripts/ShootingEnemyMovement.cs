@@ -7,16 +7,14 @@ public class ShootingEnemyMovement : Enemy
 {
     [SerializeField] private List<ShootingEnemyStats> enemyStatsList;
     [SerializeField] private Transform firePoint;
+    
     private ShootingEnemyStats _enemyStats;
     private float _shootingTimer = 99999f;
-    //private bool _onShoot;
-    private enum State { Running, Shooting }
     private State _state;
-    [SerializeField] private Animator animator;
     private int _isWalkingHash;
     private int _onShootHash;
-    [SerializeField] private GameObject deathEffect;
-    [SerializeField] private float effectLifeTime;
+
+    private enum State { Running, Shooting }
  
     private void Awake()
     {
@@ -29,7 +27,6 @@ public class ShootingEnemyMovement : Enemy
 
     private void Start()
     {
-        //_enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
         _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
 
         navMeshAgent.speed = _enemyStats.MoveSpeed;
@@ -38,7 +35,6 @@ public class ShootingEnemyMovement : Enemy
     private void Update() 
     {
         Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
-        //DirectionNorm = Direction / Direction.magnitude;
 
         if(Direction.magnitude > _enemyStats.ShootingDist)
         {
@@ -54,53 +50,28 @@ public class ShootingEnemyMovement : Enemy
 
     private void FixedUpdate()
     {
-        //_onShoot = !(Direction.magnitude > _enemyStats.ShootingDist);
-
-        //transform.LookAt(GameLoop.Instance.Player.transform);
-
-        //if(navMeshAgent.enabled == true)
-        //{
-            switch(_state)
-            {
-                case State.Running:
-                    //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
-                    navMeshAgent.isStopped = false;
-                    _shootingTimer = _enemyStats.ShootingCoolDown;
-                    navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
-                    break;
-                case State.Shooting:
-                    transform.LookAt(GameLoop.Instance.Player.transform);
-                    navMeshAgent.isStopped = true;
-                    //navMeshAgent.destination = transform.position;
-                    if(_shootingTimer >= _enemyStats.ShootingCoolDown)
-                    {
-                        Shoot();
-                        animator.SetTrigger(_onShootHash);
-                        _shootingTimer = 0;
-                    }
-                    else
-                    {
-                        _shootingTimer += Time.deltaTime;
-                    }
-                    break;
-            }
-        //}
-        /*if(!_onShoot)
+        switch(_state)
         {
-            Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
-        }
-        else
-        {
-            if(_shootingTimer >= _enemyStats.ShootingCoolDown)
-            {
-                Shoot();
-                _shootingTimer = 0;
+            case State.Running:
+                navMeshAgent.isStopped = false;
+                _shootingTimer = _enemyStats.ShootingCoolDown;
+                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                break;
+            case State.Shooting:
+                transform.LookAt(GameLoop.Instance.Player.transform);
+                navMeshAgent.isStopped = true;
+                if(_shootingTimer >= _enemyStats.ShootingCoolDown)
+                {
+                    Shoot();
+                    animator.SetTrigger(_onShootHash);
+                    _shootingTimer = 0;
+                }
+                else
+                {
+                    _shootingTimer += Time.deltaTime;
+                }
+                break;
             }
-            else
-            {
-                _shootingTimer += Time.deltaTime;
-            }
-        }*/
     }
 
     private void Shoot()

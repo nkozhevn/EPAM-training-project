@@ -6,16 +6,15 @@ public class JumpingEnemy : Enemy
 {
     [SerializeField] private List<JumpingEnemyStats> enemyStatsList;
     [SerializeField] private Transform jumpPoint;
+
     private JumpingEnemyStats _enemyStats;
     private float _jumpingWaitTimer = 99999f;
     private float _jumpingCoolDownTimer = 0f; 
-    private enum State { Running, Jumping, Standing }
     private State _state;
-    [SerializeField] private Animator animator;
     private int _isWalkingHash;
     private int _isJumpingHash;
-    [SerializeField] private GameObject deathEffect;
-    [SerializeField] private float effectLifeTime;
+    
+    private enum State { Running, Jumping, Standing }
 
     private void Awake()
     {
@@ -53,55 +52,44 @@ public class JumpingEnemy : Enemy
 
     private void LateUpdate()
     {
-        //if(navMeshAgent.enabled)
-        //{
-            switch(_state)
-            {
-                case State.Running:
-                    //navMeshAgent.enabled = true;
-                    //if(navMeshAgent.enabled)
-                    //{
-                        //_jumpingWaitTimer = 0;
-                        //navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
-                    //}
-                    navMeshAgent.isStopped = false;
+        switch(_state)
+        {
+            case State.Running:
+                navMeshAgent.isStopped = false;
+                _jumpingWaitTimer = 0;
+                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                break;
+            case State.Jumping:
+                transform.LookAt(GameLoop.Instance.Player.transform);
+                navMeshAgent.isStopped = true;
+                if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
+                {
+                    Jump();
+                    animator.SetBool(_isWalkingHash, false);
+                    animator.SetBool(_isJumpingHash, true);
+                    _state = State.Standing;
                     _jumpingWaitTimer = 0;
-                    navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
-                    break;
-                case State.Jumping:
-                    transform.LookAt(GameLoop.Instance.Player.transform);
-                    //navMeshAgent.enabled = false;
-                    navMeshAgent.isStopped = true;
-                    if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
-                    {
-                        Jump();
-                        animator.SetBool(_isWalkingHash, false);
-                        animator.SetBool(_isJumpingHash, true);
-                        _state = State.Standing;
-                        _jumpingWaitTimer = 0;
-                    }
-                    else
-                    {
-                        _jumpingWaitTimer += Time.deltaTime;
-                    }
-                    break;
-                case State.Standing:
-                    //navMeshAgent.enabled = false;
-                    navMeshAgent.isStopped = true;
-                    if(_jumpingCoolDownTimer >= _enemyStats.JumpingCoolDown)
-                    {
-                        _state = State.Running;
-                        animator.SetBool(_isWalkingHash, true);
-                        animator.SetBool(_isJumpingHash, false);
-                        _jumpingCoolDownTimer = 0;
-                    }
-                    else
-                    {
-                        _jumpingCoolDownTimer += Time.deltaTime;
-                    }
-                    break;
-            }
-        //}
+                }
+                else
+                {
+                    _jumpingWaitTimer += Time.deltaTime;
+                }
+                break;
+            case State.Standing:
+                navMeshAgent.isStopped = true;
+                if(_jumpingCoolDownTimer >= _enemyStats.JumpingCoolDown)
+                {
+                    _state = State.Running;
+                    animator.SetBool(_isWalkingHash, true);
+                    animator.SetBool(_isJumpingHash, false);
+                    _jumpingCoolDownTimer = 0;
+                }
+                else
+                {
+                    _jumpingCoolDownTimer += Time.deltaTime;
+                }
+                break;
+        }
     }
 
     private void Jump()

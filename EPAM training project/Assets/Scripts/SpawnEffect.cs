@@ -4,28 +4,26 @@ using UnityEngine;
 
 public class SpawnEffect : MonoBehaviour {
 
-    public float spawnEffectTime = 2;
-    public float pause = 1;
-    public AnimationCurve fadeIn;
+    [SerializeField] private float spawnEffectTime = 2;
+    [SerializeField] private float pause = 1;
+    [SerializeField] private AnimationCurve fadeIn;
+    [SerializeField] private List<Renderer> renderers;
 
     [HideInInspector] public bool check = false;
-    ParticleSystem ps;
-    float timer = 0;
-    [SerializeField] private List<Renderer> renderers;
-    Renderer _renderer;
+    private ParticleSystem ps;
+    private float timer = 0;
+    private Renderer _renderer;
 
-    int shaderProperty;
+    private int shaderProperty;
 
 	void Awake ()
     {
         shaderProperty = Shader.PropertyToID("_cutoff");
-        //_renderer = GetComponent<Renderer>();
         ps = GetComponentInChildren <ParticleSystem>();
 
         var main = ps.main;
         main.duration = spawnEffectTime;
 
-        //ps.Play();
 
     }
 	

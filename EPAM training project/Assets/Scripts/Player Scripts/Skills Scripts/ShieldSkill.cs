@@ -20,7 +20,7 @@ public class ShieldSkill : Skill
     {
 
         _isActivated = true;
-        icon.Reload(reloadTime);
+        skillIcon.Reload(reloadTime);
         GameLoop.Instance.Player.Health.ToggleInvulnerability(true);
         shield.SetActive(true);
         yield return new WaitForSeconds(activeTime);

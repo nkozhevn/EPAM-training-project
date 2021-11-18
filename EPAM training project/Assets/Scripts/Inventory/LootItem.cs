@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Upgrade : MonoBehaviour
+public class LootItem : MonoBehaviour
 {
-    private bool _isActivated = false;
-    public bool IsActivated => _isActivated;
+    [SerializeField] private InventoryItem _inventoryItem;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string soundName;
 
@@ -14,7 +13,7 @@ public class Upgrade : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             audioManager.Play(soundName);
-            _isActivated = true;
+            GameLoop.Instance.Player.Inventory.AddItem(_inventoryItem);
             gameObject.SetActive(false);
         }
     }

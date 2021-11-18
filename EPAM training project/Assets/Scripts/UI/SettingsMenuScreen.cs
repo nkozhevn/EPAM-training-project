@@ -9,7 +9,7 @@ public class SettingsMenuScreen : MonoBehaviour
     [SerializeField] private GameObject menu;
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private Dropdown resolutionDropdown;
-    private Resolution[] _resolutions;
+    [SerializeField] private Resolution[] _resolutions;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string clickSoundName;
 

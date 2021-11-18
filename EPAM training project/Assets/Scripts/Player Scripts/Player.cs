@@ -10,10 +10,12 @@ public class Player : MonoBehaviour
     [SerializeField] public Level level;
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float turnSpeed = 10f;
-    //[SerializeField] public float turnSmoothTime = 0.1f;
     [SerializeField] public Camera cam;
+    [SerializeField] private Inventory _inventory;
+
     private Rigidbody _rb;
     public PlayerHealth Health => _health;
+    public Inventory Inventory => _inventory;
     public Vector3 GetPosition => transform.position;
     public Rigidbody Rigidbody => _rb;
 
@@ -26,8 +28,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        /*Health.maxHealthPoints = PlayerPrefs.GetInt("MaxHealth", Health.maxHealthPoints);
-        Health.HealthPoints = PlayerPrefs.GetInt("CurrentHealth", Health.maxHealthPoints);*/
         Health.maxHealthPoints = GameLoop.Instance.GameData.maxHealth;
         Health.HealthPoints = GameLoop.Instance.GameData.currentHealth;
     }

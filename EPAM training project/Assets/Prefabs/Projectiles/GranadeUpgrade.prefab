@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4113819084705134021}
-  - component: {fileID: 7129708660100325166}
   - component: {fileID: 8304510257472340019}
   - component: {fileID: 1493982356}
+  - component: {fileID: 315015298}
   m_Layer: 3
   m_Name: GranadeUpgrade
   m_TagString: Untagged
@@ -35,20 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7129708660100325166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3629030511225220991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d4f2b704f7f0d40a193ba906737940, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioManager: {fileID: 0}
-  soundName: Finding
 --- !u!136 &8304510257472340019
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -82,6 +68,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &315015298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3629030511225220991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef11725b31cba341b52f73ecb8c3a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventoryItem: {fileID: 11400000, guid: 8442c241a4a7adb4e9a0780b4e1e74da, type: 2}
+  audioManager: {fileID: 0}
+  soundName: Finding
 --- !u!1 &5751417667953186726
 GameObject:
   m_ObjectHideFlags: 0

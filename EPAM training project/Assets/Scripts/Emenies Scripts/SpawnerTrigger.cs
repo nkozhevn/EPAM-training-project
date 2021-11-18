@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnerTrigger : MonoBehaviour
 {
     [SerializeField] private Spawn spawner;
+    
     private bool triggered = false;
 
     private void OnTriggerEnter(Collider collider)

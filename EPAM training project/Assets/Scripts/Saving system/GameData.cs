@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    public int difficulty;
-    public string level;
-    public int maxHealth;
-    public int currentHealth;
-    public int playerLevel;
-    public int playerLevelPoints;
-    public Dictionary<string, bool> skills = new Dictionary<string, bool>
+    [HideInInspector] public int difficulty;
+    [HideInInspector] public string level;
+    [HideInInspector] public int maxHealth;
+    [HideInInspector] public int currentHealth;
+    [HideInInspector] public int playerLevel;
+    [HideInInspector] public int playerLevelPoints;
+
+    public Dictionary<string, bool> items = new Dictionary<string, bool>
     {
+        {"Pistol", true},
+        {"Shotgun", false},
+        {"Rifle", false},
         {"Granade", false},
         {"Fire", false},
         {"Shield", false}
     };
-    public Dictionary<string, bool> weapons = new Dictionary<string, bool>
-    {
-        {"Pistol", true},
-        {"Shotgun", false},
-        {"Rifle", false}
-    };
-    /*public int Difficulty => _difficulty;
-    public string level => _level;
-    public int maxHealth => _maxHealth;
-    public int currentHealth => _currentHealth;
-    public int playerLevel => _playerLevel;
-    public int playerLevelPoints => _playerLevelPoints;
-    public Dictionary<string, bool> skills => _skills;*/
 
     public void SetGameStart(int value)
     {
@@ -48,14 +39,10 @@ public class GameData : MonoBehaviour
         level = GameLoop.Instance.firstLevelName;
         playerLevel = 0;
         playerLevelPoints = 0;
-        for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
+        items[GameLoop.Instance.itemNames[0]] = true;
+        for(int i = 1; i < GameLoop.Instance.itemNames.Count; i++)
         {
-            skills[GameLoop.Instance.upgradeFindersNames[i]] = false;
-        }
-        weapons[GameLoop.Instance.weaponFindersNames[0]] = true;
-        for(int i = 1; i < GameLoop.Instance.weaponFinders.Count; i++)
-        {
-            weapons[GameLoop.Instance.weaponFindersNames[i]] = false;
+            items[GameLoop.Instance.itemNames[i]] = false;
         }
     }
 
@@ -66,18 +53,11 @@ public class GameData : MonoBehaviour
         currentHealth = GameLoop.Instance.Player.Health.HealthPoints;
         playerLevel = GameLoop.Instance.Player.level.PlayerLevel;
         playerLevelPoints = GameLoop.Instance.Player.level.LevelPoints;
-        for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
+        for(int i = 0; i < GameLoop.Instance.itemNames.Count; i++)
         {
-            if(GameLoop.Instance.upgradeFinders[i].skillGot)
+            if(GameLoop.Instance.Player.Inventory.GotCheck(GameLoop.Instance.itemNames[i]))
             {
-                skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
-            }
-        }
-        for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
-        {
-            if(GameLoop.Instance.weaponFinders[i].weaponGot)
-            {
-                weapons[GameLoop.Instance.weaponFindersNames[i]] = true;
+                items[GameLoop.Instance.itemNames[i]] = true;
             }
         }
     }
@@ -103,39 +83,15 @@ public class GameData : MonoBehaviour
         playerLevel = data.playerLevel;
         playerLevelPoints = data.playerLevelPoints;
 
-        /*int i = 0;
-        foreach(bool skill in skills)
+        for(int i = 0; i < GameLoop.Instance.itemNames.Count; i++)
         {
-            if(data.skills[i] == 0)
+            if(data.items[i] == 0)
             {
-                skill = false;
+                items[GameLoop.Instance.itemNames[i]] = false;
             }
             else
             {
-                skill = true;
-            }
-        }*/
-        for(int i = 0; i < GameLoop.Instance.upgradeFinders.Count; i++)
-        {
-            if(data.skills[i] == 0)
-            {
-                skills[GameLoop.Instance.upgradeFindersNames[i]] = false;
-            }
-            else
-            {
-                skills[GameLoop.Instance.upgradeFindersNames[i]] = true;
-            }
-        }
-
-        for(int i = 0; i < GameLoop.Instance.weaponFinders.Count; i++)
-        {
-            if(data.weapons[i] == 0)
-            {
-                weapons[GameLoop.Instance.weaponFindersNames[i]] = false;
-            }
-            else
-            {
-                weapons[GameLoop.Instance.weaponFindersNames[i]] = true;
+                items[GameLoop.Instance.itemNames[i]] = true;
             }
         }
     }

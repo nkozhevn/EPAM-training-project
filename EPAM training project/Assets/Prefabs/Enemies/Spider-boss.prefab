@@ -132,16 +132,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 2649250781368657538}
   levelPoints: 10
+  animator: {fileID: 8563803165412790316}
+  deathEffect: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
+    type: 3}
+  effectLifeTime: 2
   enemyStatsList:
   - {fileID: 11400000, guid: 3ff18405f33bc324583c72e6fd39aceb, type: 2}
   - {fileID: 11400000, guid: 3ff18405f33bc324583c72e6fd39aceb, type: 2}
   firePoint: {fileID: 2607566374527185665}
-  animator: {fileID: 8563803165412790316}
   audioManager: {fileID: 0}
   soundName: BossTheme
-  deathEffect: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
-    type: 3}
-  effectLifeTime: 2
 --- !u!195 &539927357
 NavMeshAgent:
   m_ObjectHideFlags: 0

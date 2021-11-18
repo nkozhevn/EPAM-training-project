@@ -14401,7 +14401,8 @@ GameObject:
   - component: {fileID: 23985610673556730}
   - component: {fileID: 135954929688684896}
   - component: {fileID: 114496700428029676}
-  - component: {fileID: 1038935188}
+  - component: {fileID: 1889074950}
+  - component: {fileID: 1889074946}
   m_Layer: 0
   m_Name: ShieldUpgrade
   m_TagString: Untagged
@@ -14524,7 +14525,28 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1038935188
+  renderers: []
+  check: 0
+--- !u!95 &1889074950
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912731163003908}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3c9de1117d66554eb2f9d93dd2ed8cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1889074946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14533,8 +14555,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1912731163003908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d4f2b704f7f0d40a193ba906737940, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ef11725b31cba341b52f73ecb8c3a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inventoryItem: {fileID: 11400000, guid: c5006dd8fda78cd4b92f63a1abab6b98, type: 2}
   audioManager: {fileID: 0}
   soundName: Finding

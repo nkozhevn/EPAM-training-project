@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //[SerializeField] private Transform camera;
+    [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource walkingAudio;
+
     private Vector3 _movement;
-    //private Vector3 _moveDirection;
-    //private float _rotateAngle;
-    //private float _angle;
-    //private float _turnSmoothVelocity;
     private Vector3 _mousePosition;
     private Rigidbody _rigidbody;
-    [SerializeField] private Animator animator;
     private bool _isMoving = false;
     private int _isWalkingHash;
-    [SerializeField] private AudioSource walkingAudio;
-    
 
     private void Awake()
     {
@@ -29,11 +24,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.z = Input.GetAxisRaw("Vertical");
-
-        /*_rotateAngle = Mathf.Atan2(_movement.x, _movement.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
-        _angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _rotateAngle, ref _turnSmoothVelocity, GameLoop.Instance.Player.turnSmoothTime);
-
-        _moveDirection = Quaternion.Euler(0f, _rotateAngle, 0f) * Vector3.forward;*/
 
         _mousePosition = GameLoop.Instance.Player.cam.ScreenToWorldPoint(Input.mousePosition);
 
@@ -56,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
         if(_isMoving)
         {
             _rigidbody.MovePosition(_rigidbody.position + _movement * GameLoop.Instance.Player.moveSpeed * Time.fixedDeltaTime);
-            //transform.rotation = Quaternion.Euler(0f, _angle, 0f);
         }
 
         Plane playerPlane = new Plane(Vector3.up, transform.position);
@@ -68,9 +57,5 @@ public class PlayerMovement : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, GameLoop.Instance.Player.turnSpeed * Time.deltaTime);
         }
-        /*Vector3 difference = _mousePosition - transform.position; 
-        difference.Normalize();
-        float angle = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);*/
     }
 }

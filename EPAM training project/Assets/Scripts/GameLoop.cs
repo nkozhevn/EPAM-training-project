@@ -11,17 +11,16 @@ public class GameLoop : MonoBehaviour
     [SerializeField] private UIController uIController;
     [SerializeField] private TriggerObjects finish;
     [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] public List<UpgradeFinder> upgradeFinders;
-    [SerializeField] public List<string> upgradeFindersNames;
-    [SerializeField] public List<WeaponFinder> weaponFinders;
-    [SerializeField] public List<string> weaponFindersNames;
+    [SerializeField] public List<string> itemNames;
     [SerializeField] private GameData gameData;
     [SerializeField] private Player player;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string gameThemeSoundName;
     [SerializeField] private string menuThemeSoundName;
-    public bool gameIsPaused = false;
-    public bool objective = false;
+
+    [HideInInspector] public bool gameIsPaused = false;
+    [HideInInspector] public bool objective = false;
+
     public GameData GameData
     {
         get
@@ -67,8 +66,6 @@ public class GameLoop : MonoBehaviour
 
     private void OnPlayerDied()
     {
-        //PlayerPrefs.SetString("Level", firstLevelName);
-        //GameData.level = firstLevelName;
         audioManager.Pause(gameThemeSoundName);
         audioManager.Play(menuThemeSoundName);
         GameData.SetGameEnd(firstLevelName);
@@ -78,78 +75,12 @@ public class GameLoop : MonoBehaviour
 
     public void SetDifficulty(int value)
     {
-        // switch(value)
-        // {
-        //     case 0:
-        //         /*PlayerPrefs.SetInt("Difficulty", 0);
-        //         PlayerPrefs.SetInt("MaxHealth", 20);
-        //         PlayerPrefs.SetInt("CurrentHealth", 20);*/
-        //         GameData.difficulty = 0;
-        //         GameData.maxHealth = 20;
-        //         GameData.currentHealth = 20;
-        //         break;
-        //     case 1:
-        //         /*PlayerPrefs.SetInt("Difficulty", 1);
-        //         PlayerPrefs.SetInt("MaxHealth", 10);
-        //         PlayerPrefs.SetInt("CurrentHealth", 10);*/
-        //         GameData.difficulty = 1;
-        //         GameData.maxHealth = 10;
-        //         GameData.currentHealth = 10;
-        //         break;
-        // }
-        // /*PlayerPrefs.SetString("Level", firstLevelName);
-        // PlayerPrefs.SetInt("PlayerLevel", 0);
-        // PlayerPrefs.SetInt("PlayerLevelPoints", 0);
-        // PlayerPrefs.SetInt("Shotgun", 0);
-        // PlayerPrefs.SetInt("Rifle", 0);
-        // PlayerPrefs.SetInt("Granade", 0);*/
-        // GameData.level = firstLevelName;
-        // GameData.playerLevel = 0;
-        // GameData.playerLevelPoints = 0;
-        // /*foreach(bool skill in GameData.skills)
-        // {
-        //     skill = false;
-        // }*/
-        // for(int i = 0; i < upgradeFinders.Count; i++)
-        // {
-        //     GameData.skills[upgradeFindersNames[i]] = false;
-        // }
-        // GameData.weapons[weaponFindersNames[0]] = true;
-        // for(int i = 1; i < weaponFinders.Count; i++)
-        // {
-        //     GameData.weapons[weaponFindersNames[i]] = false;
-        // }
         GameData.SetGameStart(value);
         GameData.SaveGame();
     }
 
     private void OnFinish()
     {
-        /*PlayerPrefs.SetString("Level", nextLevelName);
-        PlayerPrefs.SetInt("MaxHealth", Player.Health.maxHealthPoints);
-        PlayerPrefs.SetInt("CurrentHealth", Player.Health.HealthPoints);
-        PlayerPrefs.SetInt("PlayerLevel", Player.level.PlayerLevel);
-        PlayerPrefs.SetInt("PlayerLevelPoints", Player.level.LevelPoints);*/
-        // GameData.level = nextLevelName;
-        // GameData.maxHealth = Player.Health.maxHealthPoints;
-        // GameData.currentHealth = Player.Health.HealthPoints;
-        // GameData.playerLevel = Player.level.PlayerLevel;
-        // GameData.playerLevelPoints = Player.level.LevelPoints;
-        // for(int i = 0; i < upgradeFinders.Count; i++)
-        // {
-        //     if(upgradeFinders[i].skillGot)
-        //     {
-        //         //PlayerPrefs.SetInt(upgradeFinders[i].upgradeName, 1);
-        //         GameData.skills[upgradeFindersNames[i]] = true;
-        //     }
-        // }
-        // for(int i = 0; i < weaponFinders.Count; i++)
-        // {
-        //     if(weaponFinders[i].weaponGot)
-        //     {
-        //         GameData.weapons[weaponFindersNames[i]] = true;
-        //     }
-        // }
         audioManager.Pause(gameThemeSoundName);
         audioManager.Play(menuThemeSoundName);
         GameData.SetLevelEnd();

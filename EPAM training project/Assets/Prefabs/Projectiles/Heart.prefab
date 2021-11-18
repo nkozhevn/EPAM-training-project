@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2756594578405647829}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.1, y: 3, z: -124.9}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -80,7 +80,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restoreAmount: 5
-  audioSource: {fileID: 0}
   audioManager: {fileID: 0}
   soundName: Finding
 --- !u!1 &6614855233514347788
@@ -204,7 +203,7 @@ PrefabInstance:
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b,
         type: 3}
       propertyPath: m_Intensity
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b,
         type: 3}

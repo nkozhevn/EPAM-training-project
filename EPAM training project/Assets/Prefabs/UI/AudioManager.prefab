@@ -45,34 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixerGroup: {fileID: 24300002, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
   sounds:
-  - name: GunShoot
-    clip: {fileID: 8300000, guid: a7696a2bf114ed3438fefac35ec6ec66, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 0
-    audioMixerGroup: {fileID: 24300002, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
-    source: {fileID: 0}
-  - name: ShotgunShoot
-    clip: {fileID: 8300000, guid: 8b8b193dd11d0f140b03e7fd362e521a, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 0
-    audioMixerGroup: {fileID: 24300002, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
-    source: {fileID: 0}
-  - name: RifleShoot
-    clip: {fileID: 8300000, guid: c36ca4d8a59972f4982bad4365937c3e, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 0
-    audioMixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: PlayerWalk
-    clip: {fileID: 8300000, guid: d9021579f79e6f343a27381860bcad4a, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 1
-    audioMixerGroup: {fileID: 0}
-    source: {fileID: 0}
   - name: LevelAmbient
     clip: {fileID: 8300000, guid: 81ed50c0a41260545b133c95f07b2afe, type: 3}
     volume: 0.5
@@ -84,7 +56,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: e16b4112847c4a24a8bf3d8a485b19c3, type: 3}
     volume: 0.7
     pitch: 1
-    loop: 0
+    loop: 1
     audioMixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: MenuTheme
@@ -95,6 +67,13 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: Click
+    clip: {fileID: 8300000, guid: efb5f1b0875bbc7408e2352c2367f89a, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Finding
     clip: {fileID: 8300000, guid: eb29844b03df258489a10c01c6e51552, type: 3}
     volume: 0.7
     pitch: 1

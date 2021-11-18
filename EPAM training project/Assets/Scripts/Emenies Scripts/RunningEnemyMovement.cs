@@ -7,15 +7,13 @@ using UnityEngine.AI;
 public class RunningEnemyMovement : Enemy
 {
     [SerializeField] private List<RunningEnemyStats> enemyStatsList;
+    
     private RunningEnemyStats _enemyStats;
     private bool _hitCheck = false;
-    private enum State { Running, Standing }
     private State _state;
-    [SerializeField] private Animator animator;
     private int _isWalkingHash;
-    //[SerializeField] private SpawnEffect deathEffect;
-    [SerializeField] private GameObject deathEffect;
-    [SerializeField] private float effectLifeTime;
+
+    private enum State { Running, Standing }
 
     private void Awake()
     {
@@ -27,7 +25,6 @@ public class RunningEnemyMovement : Enemy
 
     private void Start()
     {
-        //_enemyStats = enemyStatsList[PlayerPrefs.GetInt("Difficulty")];
         _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
         _state = State.Running;
         animator.SetBool(_isWalkingHash, true);
@@ -35,23 +32,12 @@ public class RunningEnemyMovement : Enemy
         navMeshAgent.speed = _enemyStats.MoveSpeed;
     }
 
-    private void Update() 
-    {
-        //Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
-        //DirectionNorm = Direction / Direction.magnitude;
-    }
-
     private void FixedUpdate()
     {
-        //if(navMeshAgent.enabled == true)
-        //{
-            if(_state == State.Running)
-            {
-                //Rigidbody.MovePosition(Rigidbody.position + DirectionNorm * _enemyStats.MoveSpeed * Time.fixedDeltaTime);
-                //transform.LookAt(GameLoop.Instance.Player.transform);
-                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
-            }
-        //}
+        if(_state == State.Running)
+        {
+            navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -82,7 +68,6 @@ public class RunningEnemyMovement : Enemy
     {
         if(health.NoHealth)
         {
-            //deathEffect.check = true;
             GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);

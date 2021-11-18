@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyTrigger : MonoBehaviour
 {
-    //[SerializeField] private UnityEngine.AI.NavMeshAgent enemy;
     [SerializeField] private GameObject enemy;
     private bool triggered = false;
 

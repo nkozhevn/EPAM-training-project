@@ -9,9 +9,9 @@ public class AmmoBar : MonoBehaviour
     [SerializeField] private PlayerShooting playerShooting;
     [SerializeField] private Image weaponPic;
     [SerializeField] private List<Sprite> weaponImages;
+
     private int _weaponImageIndex = 0;
     private Weapon _selectedWeapon;
-
 
     private void Start()
     {

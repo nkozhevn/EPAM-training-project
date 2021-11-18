@@ -16,7 +16,8 @@ public class LevelBar : MonoBehaviour
         playerLevelNumber.text = level.StringLevelNumber();
     }
 
-    private void OnDestroy() {
+    private void OnDestroy() 
+    {
         level.LevelPointsChanged -= OnLevelPointsChanged;
     }
 

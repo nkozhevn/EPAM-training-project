@@ -23,7 +23,7 @@ public class GranadeSkill : Skill
     protected override IEnumerator Reload()
     {
         _isActivated = true;
-        icon.Reload(reloadTime);
+        skillIcon.Reload(reloadTime);
         yield return new WaitForSeconds(reloadTime);
         _isActivated = false;
     }

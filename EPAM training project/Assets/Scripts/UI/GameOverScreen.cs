@@ -29,7 +29,6 @@ public class GameOverScreen : MonoBehaviour
     public void RestartButton()
     {
         audioManager.Play(clickSoundName);
-        //SceneManager.LoadScene(PlayerPrefs.GetInt("Level", "1"));
         SceneManager.LoadScene(GameLoop.Instance.GameData.level);
         Time.timeScale = 1f;
     }
