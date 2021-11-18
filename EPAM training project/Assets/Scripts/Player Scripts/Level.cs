@@ -26,7 +26,7 @@ public class Level : MonoBehaviour
     public float LevelPointsPercent() => (float)LevelPoints / maxLevelPoints;
     public string StringLevelNumber() => _level.ToString();
 
-    private void Awake()
+    private void Start()
     {
         _level = GameLoop.Instance.GameData.playerLevel;
         health.HealthUpgrade((_level - 1) * 5);

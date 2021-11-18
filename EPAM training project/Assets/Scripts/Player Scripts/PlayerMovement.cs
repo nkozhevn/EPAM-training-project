@@ -58,4 +58,9 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, GameLoop.Instance.Player.turnSpeed * Time.deltaTime);
         }
     }
+
+    private void OnDisable()
+    {
+        walkingAudio.mute = true;
+    }
 }
