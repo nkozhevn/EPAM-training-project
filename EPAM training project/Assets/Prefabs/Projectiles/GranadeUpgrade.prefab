@@ -181,6 +181,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1777499931764746985, guid: ec12a739967f4234ca58b637f727617b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b,
         type: 3}
       propertyPath: m_Color.b
@@ -194,6 +199,16 @@ PrefabInstance:
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b,
         type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b,
+        type: 3}
+      propertyPath: m_BounceIntensity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1777499931764746986, guid: ec12a739967f4234ca58b637f727617b,
