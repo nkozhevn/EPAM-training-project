@@ -13,6 +13,11 @@ public class Player : MonoBehaviour
     [SerializeField] public Camera cam;
     [SerializeField] private Inventory _inventory;
 
+    public void RecieveDamage(float amount)
+    {
+        _health.
+    }
+
     private Rigidbody _rb;
     public PlayerHealth Health => _health;
     public Inventory Inventory => _inventory;

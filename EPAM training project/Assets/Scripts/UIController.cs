@@ -6,7 +6,7 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] private PauseScreen pauseScreen;
     [SerializeField] private GameOverScreen gameOverScreen;
-    [SerializeField] private GameOverScreen finishScreen;
+    //[SerializeField] private GameOverScreen finishScreen;
     [SerializeField] private GameObject ingameUI;
 
     private void Start()

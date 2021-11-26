@@ -77,7 +77,7 @@ public class SettingsMenuScreen : MonoBehaviour
         audioMixer.SetFloat("mainVolume", volume);
     }
 
-    public void BackButton()
+    private void BackButton()
     {
         audioManager.Play(clickSoundName);
         Back();

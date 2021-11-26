@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.InputSystem.HID;
+using UnityEngine.UI;
 
 public class GameOverScreen : MonoBehaviour
 {
@@ -12,7 +14,15 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string clickSoundName;
 
-    public void GameOver()
+    [SerializeField] private Button nextLevelButton;
+    [SerializeField] private Slider slider;
+
+    private void Awake()
+    {
+        nextLevelButton.onClick.AddListener(NextLevelButton);
+    }
+
+    public void GameOver(bool canSwitchToNextLevel)
     {
         gameObject.SetActive(true);
         ingameUI.SetActive(false);

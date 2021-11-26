@@ -101,7 +101,7 @@ public class JumpingEnemy : Enemy
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
+            IHealth health = collision.gameObject.GetComponent<IHealth>();
             if(health != null)
             {
                 health.RecieveDamage(_enemyStats.EnemyPower);

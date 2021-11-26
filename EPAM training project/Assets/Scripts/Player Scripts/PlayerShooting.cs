@@ -40,14 +40,16 @@ public class PlayerShooting : MonoBehaviour
     {
         _previousSelectedWeaponIndex = _selectedWeaponIndex;
 
-        if(Input.GetButtonDown("Fire1"))
-        {
-            _selectedWeapon.OnShoot = true;
-        }
-        if(Input.GetButtonUp("Fire1"))
-        {
-            _selectedWeapon.OnShoot = false;
-        }
+        //if(Input.GetButtonDown("Fire1"))
+        //{
+        //    _selectedWeapon.OnShoot = true;
+        //}
+        //if(Input.GetButtonUp("Fire1"))
+        //{
+        //    _selectedWeapon.OnShoot = false;
+        //}
+
+        _selectedWeapon.IsShooting = Input.GetButton("Fire1");
 
         foreach(var key in keyMap.Keys)
         {

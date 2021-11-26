@@ -39,6 +39,17 @@ public class GameLoop : MonoBehaviour
         Instance = this;
 
         GameData.LoadGame();
+
+
+        LoadSaveGame();
+        SpawnPlayer(); -> Init all subsystems;
+
+        SetCamera();
+        StartEnemySpawner();
+        ....
+
+            GameInitialized;
+
     }
 
     private void Start()

@@ -51,6 +51,9 @@ public abstract class Weapon : MonoBehaviour
     public WeaponStats Stats => weaponStats;
     public InventoryItem InventoryItem => inventoryItem;
 
+
+    public bool CanShoot => _shootingTimer >= Stats.CoolDown;
+
     private void Start()
     {
         CurrentAmmo = weaponStats.MaxAmmo;
@@ -71,7 +74,7 @@ public abstract class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if(OnShoot && _shootingTimer >= Stats.CoolDown)
+        if(IsShooting && CanShoot)
         {
             if(IsReloading)
             {
@@ -104,7 +107,7 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-    public abstract void Shoot();
+    protected abstract void Shoot();
 
     public IEnumerator Reload()
     {
