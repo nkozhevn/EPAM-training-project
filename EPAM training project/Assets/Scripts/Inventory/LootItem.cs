@@ -13,7 +13,7 @@ public class LootItem : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             audioManager.Play(soundName);
-            GameLoop.Instance.Player.Inventory.AddItem(_inventoryItem);
+            LevelController.Instance.Player.Inventory.AddItem(_inventoryItem);
             gameObject.SetActive(false);
         }
     }

@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 237165131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1111515650111270072}
-        m_TargetAssemblyTypeName: MainMenuScreen, Assembly-CSharp
-        m_MethodName: EasyButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &287812697
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,19 +352,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1700787439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1111515650111270072}
-        m_TargetAssemblyTypeName: MainMenuScreen, Assembly-CSharp
-        m_MethodName: HardButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2105776632
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,19 +789,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1111515649824426318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1111515650111270072}
-        m_TargetAssemblyTypeName: MainMenuScreen, Assembly-CSharp
-        m_MethodName: SettingsButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1111515649921933903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,19 +989,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1111515649970076533}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1111515650111270072}
-        m_TargetAssemblyTypeName: MainMenuScreen, Assembly-CSharp
-        m_MethodName: ExitButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1111515650005908565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,19 +1110,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1111515650005908560}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1111515650111270072}
-        m_TargetAssemblyTypeName: MainMenuScreen, Assembly-CSharp
-        m_MethodName: PlayButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1111515650111270074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1170,16 @@ MonoBehaviour:
   settingsMenu: {fileID: 0}
   modsButtons: {fileID: 287812697}
   loadPlug: {fileID: 4745122003628675678}
+  audioManager: {fileID: 0}
+  gameThemeSoundName: 
+  menuThemeSoundName: 
+  clickSoundName: 
+  loadButton: {fileID: 8480895048372990276}
+  playButton: {fileID: 1111515650005908563}
+  easyButton: {fileID: 237165130}
+  hardButton: {fileID: 1700787438}
+  settingsButton: {fileID: 1111515649824426305}
+  exitButton: {fileID: 1111515649970076532}
 --- !u!1 &1111515651123439664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,16 +1454,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6737612220103638656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1111515650111270072}
-        m_TargetAssemblyTypeName: MainMenuScreen, Assembly-CSharp
-        m_MethodName: LoadButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a9c06dd163aa9478459cbe010bbf6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 20
   turnSpeed: 10
   maxLevelPoints: 10
 --- !u!1 &6571097228758628994

@@ -22,9 +22,9 @@ public class Data
         playerLevel = gameData.playerLevel;
         playerLevelPoints = gameData.playerLevelPoints;
 
-        for(int i = 0; i < GameLoop.Instance.itemNames.Count; i++)
+        for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
         {
-            if(gameData.items[GameLoop.Instance.itemNames[i]])
+            if(gameData.items[LevelController.Instance.itemNames[i]])
             {
                 items[i] = 1;
             }

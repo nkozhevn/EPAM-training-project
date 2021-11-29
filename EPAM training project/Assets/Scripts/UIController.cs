@@ -18,7 +18,7 @@ public class UIController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(GameLoop.Instance.gameIsPaused)
+            if(LevelController.Instance.gameIsPaused)
             {
                 pauseScreen.Resume();
             }

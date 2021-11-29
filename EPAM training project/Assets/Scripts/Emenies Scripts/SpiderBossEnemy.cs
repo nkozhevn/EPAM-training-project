@@ -29,7 +29,7 @@ public class SpiderBossEnemy : Enemy
 
     private void Start()
     {
-        _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
+        _enemyStats = enemyStatsList[LevelController.Instance.GameData.difficulty];
 
         navMeshAgent.speed = _enemyStats.MoveSpeed;
         _state = State.Running;
@@ -43,7 +43,7 @@ public class SpiderBossEnemy : Enemy
 
     private void Update()
     {
-        Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
+        Direction = LevelController.Instance.Player.GetPosition - Rigidbody.position;
 
         if(Direction.magnitude > _enemyStats.ActivationDist)
         {
@@ -75,13 +75,13 @@ public class SpiderBossEnemy : Enemy
         {
             case State.Running:
                 navMeshAgent.isStopped = false;
-                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                navMeshAgent.destination = LevelController.Instance.Player.transform.position;
                 break;
             case State.Standing:
-                transform.LookAt(GameLoop.Instance.Player.transform);
+                transform.LookAt(LevelController.Instance.Player.transform);
                 break;
             case State.Shooting:
-                transform.LookAt(GameLoop.Instance.Player.transform);
+                transform.LookAt(LevelController.Instance.Player.transform);
                 if(_shootingTimer >= _enemyStats.ShootingCoolDown)
                 {
                     Shoot();
@@ -93,7 +93,7 @@ public class SpiderBossEnemy : Enemy
                 }
                 break;
             case State.Launching:
-                transform.LookAt(GameLoop.Instance.Player.transform);
+                transform.LookAt(LevelController.Instance.Player.transform);
                 if(_launchingTimer >= _enemyStats.LaunchingCoolDown)
                 {
                     Launch();
@@ -106,7 +106,7 @@ public class SpiderBossEnemy : Enemy
                 break;
             case State.Dashing:
                 navMeshAgent.isStopped = false;
-                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                navMeshAgent.destination = LevelController.Instance.Player.transform.position;
                 animator.SetBool(_isWalkingHash, false);
                 animator.SetBool(_isRunningHash, true);
                 break;
@@ -163,8 +163,8 @@ public class SpiderBossEnemy : Enemy
         if(health.NoHealth)
         {
             audioManager.Stop(soundName);
-            GameLoop.Instance.objective = true;
-            GameLoop.Instance.Player.Level.GainLevelPoints(levelPoints);
+            LevelController.Instance.objective = true;
+            LevelController.Instance.Player.PlayerLevel.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

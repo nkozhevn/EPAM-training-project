@@ -36,28 +36,28 @@ public class GameData : MonoBehaviour
                 currentHealth = 10;
                 break;
         }
-        level = GameLoop.Instance.firstLevelName;
+        level = LevelController.Instance.firstLevelName;
         playerLevel = 0;
         playerLevelPoints = 0;
-        items[GameLoop.Instance.itemNames[0]] = true;
-        for(int i = 1; i < GameLoop.Instance.itemNames.Count; i++)
+        items[LevelController.Instance.itemNames[0]] = true;
+        for(int i = 1; i < LevelController.Instance.itemNames.Count; i++)
         {
-            items[GameLoop.Instance.itemNames[i]] = false;
+            items[LevelController.Instance.itemNames[i]] = false;
         }
     }
 
     public void SetLevelEnd()
     {
-        level = GameLoop.Instance.nextLevelName;
-        maxHealth = GameLoop.Instance.Player.Health.maxHealthPoints;
-        currentHealth = GameLoop.Instance.Player.Health.HealthPoints;
-        playerLevel = GameLoop.Instance.Player.Level.PlayerLevel;
-        playerLevelPoints = GameLoop.Instance.Player.Level.LevelPoints;
-        for(int i = 0; i < GameLoop.Instance.itemNames.Count; i++)
+        level = LevelController.Instance.nextLevelName;
+        maxHealth = LevelController.Instance.Player.Health.maxHealthPoints;
+        currentHealth = LevelController.Instance.Player.Health.HealthPoints;
+        playerLevel = LevelController.Instance.Player.PlayerLevel.Level;
+        playerLevelPoints = LevelController.Instance.Player.PlayerLevel.LevelPoints;
+        for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
         {
-            if(GameLoop.Instance.Player.Inventory.GotCheck(GameLoop.Instance.itemNames[i]))
+            if(LevelController.Instance.Player.Inventory.GotCheck(LevelController.Instance.itemNames[i]))
             {
-                items[GameLoop.Instance.itemNames[i]] = true;
+                items[LevelController.Instance.itemNames[i]] = true;
             }
         }
     }
@@ -83,15 +83,15 @@ public class GameData : MonoBehaviour
         playerLevel = data.playerLevel;
         playerLevelPoints = data.playerLevelPoints;
 
-        for(int i = 0; i < GameLoop.Instance.itemNames.Count; i++)
+        for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
         {
             if(data.items[i] == 0)
             {
-                items[GameLoop.Instance.itemNames[i]] = false;
+                items[LevelController.Instance.itemNames[i]] = false;
             }
             else
             {
-                items[GameLoop.Instance.itemNames[i]] = true;
+                items[LevelController.Instance.itemNames[i]] = true;
             }
         }
     }

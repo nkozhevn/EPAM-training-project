@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameLoop : MonoBehaviour
+public class LevelController : MonoBehaviour
 {
-    public static GameLoop Instance{ get; private set; }
+    public static LevelController Instance{ get; private set; }
     [SerializeField] public string levelName;
     [SerializeField] public string firstLevelName;
     [SerializeField] public string nextLevelName;

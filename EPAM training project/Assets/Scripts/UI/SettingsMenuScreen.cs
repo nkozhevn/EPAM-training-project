@@ -8,10 +8,24 @@ public class SettingsMenuScreen : MonoBehaviour
 {
     [SerializeField] private GameObject menu;
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private Dropdown resolutionDropdown;
     [SerializeField] private Resolution[] _resolutions;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string clickSoundName;
+
+    [SerializeField] private Toggle fullScreenToggle;
+    [SerializeField] private Dropdown resolutionDropdown;
+    [SerializeField] private Dropdown qualityDropdown;
+    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private Button backButton;
+
+    private void Awake()
+    {
+        fullScreenToggle.onValueChanged.AddListener(FullScreenToggle);
+        resolutionDropdown.onValueChanged.AddListener(ResolutionDropdown);
+        qualityDropdown.onValueChanged.AddListener(QualityDropdown);
+        volumeSlider.onValueChanged.AddListener(VolumeSlider);
+        backButton.onClick.AddListener(BackButton);
+    }
 
     void Start()
     {

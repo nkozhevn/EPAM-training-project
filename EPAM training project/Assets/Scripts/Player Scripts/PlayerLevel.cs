@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Level : MonoBehaviour
+public class PlayerLevel : MonoBehaviour
 {
     public event Action LevelPointsChanged;
     [SerializeField] private PlayerHealth health;
@@ -20,28 +20,28 @@ public class Level : MonoBehaviour
             LevelPointsChanged?.Invoke();
         }
     }
-    public int PlayerLevel => _level;
+    public int Level => _level;
 
-    public float LevelPointsPercent() => (float)LevelPoints / GameLoop.Instance.Player.PlayerStats.MaxLevelPoints;
+    public float LevelPointsPercent() => (float)LevelPoints / LevelController.Instance.Player.PlayerStats.MaxLevelPoints;
     public string StringLevelNumber() => _level.ToString();
 
     private void Start()
     {
-        _level = GameLoop.Instance.GameData.playerLevel;
+        _level = LevelController.Instance.GameData.playerLevel;
         health.HealthUpgrade((_level - 1) * 5);
-        GainLevelPoints(GameLoop.Instance.GameData.playerLevelPoints);
+        GainLevelPoints(LevelController.Instance.GameData.playerLevelPoints);
     }
 
     public void GainLevelPoints(int amount)
     {
         LevelPoints += amount;
-        if((LevelPoints) >= GameLoop.Instance.Player.PlayerStats.MaxLevelPoints)
+        if((LevelPoints) >= LevelController.Instance.Player.PlayerStats.MaxLevelPoints)
         {
-            for(int i = 0; i < LevelPoints / GameLoop.Instance.Player.PlayerStats.MaxLevelPoints; i++)
+            for(int i = 0; i < LevelPoints / LevelController.Instance.Player.PlayerStats.MaxLevelPoints; i++)
             {
                 _level++;
                 health.HealthUpgrade(5);
-                LevelPoints -= GameLoop.Instance.Player.PlayerStats.MaxLevelPoints;
+                LevelPoints -= LevelController.Instance.Player.PlayerStats.MaxLevelPoints;
             }
         }
     }

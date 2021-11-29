@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: 1
   firstLevelName: 1
-  nextLevelName: 1
+  nextLevelName: 2
   uIController: {fileID: 3676306620813735061}
   finish: {fileID: 0}
   playerHealth: {fileID: 0}

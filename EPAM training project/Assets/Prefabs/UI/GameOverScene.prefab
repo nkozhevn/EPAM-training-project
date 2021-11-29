@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2652296494096944292}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2789037220699407004}
-        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: RestartButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2789037219548274086
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,19 +397,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2789037219813224733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2789037220699407004}
-        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: MenuButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2789037220316657494
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,19 +518,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2789037220316657451}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2789037220699407004}
-        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: RestartButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2789037220495573382
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +733,11 @@ MonoBehaviour:
   ingameUI: {fileID: 0}
   nextLevelName: 1
   menuSceneName: Main Menu
+  audioManager: {fileID: 0}
+  clickSoundName: 
+  nextLevelButton: {fileID: 797725222844160943}
+  restartButton: {fileID: 2789037220316657448}
+  menuButton: {fileID: 2789037219813224730}
 --- !u!1 &4985162400414016103
 GameObject:
   m_ObjectHideFlags: 0

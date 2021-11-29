@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.z = Input.GetAxisRaw("Vertical");
 
-        _mousePosition = GameLoop.Instance.Player.cam.ScreenToWorldPoint(Input.mousePosition);
+        _mousePosition = LevelController.Instance.Player.cam.ScreenToWorldPoint(Input.mousePosition);
 
         if(_movement.magnitude >= 0.1f)
         {
@@ -45,17 +45,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if(_isMoving)
         {
-            _rigidbody.MovePosition(_rigidbody.position + _movement * GameLoop.Instance.Player.PlayerStats.MoveSpeed * Time.fixedDeltaTime);
+            _rigidbody.MovePosition(_rigidbody.position + _movement * LevelController.Instance.Player.PlayerStats.MoveSpeed * Time.fixedDeltaTime);
         }
 
         Plane playerPlane = new Plane(Vector3.up, transform.position);
-        Ray ray = GameLoop.Instance.Player.cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = LevelController.Instance.Player.cam.ScreenPointToRay(Input.mousePosition);
         float hitdist = 0.0f;
         if (playerPlane.Raycast(ray, out hitdist))
         {
             Vector3 targetPoint = ray.GetPoint(hitdist);
             Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, GameLoop.Instance.Player.PlayerStats.TurnSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, LevelController.Instance.Player.PlayerStats.TurnSpeed * Time.deltaTime);
         }
     }
 

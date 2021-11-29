@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2919811084199211819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6330621236068877189}
-        m_TargetAssemblyTypeName: SettingsMenuScreen, Assembly-CSharp
-        m_MethodName: BackButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &358911377629845411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,19 +1269,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6330621236068877189}
-        m_TargetAssemblyTypeName: SettingsMenuScreen, Assembly-CSharp
-        m_MethodName: QualityDropdown
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &3729705262972749037
 GameObject:
@@ -1689,19 +1665,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6330621236068877189}
-        m_TargetAssemblyTypeName: SettingsMenuScreen, Assembly-CSharp
-        m_MethodName: VolumeSlider
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &4461851839415797323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,19 +2402,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6330621236068877189}
-        m_TargetAssemblyTypeName: SettingsMenuScreen, Assembly-CSharp
-        m_MethodName: FullScreenToggle
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
 --- !u!1 &5762199749828078038
 GameObject:
@@ -2822,9 +2774,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f26eb05e3f44394984b2bd92d6a3509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 0}
+  menu: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
-  resolutionDropdown: {fileID: 0}
+  audioManager: {fileID: 0}
+  clickSoundName: 
+  fullScreenToggle: {fileID: 2777227748864626661}
+  resolutionDropdown: {fileID: 1036732610660355844}
+  qualityDropdown: {fileID: 1384287175334015805}
+  volumeSlider: {fileID: 3940431056931806051}
+  backButton: {fileID: 7695590213762398493}
 --- !u!1 &7820147962705648662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,19 +2956,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6330621236068877189}
-        m_TargetAssemblyTypeName: SettingsMenuScreen, Assembly-CSharp
-        m_MethodName: ResolutionDropdown
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &8149033068848257488
 GameObject:

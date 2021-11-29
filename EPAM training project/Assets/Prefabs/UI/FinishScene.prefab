@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1606378252655661650}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1606378254443522021}
-        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: RestartButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1606378252897510655
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,19 +553,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1606378253560992868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1606378254443522021}
-        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: MenuButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1606378254443522019
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +610,11 @@ MonoBehaviour:
   ingameUI: {fileID: 0}
   nextLevelName: 1
   menuSceneName: Main Menu
+  audioManager: {fileID: 0}
+  clickSoundName: 
+  nextLevelButton: {fileID: 4318302011123302102}
+  restartButton: {fileID: 1606378252655661649}
+  menuButton: {fileID: 1606378253560992867}
 --- !u!1 &4093361548835260000
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,19 +735,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1455084386567104989}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1606378254443522021}
-        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: NextLevelButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8489704055871538974
 GameObject:
   m_ObjectHideFlags: 0

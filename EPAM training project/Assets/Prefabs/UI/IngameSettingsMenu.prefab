@@ -772,12 +772,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1720592968775985564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33791f2a26f5244c9cdd6f0afece62f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f26eb05e3f44394984b2bd92d6a3509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  menu: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: d93e4c164e420224cbab4a0bd829135e, type: 2}
-  resolutionDropdown: {fileID: 0}
+  audioManager: {fileID: 0}
+  clickSoundName: Click
+  fullScreenToggle: {fileID: 3078254020293681734}
+  resolutionDropdown: {fileID: 5399648544953358702}
+  qualityDropdown: {fileID: 7942293293460108904}
+  volumeSlider: {fileID: 3602905810496839789}
+  backButton: {fileID: 4430982210000081528}
 --- !u!1 &2046435804095865200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,19 +1089,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1293425973335579585}
-        m_TargetAssemblyTypeName: IngameSettingsMenuScreen, Assembly-CSharp
-        m_MethodName: QualityDropdown
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &2418537679322987468
 GameObject:
@@ -1731,19 +1725,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2849525824921360424}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1293425973335579585}
-        m_TargetAssemblyTypeName: IngameSettingsMenuScreen, Assembly-CSharp
-        m_MethodName: BackButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &4126382302415294047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,19 +2049,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1293425973335579585}
-        m_TargetAssemblyTypeName: IngameSettingsMenuScreen, Assembly-CSharp
-        m_MethodName: ResolutionDropdown
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &6239804825857498994
 GameObject:
@@ -2352,19 +2322,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1293425973335579585}
-        m_TargetAssemblyTypeName: IngameSettingsMenuScreen, Assembly-CSharp
-        m_MethodName: FullScreenToggle
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
 --- !u!1 &6338987571154375210
 GameObject:
@@ -3491,19 +3449,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1293425973335579585}
-        m_TargetAssemblyTypeName: IngameSettingsMenuScreen, Assembly-CSharp
-        m_MethodName: VolumeSlider
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8745357273403040709
 GameObject:
   m_ObjectHideFlags: 0

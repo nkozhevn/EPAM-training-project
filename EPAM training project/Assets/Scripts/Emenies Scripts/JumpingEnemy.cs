@@ -27,14 +27,14 @@ public class JumpingEnemy : Enemy
 
     private void Start()
     {
-        _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
+        _enemyStats = enemyStatsList[LevelController.Instance.GameData.difficulty];
 
         navMeshAgent.speed = _enemyStats.MoveSpeed;
     }
 
     private void Update() 
     {
-        Direction = GameLoop.Instance.Player.GetPosition - Rigidbody.position;
+        Direction = LevelController.Instance.Player.GetPosition - Rigidbody.position;
 
         if(Direction.magnitude > _enemyStats.JumpingDist && _state != State.Standing)
         {
@@ -57,10 +57,10 @@ public class JumpingEnemy : Enemy
             case State.Running:
                 navMeshAgent.isStopped = false;
                 _jumpingWaitTimer = 0;
-                navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+                navMeshAgent.destination = LevelController.Instance.Player.transform.position;
                 break;
             case State.Jumping:
-                transform.LookAt(GameLoop.Instance.Player.transform);
+                transform.LookAt(LevelController.Instance.Player.transform);
                 navMeshAgent.isStopped = true;
                 if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
                 {
@@ -113,7 +113,7 @@ public class JumpingEnemy : Enemy
     {
         if(health.NoHealth)
         {
-            GameLoop.Instance.Player.Level.GainLevelPoints(levelPoints);
+            LevelController.Instance.Player.PlayerLevel.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuScreen : MonoBehaviour
 {
@@ -15,10 +16,27 @@ public class MainMenuScreen : MonoBehaviour
     [SerializeField] private string menuThemeSoundName;
     [SerializeField] private string clickSoundName;
 
+    [SerializeField] private Button loadButton;
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button easyButton;
+    [SerializeField] private Button hardButton;
+    [SerializeField] private Button settingsButton;
+    [SerializeField] private Button exitButton;
+
+    private void Awake()
+    {
+        loadButton.onClick.AddListener(LoadButton);
+        playButton.onClick.AddListener(PlayButton);
+        easyButton.onClick.AddListener(EasyButton);
+        hardButton.onClick.AddListener(HardButton);
+        settingsButton.onClick.AddListener(SettingsButton);
+        exitButton.onClick.AddListener(ExitButton);
+    }
+
     private void Start()
     {
         modsButtons.SetActive(false);
-        if(GameLoop.Instance.GameData.level != levelName)
+        if(LevelController.Instance.GameData.level != levelName)
         {
             loadPlug.SetActive(false);
         }
@@ -30,7 +48,7 @@ public class MainMenuScreen : MonoBehaviour
     public void LoadButton()
     {
         audioManager.Play(clickSoundName);
-        SceneManager.LoadScene(GameLoop.Instance.GameData.level);
+        SceneManager.LoadScene(LevelController.Instance.GameData.level);
     }
 
     public void PlayButton()
@@ -42,14 +60,14 @@ public class MainMenuScreen : MonoBehaviour
     public void EasyButton()
     {
         audioManager.Play(clickSoundName);
-        GameLoop.Instance.SetDifficulty(0);
+        LevelController.Instance.SetDifficulty(0);
         SceneManager.LoadScene(levelName);
     }
 
     public void HardButton()
     {
         audioManager.Play(clickSoundName);
-        GameLoop.Instance.SetDifficulty(1);
+        LevelController.Instance.SetDifficulty(1);
         SceneManager.LoadScene(levelName);
     }
 

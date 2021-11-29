@@ -25,7 +25,7 @@ public class RunningEnemyMovement : Enemy
 
     private void Start()
     {
-        _enemyStats = enemyStatsList[GameLoop.Instance.GameData.difficulty];
+        _enemyStats = enemyStatsList[LevelController.Instance.GameData.difficulty];
         _state = State.Running;
         animator.SetBool(_isWalkingHash, true);
 
@@ -36,7 +36,7 @@ public class RunningEnemyMovement : Enemy
     {
         if(_state == State.Running)
         {
-            navMeshAgent.destination = GameLoop.Instance.Player.transform.position;
+            navMeshAgent.destination = LevelController.Instance.Player.transform.position;
         }
     }
 
@@ -68,7 +68,7 @@ public class RunningEnemyMovement : Enemy
     {
         if(health.NoHealth)
         {
-            GameLoop.Instance.Player.Level.GainLevelPoints(levelPoints);
+            LevelController.Instance.Player.PlayerLevel.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

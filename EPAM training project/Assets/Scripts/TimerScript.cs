@@ -22,7 +22,7 @@ public class TimerScript : MonoBehaviour
 
     private void Effect()
     {
-        GameLoop.Instance.objective = true;
+        LevelController.Instance.objective = true;
         objectiveText.text = text;
     }
 }

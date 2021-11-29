@@ -7,14 +7,14 @@ public class Player : MonoBehaviour
 {
     public event Action PlayerDied;
     [SerializeField] private PlayerHealth _health;
-    [SerializeField] private Level level;
+    [SerializeField] private PlayerLevel level;
     [SerializeField] public Camera cam;
     [SerializeField] private Inventory _inventory;
     [SerializeField] private PlayerStats playerStats;
 
     private Rigidbody _rb;
     public PlayerStats PlayerStats => playerStats;
-    public Level Level => level;
+    public PlayerLevel PlayerLevel => level;
     public PlayerHealth Health => _health;
     public Inventory Inventory => _inventory;
     public Vector3 GetPosition => transform.position;
@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Health.maxHealthPoints = GameLoop.Instance.GameData.maxHealth;
-        Health.HealthPoints = GameLoop.Instance.GameData.currentHealth;
+        Health.maxHealthPoints = LevelController.Instance.GameData.maxHealth;
+        Health.HealthPoints = LevelController.Instance.GameData.currentHealth;
     }
     
     public void OnHealthChanged()

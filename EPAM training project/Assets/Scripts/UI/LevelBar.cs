@@ -10,19 +10,19 @@ public class LevelBar : MonoBehaviour
 
     private void Start()
     {
-        GameLoop.Instance.Player.Level.LevelPointsChanged += OnLevelPointsChanged;
+        LevelController.Instance.Player.PlayerLevel.LevelPointsChanged += OnLevelPointsChanged;
         OnLevelPointsChanged();
-        playerLevelNumber.text = GameLoop.Instance.Player.Level.StringLevelNumber();
+        playerLevelNumber.text = LevelController.Instance.Player.PlayerLevel.StringLevelNumber();
     }
 
     private void OnDestroy() 
     {
-        GameLoop.Instance.Player.Level.LevelPointsChanged -= OnLevelPointsChanged;
+        LevelController.Instance.Player.PlayerLevel.LevelPointsChanged -= OnLevelPointsChanged;
     }
 
     public void OnLevelPointsChanged()
     {
-        barImage.fillAmount = GameLoop.Instance.Player.Level.LevelPointsPercent();
-        playerLevelNumber.text = GameLoop.Instance.Player.Level.StringLevelNumber();
+        barImage.fillAmount = LevelController.Instance.Player.PlayerLevel.LevelPointsPercent();
+        playerLevelNumber.text = LevelController.Instance.Player.PlayerLevel.StringLevelNumber();
     }
 }
