@@ -51,8 +51,8 @@ public class GameData : MonoBehaviour
         level = GameLoop.Instance.nextLevelName;
         maxHealth = GameLoop.Instance.Player.Health.maxHealthPoints;
         currentHealth = GameLoop.Instance.Player.Health.HealthPoints;
-        playerLevel = GameLoop.Instance.Player.level.PlayerLevel;
-        playerLevelPoints = GameLoop.Instance.Player.level.LevelPoints;
+        playerLevel = GameLoop.Instance.Player.Level.PlayerLevel;
+        playerLevelPoints = GameLoop.Instance.Player.Level.LevelPoints;
         for(int i = 0; i < GameLoop.Instance.itemNames.Count; i++)
         {
             if(GameLoop.Instance.Player.Inventory.GotCheck(GameLoop.Instance.itemNames[i]))

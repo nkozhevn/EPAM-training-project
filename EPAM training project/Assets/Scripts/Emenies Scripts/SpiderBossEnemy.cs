@@ -164,7 +164,7 @@ public class SpiderBossEnemy : Enemy
         {
             audioManager.Stop(soundName);
             GameLoop.Instance.objective = true;
-            GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
+            GameLoop.Instance.Player.Level.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

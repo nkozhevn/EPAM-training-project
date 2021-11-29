@@ -1890,7 +1890,7 @@ PrefabInstance:
     - target: {fileID: 8118825565721115336, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.8000069
+      value: -3.800003
       objectReference: {fileID: 0}
     - target: {fileID: 8278431097471162181, guid: 6471a6ccc3f037a48960601541f389d2,
         type: 3}
@@ -1951,6 +1951,11 @@ PrefabInstance:
       propertyPath: ingameUI
       value: 
       objectReference: {fileID: 7875442887086314321}
+    - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f,
+        type: 3}
+      propertyPath: nextLevelName
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2789037220699407004, guid: 05b60ebf382f8a84785beff5eaf9c96f,
         type: 3}
       propertyPath: clickSoundName
@@ -2194,7 +2199,7 @@ PrefabInstance:
     - target: {fileID: 1606378254443522021, guid: c4db0f686319061499c70f5875785419,
         type: 3}
       propertyPath: nextLevelName
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1606378254443522021, guid: c4db0f686319061499c70f5875785419,
         type: 3}

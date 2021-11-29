@@ -7,13 +7,14 @@ public class Player : MonoBehaviour
 {
     public event Action PlayerDied;
     [SerializeField] private PlayerHealth _health;
-    [SerializeField] public Level level;
-    [SerializeField] public float moveSpeed = 5f;
-    [SerializeField] public float turnSpeed = 10f;
+    [SerializeField] private Level level;
     [SerializeField] public Camera cam;
     [SerializeField] private Inventory _inventory;
+    [SerializeField] private PlayerStats playerStats;
 
     private Rigidbody _rb;
+    public PlayerStats PlayerStats => playerStats;
+    public Level Level => level;
     public PlayerHealth Health => _health;
     public Inventory Inventory => _inventory;
     public Vector3 GetPosition => transform.position;

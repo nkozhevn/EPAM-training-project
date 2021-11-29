@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(_isMoving)
         {
-            _rigidbody.MovePosition(_rigidbody.position + _movement * GameLoop.Instance.Player.moveSpeed * Time.fixedDeltaTime);
+            _rigidbody.MovePosition(_rigidbody.position + _movement * GameLoop.Instance.Player.PlayerStats.MoveSpeed * Time.fixedDeltaTime);
         }
 
         Plane playerPlane = new Plane(Vector3.up, transform.position);
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 targetPoint = ray.GetPoint(hitdist);
             Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, GameLoop.Instance.Player.turnSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, GameLoop.Instance.Player.PlayerStats.TurnSpeed * Time.deltaTime);
         }
     }
 

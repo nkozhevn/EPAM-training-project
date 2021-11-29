@@ -6,7 +6,6 @@ using System;
 public class Level : MonoBehaviour
 {
     public event Action LevelPointsChanged;
-    [SerializeField] private int maxLevelPoints = 10;
     [SerializeField] private PlayerHealth health;
 
     private int _level = 0;
@@ -23,7 +22,7 @@ public class Level : MonoBehaviour
     }
     public int PlayerLevel => _level;
 
-    public float LevelPointsPercent() => (float)LevelPoints / maxLevelPoints;
+    public float LevelPointsPercent() => (float)LevelPoints / GameLoop.Instance.Player.PlayerStats.MaxLevelPoints;
     public string StringLevelNumber() => _level.ToString();
 
     private void Start()
@@ -36,13 +35,13 @@ public class Level : MonoBehaviour
     public void GainLevelPoints(int amount)
     {
         LevelPoints += amount;
-        if((LevelPoints) >= maxLevelPoints)
+        if((LevelPoints) >= GameLoop.Instance.Player.PlayerStats.MaxLevelPoints)
         {
-            for(int i = 0; i < LevelPoints / maxLevelPoints; i++)
+            for(int i = 0; i < LevelPoints / GameLoop.Instance.Player.PlayerStats.MaxLevelPoints; i++)
             {
                 _level++;
                 health.HealthUpgrade(5);
-                LevelPoints -= maxLevelPoints;
+                LevelPoints -= GameLoop.Instance.Player.PlayerStats.MaxLevelPoints;
             }
         }
     }

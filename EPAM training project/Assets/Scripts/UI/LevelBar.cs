@@ -7,23 +7,22 @@ public class LevelBar : MonoBehaviour
 {
     [SerializeField] private Image barImage;
     [SerializeField] private Text playerLevelNumber;
-    [SerializeField] private Level level;
 
     private void Start()
     {
-        level.LevelPointsChanged += OnLevelPointsChanged;
+        GameLoop.Instance.Player.Level.LevelPointsChanged += OnLevelPointsChanged;
         OnLevelPointsChanged();
-        playerLevelNumber.text = level.StringLevelNumber();
+        playerLevelNumber.text = GameLoop.Instance.Player.Level.StringLevelNumber();
     }
 
     private void OnDestroy() 
     {
-        level.LevelPointsChanged -= OnLevelPointsChanged;
+        GameLoop.Instance.Player.Level.LevelPointsChanged -= OnLevelPointsChanged;
     }
 
     public void OnLevelPointsChanged()
     {
-        barImage.fillAmount = level.LevelPointsPercent();
-        playerLevelNumber.text = level.StringLevelNumber();
+        barImage.fillAmount = GameLoop.Instance.Player.Level.LevelPointsPercent();
+        playerLevelNumber.text = GameLoop.Instance.Player.Level.StringLevelNumber();
     }
 }

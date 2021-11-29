@@ -68,7 +68,7 @@ public class RunningEnemyMovement : Enemy
     {
         if(health.NoHealth)
         {
-            GameLoop.Instance.Player.level.GainLevelPoints(levelPoints);
+            GameLoop.Instance.Player.Level.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);
