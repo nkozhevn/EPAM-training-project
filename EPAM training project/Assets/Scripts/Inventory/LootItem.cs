@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LootItem : MonoBehaviour
 {
-    [SerializeField] private InventoryItem _inventoryItem;
+    [SerializeField] private InventoryItem inventoryItem;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private string soundName;
 
@@ -13,7 +13,7 @@ public class LootItem : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             audioManager.Play(soundName);
-            LevelController.Instance.Player.Inventory.AddItem(_inventoryItem);
+            LevelController.Instance.Player.Inventory.AddItem(inventoryItem);
             gameObject.SetActive(false);
         }
     }

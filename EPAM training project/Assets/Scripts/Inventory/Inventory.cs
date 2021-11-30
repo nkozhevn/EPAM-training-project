@@ -7,8 +7,21 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private PlayerShooting _playerShooting;
     [SerializeField] private SkillActivator _skillActivator;
+    [SerializeField] private List<InventoryItem> allItems;
 
     private List<InventoryItem> _items = new List<InventoryItem>();
+    public List<InventoryItem> Items => _items;
+
+    private void Start()
+    {
+        foreach(InventoryItem item in allItems)
+        {
+            if(LevelController.Instance.GameData.items[item.Name])
+            {
+                AddItem(item);
+            }
+        }
+    }
 
     public bool GotCheck(string itemName)
     {

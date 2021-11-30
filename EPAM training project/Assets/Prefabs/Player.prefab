@@ -618,6 +618,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerShooting: {fileID: 2321173445509720669}
   _skillActivator: {fileID: 6970608186529817223}
+  allItems:
+  - {fileID: 11400000, guid: 69bac130bd84f2d46b0ff8264dbfdc64, type: 2}
+  - {fileID: 11400000, guid: b414a03e74bcbd14db84dd4f8c006f5e, type: 2}
+  - {fileID: 11400000, guid: 1524c283c151b7f459ae91262cb6a4fb, type: 2}
+  - {fileID: 11400000, guid: 8442c241a4a7adb4e9a0780b4e1e74da, type: 2}
+  - {fileID: 11400000, guid: 154c25bdb9ba30842af804db870e06cf, type: 2}
+  - {fileID: 11400000, guid: c5006dd8fda78cd4b92f63a1abab6b98, type: 2}
 --- !u!114 &8644782152447780395
 MonoBehaviour:
   m_ObjectHideFlags: 0

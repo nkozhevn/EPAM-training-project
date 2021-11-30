@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameData : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class GameData : MonoBehaviour
         {"Shield", false}
     };
 
-    public void SetGameStart(int value)
+    public void SetGameStart(int value, string firstWeaponName)
     {
         switch(value)
         {
@@ -39,11 +40,23 @@ public class GameData : MonoBehaviour
         level = LevelController.Instance.firstLevelName;
         playerLevel = 0;
         playerLevelPoints = 0;
-        items[LevelController.Instance.itemNames[0]] = true;
-        for(int i = 1; i < LevelController.Instance.itemNames.Count; i++)
+
+        foreach(string item in items.Keys.ToArray())
         {
-            items[LevelController.Instance.itemNames[i]] = false;
+            if(item == firstWeaponName)
+            {
+                items[item] = true;
+            }
+            else
+            {
+                items[item] = false;
+            }
         }
+        // items[LevelController.Instance.itemNames[0]] = true;
+        // for(int i = 1; i < LevelController.Instance.itemNames.Count; i++)
+        // {
+        //     items[LevelController.Instance.itemNames[i]] = false;
+        // }
     }
 
     public void SetLevelEnd()
@@ -53,13 +66,18 @@ public class GameData : MonoBehaviour
         currentHealth = LevelController.Instance.Player.Health.HealthPoints;
         playerLevel = LevelController.Instance.Player.PlayerLevel.Level;
         playerLevelPoints = LevelController.Instance.Player.PlayerLevel.LevelPoints;
-        for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
+
+        foreach(InventoryItem item in LevelController.Instance.Player.Inventory.Items)
         {
-            if(LevelController.Instance.Player.Inventory.GotCheck(LevelController.Instance.itemNames[i]))
-            {
-                items[LevelController.Instance.itemNames[i]] = true;
-            }
+            items[item.Name] = true;
         }
+        // for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
+        // {
+        //     if(LevelController.Instance.Player.Inventory.GotCheck(LevelController.Instance.itemNames[i]))
+        //     {
+        //         items[LevelController.Instance.itemNames[i]] = true;
+        //     }
+        // }
     }
     
     public void SetGameEnd(string firstLevelName)
@@ -83,16 +101,22 @@ public class GameData : MonoBehaviour
         playerLevel = data.playerLevel;
         playerLevelPoints = data.playerLevelPoints;
 
-        for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
+        int i = 0;
+        foreach(string item in items.Keys.ToArray())
         {
-            if(data.items[i] == 0)
-            {
-                items[LevelController.Instance.itemNames[i]] = false;
-            }
-            else
-            {
-                items[LevelController.Instance.itemNames[i]] = true;
-            }
+            items[item] = data.items[i] == 1;
+            i++;
         }
+        // for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
+        // {
+        //     if(data.items[i] == 0)
+        //     {
+        //         items[LevelController.Instance.itemNames[i]] = false;
+        //     }
+        //     else
+        //     {
+        //         items[LevelController.Instance.itemNames[i]] = true;
+        //     }
+        // }
     }
 }

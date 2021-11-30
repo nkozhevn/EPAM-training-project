@@ -22,9 +22,10 @@ public class Data
         playerLevel = gameData.playerLevel;
         playerLevelPoints = gameData.playerLevelPoints;
 
-        for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
+        int i = 0;
+        foreach(bool item in LevelController.Instance.GameData.items.Values)
         {
-            if(gameData.items[LevelController.Instance.itemNames[i]])
+            if(item)
             {
                 items[i] = 1;
             }
@@ -33,5 +34,16 @@ public class Data
                 items[i] = 0;
             }
         }
+        // for(int i = 0; i < LevelController.Instance.itemNames.Count; i++)
+        // {
+        //     if(gameData.items[LevelController.Instance.itemNames[i]])
+        //     {
+        //         items[i] = 1;
+        //     }
+        //     else
+        //     {
+        //         items[i] = 0;
+        //     }
+        // }
     }
 }

@@ -10,8 +10,7 @@ public class LevelController : MonoBehaviour
     [SerializeField] public string nextLevelName;
     [SerializeField] private UIController uIController;
     [SerializeField] private TriggerObjects finish;
-    [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] public List<string> itemNames;
+    //[SerializeField] public List<string> itemNames;
     [SerializeField] private GameData gameData;
     [SerializeField] private Player player;
     [SerializeField] private AudioManager audioManager;
@@ -75,7 +74,7 @@ public class LevelController : MonoBehaviour
 
     public void SetDifficulty(int value)
     {
-        GameData.SetGameStart(value);
+        GameData.SetGameStart(value, "Pistol");
         GameData.SaveGame();
     }
 
