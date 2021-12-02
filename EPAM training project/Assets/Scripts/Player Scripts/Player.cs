@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     public PlayerLevel PlayerLevel => level;
     public PlayerHealth Health => _health;
     public Inventory Inventory => _inventory;
-    public Vector3 GetPosition => transform.position;
     public Rigidbody Rigidbody => _rb;
 
     private void Awake()

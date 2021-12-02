@@ -1,21 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    public static LevelController Instance{ get; private set; }
+    public Action GameInitialized;
+
+    public static LevelController Instance { get; private set; }
+    
+    //TODO: not Monobeh
+    [SerializeField] private GameData gameData;
+
+    [Header("Objects To Instantiate")]
+    [SerializeField] private Player playerPrefab;
+    
+
+
+    [Header("Sub Systems")]
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private UIController uIController;
+
+
+    
+    
+    
+    [Header("Object To Remove")]
     [SerializeField] public string levelName;
     [SerializeField] public string firstLevelName;
     [SerializeField] public string nextLevelName;
-    [SerializeField] private UIController uIController;
     [SerializeField] private TriggerObjects finish;
-    //[SerializeField] public List<string> itemNames;
-    [SerializeField] private GameData gameData;
-    [SerializeField] private Player player;
-    [SerializeField] private AudioManager audioManager;
     [SerializeField] private string gameThemeSoundName;
     [SerializeField] private string menuThemeSoundName;
+
+
+
 
     [HideInInspector] public bool gameIsPaused = false;
     [HideInInspector] public bool objective = false;
@@ -31,25 +48,33 @@ public class LevelController : MonoBehaviour
             gameData = value;
         }
     }
-    public Player Player => player;
+
+    public Player Player { get; private set; }
+    public bool IsInitialized { get; private set; }
+
+
 
     private void Awake()
     {
         Instance = this;
+        IsInitialized = false;
 
         GameData.LoadGame();
+        SpawnPlayer();
+
+        IsInitialized = true;
+        GameInitialized?.Invoke();
     }
 
     private void Start()
     {
-        Time.timeScale = 1f;
-
-        if(Player != null)
-        {
-            Player.PlayerDied += OnPlayerDied;
-        }
-
         audioManager.Play(gameThemeSoundName);
+    }
+
+    private void SpawnPlayer()
+    {
+        Player = Instantiate(playerPrefab);
+        Player.PlayerDied += OnPlayerDied;
     }
 
     private void Update()

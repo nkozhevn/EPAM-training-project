@@ -1,15 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private Enemy enemy;
     private bool triggered = false;
+
+    private void Awake()
+    {
+        enemy.gameObject.SetActive(false);
+    }
 
     private void Start()
     {
-        enemy.SetActive(false);
+        LevelController.Instance.GameInitialized += SetupEnemy;
+    }
+
+    private void SetupEnemy()
+    {
+        enemy.Setup(LevelController.Instance.Player);
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -18,9 +26,14 @@ public class EnemyTrigger : MonoBehaviour
         {
             if (collider.gameObject.CompareTag("Player"))
             {
-                enemy.SetActive(true);
+                enemy.gameObject.SetActive(true);
                 triggered = true;
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        LevelController.Instance.GameInitialized -= SetupEnemy;
     }
 }

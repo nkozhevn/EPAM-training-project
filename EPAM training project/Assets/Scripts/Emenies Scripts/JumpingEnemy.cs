@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,13 +27,15 @@ public class JumpingEnemy : Enemy
     private void Start()
     {
         _enemyStats = enemyStatsList[LevelController.Instance.GameData.difficulty];
-
         navMeshAgent.speed = _enemyStats.MoveSpeed;
     }
 
     private void Update() 
     {
-        Direction = LevelController.Instance.Player.GetPosition - Rigidbody.position;
+        if (!IsInitialized)
+            return;
+
+        Direction = Player.transform.position - Rigidbody.position;
 
         if(Direction.magnitude > _enemyStats.JumpingDist && _state != State.Standing)
         {
@@ -52,15 +53,18 @@ public class JumpingEnemy : Enemy
 
     private void LateUpdate()
     {
-        switch(_state)
+        if (!IsInitialized)
+            return;
+
+        switch (_state)
         {
             case State.Running:
                 navMeshAgent.isStopped = false;
                 _jumpingWaitTimer = 0;
-                navMeshAgent.destination = LevelController.Instance.Player.transform.position;
+                navMeshAgent.destination = Player.transform.position;
                 break;
             case State.Jumping:
-                transform.LookAt(LevelController.Instance.Player.transform);
+                transform.LookAt(Player.transform);
                 navMeshAgent.isStopped = true;
                 if(_jumpingWaitTimer >= _enemyStats.JumpingWaitTime)
                 {
@@ -113,7 +117,7 @@ public class JumpingEnemy : Enemy
     {
         if(health.NoHealth)
         {
-            LevelController.Instance.Player.PlayerLevel.GainLevelPoints(levelPoints);
+            Player.PlayerLevel.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

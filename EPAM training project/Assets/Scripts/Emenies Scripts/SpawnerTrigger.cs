@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnerTrigger : MonoBehaviour
 {
-    [SerializeField] private Spawn spawner;
+    [SerializeField] private EnemySpawner spawner;
     
     private bool triggered = false;
 

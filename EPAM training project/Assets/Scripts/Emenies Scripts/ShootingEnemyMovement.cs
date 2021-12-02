@@ -34,7 +34,7 @@ public class ShootingEnemyMovement : Enemy
 
     private void Update() 
     {
-        Direction = LevelController.Instance.Player.GetPosition - Rigidbody.position;
+        Direction = Player.transform.position - Rigidbody.position;
 
         if(Direction.magnitude > _enemyStats.ShootingDist)
         {
@@ -55,10 +55,10 @@ public class ShootingEnemyMovement : Enemy
             case State.Running:
                 navMeshAgent.isStopped = false;
                 _shootingTimer = _enemyStats.ShootingCoolDown;
-                navMeshAgent.destination = LevelController.Instance.Player.transform.position;
+                navMeshAgent.destination = Player.transform.position;
                 break;
             case State.Shooting:
-                transform.LookAt(LevelController.Instance.Player.transform);
+                transform.LookAt(Player.transform);
                 navMeshAgent.isStopped = true;
                 if(_shootingTimer >= _enemyStats.ShootingCoolDown)
                 {
@@ -85,7 +85,7 @@ public class ShootingEnemyMovement : Enemy
     {
         if(health.NoHealth)
         {
-            LevelController.Instance.Player.PlayerLevel.GainLevelPoints(levelPoints);
+            Player.PlayerLevel.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

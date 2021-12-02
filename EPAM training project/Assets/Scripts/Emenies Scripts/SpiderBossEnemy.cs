@@ -43,7 +43,7 @@ public class SpiderBossEnemy : Enemy
 
     private void Update()
     {
-        Direction = LevelController.Instance.Player.GetPosition - Rigidbody.position;
+        Direction = Player.transform.position - Rigidbody.position;
 
         if(Direction.magnitude > _enemyStats.ActivationDist)
         {
@@ -75,13 +75,13 @@ public class SpiderBossEnemy : Enemy
         {
             case State.Running:
                 navMeshAgent.isStopped = false;
-                navMeshAgent.destination = LevelController.Instance.Player.transform.position;
+                navMeshAgent.destination = Player.transform.position;
                 break;
             case State.Standing:
-                transform.LookAt(LevelController.Instance.Player.transform);
+                transform.LookAt(Player.transform);
                 break;
             case State.Shooting:
-                transform.LookAt(LevelController.Instance.Player.transform);
+                transform.LookAt(Player.transform);
                 if(_shootingTimer >= _enemyStats.ShootingCoolDown)
                 {
                     Shoot();
@@ -93,7 +93,7 @@ public class SpiderBossEnemy : Enemy
                 }
                 break;
             case State.Launching:
-                transform.LookAt(LevelController.Instance.Player.transform);
+                transform.LookAt(Player.transform);
                 if(_launchingTimer >= _enemyStats.LaunchingCoolDown)
                 {
                     Launch();
@@ -106,7 +106,7 @@ public class SpiderBossEnemy : Enemy
                 break;
             case State.Dashing:
                 navMeshAgent.isStopped = false;
-                navMeshAgent.destination = LevelController.Instance.Player.transform.position;
+                navMeshAgent.destination = Player.transform.position;
                 animator.SetBool(_isWalkingHash, false);
                 animator.SetBool(_isRunningHash, true);
                 break;
@@ -164,7 +164,7 @@ public class SpiderBossEnemy : Enemy
         {
             audioManager.Stop(soundName);
             LevelController.Instance.objective = true;
-            LevelController.Instance.Player.PlayerLevel.GainLevelPoints(levelPoints);
+            Player.PlayerLevel.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

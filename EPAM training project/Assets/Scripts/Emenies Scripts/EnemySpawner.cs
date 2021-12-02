@@ -1,12 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private float spawnTimer = 0.1f;
     [SerializeField] private int enemyToSpawn = 10;
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private Enemy enemyPrefab;
     [SerializeField] private TriggerObjects trigger;
     private int _count;
 
@@ -15,13 +14,13 @@ public class Spawn : MonoBehaviour
         _count = 0;
         while(_count < enemyToSpawn)
         {
-            if(!trigger.IsActivated)
+            if(!trigger.IsActivated && LevelController.Instance.IsInitialized)
             {
-                Instantiate(enemyPrefab, transform.position, transform.rotation);
+                var enemy = Instantiate(enemyPrefab, transform.position, transform.rotation);
+                enemy.Setup(LevelController.Instance.Player);
                 _count++;
             }
             yield return new WaitForSeconds(spawnTimer);
         }
-        
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,4 +14,13 @@ public abstract class Enemy : MonoBehaviour
     protected Vector3 Direction { get; set; }
     protected Vector3 DirectionNorm { get; set; }
     protected Rigidbody Rigidbody => _rb;
+
+    protected Player Player { get; private set; }
+    protected bool IsInitialized { get; private set; }
+
+    public void Setup(Player player)
+    {
+        Player = player;
+        IsInitialized = true;
+    }
 }

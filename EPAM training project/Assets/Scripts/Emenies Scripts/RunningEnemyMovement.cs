@@ -36,7 +36,7 @@ public class RunningEnemyMovement : Enemy
     {
         if(_state == State.Running)
         {
-            navMeshAgent.destination = LevelController.Instance.Player.transform.position;
+            navMeshAgent.destination = Player.transform.position;
         }
     }
 
@@ -68,7 +68,7 @@ public class RunningEnemyMovement : Enemy
     {
         if(health.NoHealth)
         {
-            LevelController.Instance.Player.PlayerLevel.GainLevelPoints(levelPoints);
+            Player.PlayerLevel.GainLevelPoints(levelPoints);
             GameObject effect = Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(effect, effectLifeTime);
             Destroy(gameObject);

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShieldSkill : Skill
@@ -13,12 +12,10 @@ public class ShieldSkill : Skill
         {
             StartCoroutine(Reload());
         }
-        
     }
 
     protected override IEnumerator Reload()
     {
-
         _isActivated = true;
         skillIcon.Reload(reloadTime);
         LevelController.Instance.Player.Health.ToggleInvulnerability(true);

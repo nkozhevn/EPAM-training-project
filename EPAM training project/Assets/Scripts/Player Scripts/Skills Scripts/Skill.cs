@@ -26,5 +26,6 @@ public abstract class Skill : MonoBehaviour, ISkill
     public InventoryItem InventoryItem => inventoryItem;
 
     public abstract void Activate();
+
     protected abstract IEnumerator Reload();
 }
