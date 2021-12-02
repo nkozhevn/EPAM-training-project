@@ -29,14 +29,7 @@ public abstract class Weapon : MonoBehaviour
         set
         {
             _isPicked = value;
-            if(_isPicked)
-            {
-                icon.enabled = true;
-            }
-            else
-            {
-                icon.enabled = false;
-            }
+            weaponIcon.gameObject.SetActive(_isPicked);
         }
     }
     public int CurrentAmmo

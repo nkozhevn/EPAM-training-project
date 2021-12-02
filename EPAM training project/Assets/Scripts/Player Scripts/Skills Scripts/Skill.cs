@@ -20,14 +20,7 @@ public abstract class Skill : MonoBehaviour, ISkill
         set
         {
             _isPicked = value;
-            if(_isPicked)
-            {
-                icon.enabled = true;
-            }
-            else
-            {
-                icon.enabled = false;
-            }
+            skillIcon.gameObject.SetActive(_isPicked);
         }
     }
     public InventoryItem InventoryItem => inventoryItem;
