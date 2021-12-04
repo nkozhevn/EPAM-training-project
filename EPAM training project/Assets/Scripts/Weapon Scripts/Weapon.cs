@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using System.Linq;
 
 public abstract class Weapon : MonoBehaviour
 {
     public event Action AmmoChanged;
     [SerializeField] protected WeaponStats weaponStats;
-    [SerializeField] private SkillIcon weaponIcon;
-    [SerializeField] private Image weaponIconBorder;
-    [SerializeField] private Image icon;
+    private SkillIcon weaponIcon;
+    [HideInInspector] private Image weaponIconBorder;
     [SerializeField] private InventoryItem inventoryItem;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private AudioSource shootingAudio;
@@ -43,6 +43,21 @@ public abstract class Weapon : MonoBehaviour
     }
     public WeaponStats Stats => weaponStats;
     public InventoryItem InventoryItem => inventoryItem;
+
+    private void Awake()
+    {
+        LevelController.Instance.GameInitialized += Initialized;
+    }
+
+    private void Initialized()
+    {
+        weaponIcon = LevelController.Instance.UIController.AmmoUI.ItemIcons.First(x => x.ItemName == inventoryItem.Name);
+    }
+
+    private void OnDestroy()
+    {
+        LevelController.Instance.GameInitialized -= Initialized;
+    }
 
     private void Start()
     {

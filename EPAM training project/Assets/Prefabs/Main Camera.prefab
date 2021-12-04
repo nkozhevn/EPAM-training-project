@@ -55,7 +55,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 15
   far clip plane: 5000
   field of view: 40
   orthographic: 0
@@ -87,6 +87,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93568da442ea13e419e8e40974ecb2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   smoothSpeed: 500
   offset: {x: 0, y: 16, z: -25}

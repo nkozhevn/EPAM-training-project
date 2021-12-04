@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private GameOverScreen finishScreen;
     [SerializeField] private GameObject ingameUI;
+    [SerializeField] private AmmoBar ammoUI;
+    public AmmoBar AmmoUI => ammoUI;
 
     private void Start()
     {

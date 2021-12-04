@@ -7,22 +7,36 @@ public class LevelBar : MonoBehaviour
 {
     [SerializeField] private Image barImage;
     [SerializeField] private Text playerLevelNumber;
+    private PlayerLevel _playerLevel;
 
-    private void Start()
+    private void Awake()
     {
-        LevelController.Instance.Player.PlayerLevel.LevelPointsChanged += OnLevelPointsChanged;
-        OnLevelPointsChanged();
-        playerLevelNumber.text = LevelController.Instance.Player.PlayerLevel.StringLevelNumber();
+        LevelController.Instance.GameInitialized += Initialization;
+        LevelController.Instance.LevelEnded += OnLevelEnd;
     }
 
-    private void OnDestroy() 
+    private void Initialization()
     {
-        LevelController.Instance.Player.PlayerLevel.LevelPointsChanged -= OnLevelPointsChanged;
+        _playerLevel = LevelController.Instance.Player.PlayerLevel;
+        _playerLevel.LevelPointsChanged += OnLevelPointsChanged;
+        OnLevelPointsChanged();
+        playerLevelNumber.text = _playerLevel.StringLevelNumber();
+    }
+
+    private void OnLevelEnd() 
+    {
+        _playerLevel.LevelPointsChanged -= OnLevelPointsChanged;
     }
 
     public void OnLevelPointsChanged()
     {
-        barImage.fillAmount = LevelController.Instance.Player.PlayerLevel.LevelPointsPercent();
-        playerLevelNumber.text = LevelController.Instance.Player.PlayerLevel.StringLevelNumber();
+        barImage.fillAmount = _playerLevel.LevelPointsPercent();
+        playerLevelNumber.text = _playerLevel.StringLevelNumber();
+    }
+
+    private void OnDestroy()
+    {
+        LevelController.Instance.GameInitialized -= Initialization;
+        LevelController.Instance.LevelEnded -= OnLevelEnd;
     }
 }

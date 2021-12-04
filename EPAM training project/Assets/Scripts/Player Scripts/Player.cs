@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     public event Action PlayerDied;
     [SerializeField] private PlayerHealth _health;
     [SerializeField] private PlayerLevel level;
-    [SerializeField] public Camera cam;
     [SerializeField] private Inventory _inventory;
     [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private PlayerShooting playerShooting;
+    [HideInInspector] public Camera cam;
 
     private Rigidbody _rb;
+    public PlayerShooting PlayerShooting => playerShooting;
     public PlayerStats PlayerStats => playerStats;
     public PlayerLevel PlayerLevel => level;
     public PlayerHealth Health => _health;

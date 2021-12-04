@@ -12,7 +12,12 @@ public class Inventory : MonoBehaviour
     private List<InventoryItem> _items = new List<InventoryItem>();
     public List<InventoryItem> Items => _items;
 
-    private void Start()
+    private void Awake()
+    {
+        LevelController.Instance.GameInitialized += Initialization;
+    }
+
+    private void Initialization()
     {
         foreach(InventoryItem item in allItems)
         {
@@ -50,5 +55,10 @@ public class Inventory : MonoBehaviour
             default:
                 throw new ArgumentException("Invalid item type.");
         }
+    }
+
+    private void OnDestroy()
+    {
+        LevelController.Instance.GameInitialized -= Initialization;
     }
 }

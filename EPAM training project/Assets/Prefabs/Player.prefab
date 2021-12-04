@@ -110,9 +110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponStats: {fileID: 11400000, guid: 7e3ab06622f4c8b408175e522fd86be4, type: 2}
-  weaponIcon: {fileID: 0}
-  weaponIconBorder: {fileID: 0}
-  icon: {fileID: 0}
   inventoryItem: {fileID: 11400000, guid: 1524c283c151b7f459ae91262cb6a4fb, type: 2}
   playerAnimator: {fileID: 758798366502978741}
   shootingAudio: {fileID: 2267134130437036037}
@@ -228,9 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponStats: {fileID: 11400000, guid: 3c0d93ea8b6c7d34aa3a73ad6fe22c77, type: 2}
-  weaponIcon: {fileID: 0}
-  weaponIconBorder: {fileID: 0}
-  icon: {fileID: 0}
   inventoryItem: {fileID: 11400000, guid: b414a03e74bcbd14db84dd4f8c006f5e, type: 2}
   playerAnimator: {fileID: 758798366502978741}
   shootingAudio: {fileID: 2759076713726068145}
@@ -321,7 +315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonKeyCode: Z
   skillIcon: {fileID: 0}
-  icon: {fileID: 0}
   reloadTime: 15
   inventoryItem: {fileID: 11400000, guid: 154c25bdb9ba30842af804db870e06cf, type: 2}
   firePrefab: {fileID: -5857985936353919375, guid: 3ea4981e9a43f284382421e55f1b0fbf,
@@ -364,7 +357,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6429648934735280280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.999163, y: 1.51, z: -2.14}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 123036693191709085}
@@ -421,9 +414,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: {fileID: 4733793882949672753}
   level: {fileID: 8332765358380007414}
-  cam: {fileID: 0}
   _inventory: {fileID: 7186423894420910438}
   playerStats: {fileID: 8644782152447780395}
+  playerShooting: {fileID: 2321173445509720669}
+  cam: {fileID: 0}
 --- !u!114 &5772072715159616703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,7 +730,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonKeyCode: Q
   skillIcon: {fileID: 0}
-  icon: {fileID: 0}
   reloadTime: 30
   inventoryItem: {fileID: 11400000, guid: c5006dd8fda78cd4b92f63a1abab6b98, type: 2}
   activeTime: 5
@@ -851,9 +844,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponStats: {fileID: 11400000, guid: e6acc9b5b85519f488895a7e4f7330f9, type: 2}
-  weaponIcon: {fileID: 0}
-  weaponIconBorder: {fileID: 0}
-  icon: {fileID: 0}
   inventoryItem: {fileID: 11400000, guid: 69bac130bd84f2d46b0ff8264dbfdc64, type: 2}
   playerAnimator: {fileID: 758798366502978741}
   shootingAudio: {fileID: 1563584542440372198}
@@ -904,7 +894,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonKeyCode: X
   skillIcon: {fileID: 0}
-  icon: {fileID: 0}
   reloadTime: 10
   inventoryItem: {fileID: 11400000, guid: 8442c241a4a7adb4e9a0780b4e1e74da, type: 2}
   granadePrefab: {fileID: 1060827923184184245, guid: 0ded7e6d151cca54583e4592c7661fec,
@@ -920,7 +909,7 @@ PrefabInstance:
     - target: {fileID: 2511810472704310570, guid: b666713b227a5d04f99ea69cf7ae3e42,
         type: 3}
       propertyPath: m_Name
-      value: Weapon3
+      value: Rifle
       objectReference: {fileID: 0}
     - target: {fileID: 2511810472704310570, guid: b666713b227a5d04f99ea69cf7ae3e42,
         type: 3}
@@ -1163,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 3350405896076431046, guid: 8d5cafa155b91cd499fed866d468b2d2,
         type: 3}
       propertyPath: m_Name
-      value: Weapon2
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 3350405896076431046, guid: 8d5cafa155b91cd499fed866d468b2d2,
         type: 3}
@@ -2234,7 +2223,7 @@ PrefabInstance:
     - target: {fileID: 1530314228072032690, guid: 5846b4e8a2e9b39408a7c6e5cf08bb38,
         type: 3}
       propertyPath: m_Name
-      value: Weapon1
+      value: Pistol
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 737404705783240045, guid: 5846b4e8a2e9b39408a7c6e5cf08bb38, type: 3}

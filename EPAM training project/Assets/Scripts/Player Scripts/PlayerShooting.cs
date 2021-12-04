@@ -31,8 +31,13 @@ public class PlayerShooting : MonoBehaviour
 
     private void Awake()
     {
-        weapons.First().IsPicked = true;
+        LevelController.Instance.GameInitialized += Initialized;
+    }
 
+    private void Initialized()
+    {
+        weapons.First().IsPicked = true;
+        
         SelectWeapon(_selectedWeaponIndex);
     }
 
@@ -84,5 +89,10 @@ public class PlayerShooting : MonoBehaviour
     {
         var weapon = weapons.First(x => x.InventoryItem.Name == name);
         weapon.IsPicked = true;
+    }
+
+    private void OnDestroy()
+    {
+        LevelController.Instance.GameInitialized -= Initialized;
     }
 }

@@ -50,16 +50,11 @@ MonoBehaviour:
   nextLevelName: 2
   uIController: {fileID: 3676306620813735061}
   finish: {fileID: 0}
-  playerHealth: {fileID: 0}
-  itemNames:
-  - Pistol
-  - Shotgun
-  - Rifle
-  - Granade
-  - Fire
-  - Shield
   gameData: {fileID: 6237983625257449731}
-  player: {fileID: 0}
+  cameraPrefab: {fileID: 6492348828549088320, guid: cc4fc13c68663614da2c776348f6478f,
+    type: 3}
+  playerPrefab: {fileID: 6429648934735280280, guid: c5b7e5f994ccaa0429b86e5598ee32e5,
+    type: 3}
   audioManager: {fileID: 0}
   gameThemeSoundName: LevelAmbient
   menuThemeSoundName: MenuTheme
@@ -81,6 +76,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 0}
   finishScreen: {fileID: 0}
   ingameUI: {fileID: 0}
+  ammoUI: {fileID: 0}
 --- !u!114 &6237983625257449731
 MonoBehaviour:
   m_ObjectHideFlags: 0
