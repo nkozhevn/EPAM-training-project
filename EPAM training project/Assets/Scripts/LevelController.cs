@@ -59,9 +59,9 @@ public class LevelController : MonoBehaviour
             Player.PlayerDied += OnPlayerDied;
         }
 
-        GameInitialized?.Invoke();
-
         audioManager.Play(gameThemeSoundName);
+
+        GameInitialized?.Invoke();
     }
 
     private void Update()
@@ -81,8 +81,8 @@ public class LevelController : MonoBehaviour
         audioManager.Play(menuThemeSoundName);
         GameData.SetGameEnd(firstLevelName);
         GameData.SaveGame();
-        LevelEnded?.Invoke();
         uIController.GameOver();
+        LevelEnded?.Invoke();
     }
 
     public void SetDifficulty(int value)

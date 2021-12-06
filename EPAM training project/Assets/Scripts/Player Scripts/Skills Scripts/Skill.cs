@@ -14,19 +14,9 @@ public abstract class Skill : MonoBehaviour, ISkill
     protected bool _isActivated = false;
     private bool _isPicked;
 
-    private void Awake()
-    {
-        LevelController.Instance.GameInitialized += Initialized;
-    }
-
-    private void Initialized()
+    private void Initialize()
     {
         skillIcon = LevelController.Instance.UIController.AmmoUI.ItemIcons.First(x => x.ItemName == inventoryItem.Name);
-    }
-
-    private void OnDestroy()
-    {
-        LevelController.Instance.GameInitialized -= Initialized;
     }
 
     public bool IsPicked
@@ -35,6 +25,7 @@ public abstract class Skill : MonoBehaviour, ISkill
         set
         {
             _isPicked = value;
+            Initialize();
             skillIcon.gameObject.SetActive(_isPicked);
         }
     }
