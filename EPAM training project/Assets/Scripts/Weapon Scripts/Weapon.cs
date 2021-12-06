@@ -29,6 +29,7 @@ public abstract class Weapon : MonoBehaviour
         set
         {
             _isPicked = value;
+            Initialize();
             weaponIcon.gameObject.SetActive(_isPicked);
         }
     }
@@ -44,19 +45,9 @@ public abstract class Weapon : MonoBehaviour
     public WeaponStats Stats => weaponStats;
     public InventoryItem InventoryItem => inventoryItem;
 
-    private void Awake()
-    {
-        LevelController.Instance.GameInitialized += Initialized;
-    }
-
-    private void Initialized()
+    private void Initialize()
     {
         weaponIcon = LevelController.Instance.UIController.AmmoUI.ItemIcons.First(x => x.ItemName == inventoryItem.Name);
-    }
-
-    private void OnDestroy()
-    {
-        LevelController.Instance.GameInitialized -= Initialized;
     }
 
     private void Start()

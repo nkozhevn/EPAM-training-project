@@ -36,7 +36,12 @@ public class PlayerShooting : MonoBehaviour
 
     private void Initialized()
     {
-        weapons.First().IsPicked = true;
+        var defaultWeapon = weapons.First();
+        if (!defaultWeapon.gameObject.activeInHierarchy)
+        {
+            defaultWeapon.gameObject.SetActive(true);
+        }
+        defaultWeapon.IsPicked = true;
         
         SelectWeapon(_selectedWeaponIndex);
     }
