@@ -1646,6 +1646,11 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1650850282}
+    - target: {fileID: 6237983625257449731, guid: 6e108719598157b42953ca346cc74209,
+        type: 3}
+      propertyPath: levelName
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e108719598157b42953ca346cc74209, type: 3}
 --- !u!1001 &929158848

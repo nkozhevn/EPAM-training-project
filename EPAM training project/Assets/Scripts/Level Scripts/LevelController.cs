@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
     public event Action GameInitialized;
     public event Action LevelEnded;
     public static LevelController Instance{ get; private set; }
-    [SerializeField] public string levelName;
-    [SerializeField] public string firstLevelName;
-    [SerializeField] public string nextLevelName;
     [SerializeField] private UIController uIController;
     [SerializeField] private TriggerObjects finish;
     //[SerializeField] public List<string> itemNames;
@@ -19,8 +17,6 @@ public class LevelController : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     //[SerializeField] private Player player;
     [SerializeField] private AudioManager audioManager;
-    [SerializeField] private string gameThemeSoundName;
-    [SerializeField] private string menuThemeSoundName;
 
     [HideInInspector] public bool gameIsPaused = false;
     [HideInInspector] public bool objective = false;
@@ -45,9 +41,12 @@ public class LevelController : MonoBehaviour
 
         GameData.LoadGame();
 
-        GameObject cam = Instantiate(cameraPrefab);
-        Player = Instantiate(playerPrefab).GetComponent<Player>();
-        Player.PlayerDied += OnPlayerDied;
+        if(SceneManager.GetActiveScene().name != GameData.MainMenuSceneName)
+        {
+            GameObject cam = Instantiate(cameraPrefab);
+            Player = Instantiate(playerPrefab).GetComponent<Player>();
+            Player.PlayerDied += OnPlayerDied;
+        }
     }
 
     private void Start()
@@ -59,7 +58,7 @@ public class LevelController : MonoBehaviour
             Player.PlayerDied += OnPlayerDied;
         }
 
-        audioManager.Play(gameThemeSoundName);
+        audioManager.Play(GameData.GameThemeSoundName);
 
         GameInitialized?.Invoke();
     }
@@ -77,9 +76,9 @@ public class LevelController : MonoBehaviour
 
     private void OnPlayerDied()
     {
-        audioManager.Pause(gameThemeSoundName);
-        audioManager.Play(menuThemeSoundName);
-        GameData.SetGameEnd(firstLevelName);
+        audioManager.Pause(GameData.GameThemeSoundName);
+        audioManager.Play(GameData.MenuThemeSoundName);
+        GameData.SetGameEnd(GameData.FirstLevelName);
         GameData.SaveGame();
         uIController.GameOver();
         LevelEnded?.Invoke();
@@ -93,8 +92,8 @@ public class LevelController : MonoBehaviour
 
     private void OnFinish()
     {
-        audioManager.Pause(gameThemeSoundName);
-        audioManager.Play(menuThemeSoundName);
+        audioManager.Pause(GameData.GameThemeSoundName);
+        audioManager.Play(GameData.MenuThemeSoundName);
         GameData.SetLevelEnd();
         GameData.SaveGame();
         LevelEnded?.Invoke();

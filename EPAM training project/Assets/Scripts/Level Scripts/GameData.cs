@@ -5,6 +5,20 @@ using System.Linq;
 
 public class GameData : MonoBehaviour
 {
+    [SerializeField] private string levelName;
+    [SerializeField] private string firstLevelName;
+    [SerializeField] private string nextLevelName;
+    [SerializeField] private string mainMenuSceneName;
+    [SerializeField] private string gameThemeSoundName;
+    [SerializeField] private string menuThemeSoundName;
+
+    public string LevelName => levelName;
+    public string FirstLevelName => firstLevelName;
+    public string NextLevelName => nextLevelName;
+    public string MainMenuSceneName => mainMenuSceneName;
+    public string GameThemeSoundName => gameThemeSoundName;
+    public string MenuThemeSoundName => menuThemeSoundName;
+
     [HideInInspector] public int difficulty;
     [HideInInspector] public string level;
     [HideInInspector] public int maxHealth;
@@ -37,7 +51,7 @@ public class GameData : MonoBehaviour
                 currentHealth = 10;
                 break;
         }
-        level = LevelController.Instance.firstLevelName;
+        level = FirstLevelName;
         playerLevel = 0;
         playerLevelPoints = 0;
 
@@ -61,7 +75,7 @@ public class GameData : MonoBehaviour
 
     public void SetLevelEnd()
     {
-        level = LevelController.Instance.nextLevelName;
+        level = NextLevelName;
         maxHealth = LevelController.Instance.Player.Health.maxHealthPoints;
         currentHealth = LevelController.Instance.Player.Health.HealthPoints;
         playerLevel = LevelController.Instance.Player.PlayerLevel.Level;
@@ -82,7 +96,7 @@ public class GameData : MonoBehaviour
     
     public void SetGameEnd(string firstLevelName)
     {
-        level = firstLevelName;
+        level = FirstLevelName;
     }
 
     public void SaveGame()
